@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Conformación — Brouk SpA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Mulish:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0B0A09;--ink:#F3EDE2;--ink-soft:#B5AD9F;--ink-faint:#7A7468;
+    --line:#2A2620;--line-gold:rgba(200,155,92,.30);--gold:#C89B5C;--gold-soft:#E2C695;--gold-deep:#9A7438;
+    --champagne:#D8C9AE;--card:#131110;--sage:#8FA68E;--dusty:#859AC0;--terra:#C5896B;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.45),0 26px 70px rgba(0,0,0,.6);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'Mulish',sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 15% 4%, rgba(200,155,92,.10), transparent 38%),radial-gradient(circle at 92% 0%, rgba(200,155,92,.06), transparent 36%);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,h4{font-family:'Jost',sans-serif;font-weight:400;line-height:1.12;letter-spacing:-.005em;color:var(--ink)}
+
+  .top{padding:40px 0 0}
+  .brand{margin-bottom:20px}
+  .brand-word{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(34px,7vw,64px);letter-spacing:.2em;line-height:1;color:#F6F1E7;padding-left:.2em}
+  .brand-word .gd{color:var(--gold)}
+  .brand-tag{font-family:'Jost',sans-serif;font-weight:400;letter-spacing:.5em;font-size:clamp(10px,1.3vw,13px);color:var(--champagne);text-transform:uppercase;margin-top:10px;padding-left:.25em}
+  .doc-title{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line-gold);padding-bottom:20px}
+  .doc-title .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .doc-title h1{font-size:clamp(26px,3.5vw,40px);font-weight:300;margin-top:6px}
+  .doc-title h1 em{font-style:normal;color:var(--gold)}
+  .doc-title .meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink-faint);text-align:right;line-height:1.7}
+
+  .tabs{position:sticky;top:0;z-index:50;background:rgba(11,10,9,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-top:22px}
+  .tabs-inner{max-width:1080px;margin:0 auto;padding:0 28px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin}
+  .tabs-inner::-webkit-scrollbar{height:4px}
+  .tabs-inner::-webkit-scrollbar-thumb{background:var(--line-gold);border-radius:4px}
+  .tab{flex-shrink:0;background:none;border:none;color:var(--ink-faint);font-family:'Mulish',sans-serif;font-size:13.5px;font-weight:600;padding:16px 14px;cursor:pointer;border-bottom:2px solid transparent;transition:.18s;white-space:nowrap}
+  .tab:hover{color:var(--ink-soft)}
+  .tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+  .tab .tnum{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gold-deep);margin-right:6px}
+  .tab.active .tnum{color:var(--gold)}
+
+  .panel{display:none;padding:48px 0 70px;animation:fade .3s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .sec-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold);letter-spacing:.14em;font-weight:500;text-transform:uppercase}
+  .sec-title{font-size:clamp(28px,4vw,42px);margin:8px 0 8px;font-weight:300}
+  .sec-lead{font-size:18px;color:var(--ink-soft);max-width:780px;margin-bottom:34px;line-height:1.55}
+  p{margin-bottom:14px;color:var(--ink-soft)}
+  strong{color:var(--ink);font-weight:700}
+  a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid var(--line-gold)}
+  .blk{margin-top:40px}
+  h3.subh{font-size:22px;margin:34px 0 8px;font-weight:400}
+
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+  .card h4{font-size:19px;margin-bottom:6px;font-weight:500}
+
+  .socio{position:relative;overflow:hidden}
+  .socio::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px}
+  .socio.c1::before{background:var(--gold)}
+  .socio.c2::before{background:var(--sage)}
+  .socio.c3::before{background:var(--dusty)}
+  .socio.c4::before{background:var(--terra)}
+  .socio .role{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-faint);margin-top:4px}
+  .socio .area{font-family:'Jost',sans-serif;font-weight:400;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--champagne);margin:14px 0 12px}
+  .socio ul{list-style:none;font-size:14.5px}
+  .socio ul li{padding-left:18px;position:relative;margin-bottom:7px;color:var(--ink-soft);line-height:1.45}
+  .socio ul li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700;font-size:16px;line-height:1.3}
+  .socio .split{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+  .socio .split .who{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dusty);margin-bottom:4px;display:block}
+  .badge-origin{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:6px;text-transform:uppercase;font-weight:500}
+  .b-kubuz{background:rgba(133,154,192,.16);color:var(--dusty)}
+  .b-brouk{background:rgba(200,155,92,.16);color:var(--gold)}
+  .rec-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(197,137,107,.18);color:var(--terra);padding:3px 9px;border-radius:6px;font-weight:600;margin-bottom:8px}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .tbl thead th{background:#1C1813;color:var(--gold);text-align:left;padding:13px 16px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--line-gold)}
+  .tbl td{padding:12px 16px;border-top:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+  .tbl tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
+  .tbl td b{color:var(--ink)}
+  .fill{color:var(--gold-deep);font-family:'JetBrains Mono',monospace;font-size:13px}
+  .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:2px 8px;border-radius:5px;font-weight:500;letter-spacing:.04em}
+  .t-cam{background:rgba(200,155,92,.15);color:var(--gold)}
+  .t-gon{background:rgba(143,166,142,.16);color:var(--sage)}
+  .t-tec{background:rgba(133,154,192,.16);color:var(--dusty)}
+  .t-cs{background:rgba(197,137,107,.16);color:var(--terra)}
+  .t-adm{background:rgba(197,137,107,.16);color:var(--terra)}
+  .t-all{background:rgba(216,201,174,.12);color:var(--champagne)}
+  .t-board{background:rgba(200,155,92,.2);color:var(--gold-soft)}
+
+  .road{margin-top:10px}
+  .week{display:grid;grid-template-columns:140px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+  .week:first-child{border-top:none}
+  .week-label .wk{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.08em;font-weight:500;text-transform:uppercase}
+  .week-label .dates{font-family:'Jost',sans-serif;font-size:24px;font-weight:300;margin-top:4px;line-height:1.05;color:var(--ink)}
+  .week-label .focus{font-size:13px;color:var(--ink-faint);margin-top:6px}
+  .tasks{display:flex;flex-direction:column;gap:9px}
+  .task{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.4;color:var(--ink-soft)}
+  .task .tag{flex-shrink:0;margin-top:2px}
+  .milestone{background:linear-gradient(135deg,#1A150D 0%,#100D0A 60%);color:var(--ink);border:1px solid var(--line-gold);border-radius:16px;padding:30px 32px;margin:30px 0;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  .milestone::after{content:"01·07";position:absolute;right:-8px;bottom:-30px;font-family:'Jost',sans-serif;font-size:130px;font-weight:300;color:rgba(200,155,92,.07)}
+  .milestone .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .milestone h3{color:var(--gold-soft);font-size:30px;margin:8px 0 6px;position:relative;font-weight:300}
+  .milestone p{color:var(--ink-soft);position:relative;max-width:620px}
+  .milestone .ms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;position:relative}
+  .ms-item{background:rgba(200,155,92,.06);border:1px solid var(--line-gold);border-radius:10px;padding:15px}
+  .ms-item .n{font-family:'Jost',sans-serif;font-size:32px;color:var(--gold);font-weight:300}
+  .ms-item .l{font-size:13px;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+
+  .callout{border-left:2px solid var(--gold);background:rgba(200,155,92,.05);border-radius:0 12px 12px 0;padding:20px 24px;margin:20px 0}
+  .callout.teal{border-color:var(--champagne);background:rgba(216,201,174,.045)}
+  .callout.strong{border-left-width:3px;background:rgba(200,155,92,.08)}
+  .callout.terra{border-color:var(--terra);background:rgba(197,137,107,.06)}
+  .callout h4{font-size:17px;margin-bottom:6px;font-weight:500;color:var(--gold-soft)}
+  .callout.teal h4{color:var(--champagne)}
+  .callout.terra h4{color:var(--terra)}
+  .callout p{margin-bottom:6px;font-size:15px}
+  .callout p:last-child{margin-bottom:0}
+  .callout ul{margin:6px 0 0;padding-left:18px}
+  .callout ul li{font-size:14.5px;color:var(--ink-soft);margin-bottom:5px}
+
+  .entities{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;margin-bottom:30px}
+  .ent{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .ent .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+  .ent .nm{font-family:'Jost',sans-serif;font-size:20px;font-weight:400;margin:4px 0 6px;color:var(--ink)}
+  .ent.new .nm{color:var(--gold)}
+  .ent p{font-size:13.5px;margin:0;color:var(--ink-soft)}
+  .ent-arrow{display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:34px;font-weight:300;color:var(--gold)}
+
+  .gov{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
+  .gov .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+  .gov .col.board{border-top:3px solid var(--gold)}
+  .gov .col.indiv{border-top:3px solid var(--sage)}
+  .gov .col h4{font-size:18px;font-weight:500;margin-bottom:4px}
+  .gov .col .csub{font-size:13px;color:var(--ink-faint);margin-bottom:14px}
+  .gov ul{list-style:none}
+  .gov ul li{padding-left:20px;position:relative;margin-bottom:9px;font-size:14.5px;color:var(--ink-soft);line-height:1.45}
+  .gov .board ul li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:11px;top:3px}
+  .gov .indiv ul li::before{content:"›";position:absolute;left:0;color:var(--sage);font-weight:700;font-size:16px;top:-1px}
+  .gov .indiv .who{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em}
+
+  .decision{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:14px;box-shadow:var(--shadow);position:relative;padding-left:56px}
+  .decision .qn{position:absolute;left:18px;top:18px;font-family:'Jost',sans-serif;font-size:28px;color:var(--gold);font-weight:300}
+  .decision h4{font-size:16.5px;margin-bottom:5px;font-weight:500}
+  .decision p{font-size:14.5px;margin-bottom:0}
+
+  ul.clean{list-style:none;margin:6px 0 14px}
+  ul.clean li{padding-left:22px;position:relative;margin-bottom:9px;color:var(--ink-soft);line-height:1.45}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;background:var(--gold);border-radius:1px;transform:rotate(45deg)}
+
+  .num-stat{display:flex;gap:26px;flex-wrap:wrap;margin:8px 0 4px}
+  .num-stat .ns{flex:1;min-width:150px}
+  .num-stat .ns .v{font-family:'Jost',sans-serif;font-size:40px;font-weight:300;color:var(--ink);line-height:1}
+  .num-stat .ns .v em{color:var(--gold);font-style:normal}
+  .num-stat .ns .k{font-size:13px;color:var(--ink-faint);margin-top:8px}
+
+  .footer{padding:30px 0 70px;text-align:center;border-top:1px solid var(--line);margin-top:10px}
+  .footer p{font-size:13px;color:var(--ink-faint);max-width:680px;margin:0 auto 8px}
+  .footer .fbrand{font-family:'Jost',sans-serif;letter-spacing:.34em;color:var(--champagne);font-size:15px;margin-bottom:14px}
+  .footer .fbrand .gd{color:var(--gold)}
+
+  @media(max-width:860px){
+    .g2,.g3,.gov{grid-template-columns:1fr}
+    .week{grid-template-columns:1fr;gap:14px}
+    .milestone .ms-grid{grid-template-columns:1fr}
+    .num-stat{gap:18px}
+    .entities{grid-template-columns:1fr}
+    .ent-arrow{transform:rotate(90deg)}
+  }
+  @media print{
+    body{background:#0B0A09;font-size:11px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .tabs{display:none}
+    .panel{display:block!important;border-top:1px solid var(--line);padding:24px 0}
+    .card,.decision,.milestone,.tbl,.entities,.gov .col{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap top">
+  <div class="brand">
+    <div class="brand-word"><span class="gd">B</span>ROU<span class="gd">K</span></div>
+    <div class="brand-tag">Red Inmobiliaria</div>
+  </div>
+  <div class="doc-title">
+    <div>
+      <div class="eyebrow">Plan de conformación de sociedad · Confidencial</div>
+      <h1>Brouk <em>SpA</em></h1>
+    </div>
+    <div class="meta">Versión 4 · Mayo 2026<br>Arranque 01·06·2026<br>Corte 01·07·2026</div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <button class="tab active" onclick="showTab('t-resumen',this)"><span class="tnum">01</span>Resumen</button>
+    <button class="tab" onclick="showTab('t-sociedad',this)"><span class="tnum">02</span>Sociedad y socios</button>
+    <button class="tab" onclick="showTab('t-gobierno',this)"><span class="tnum">03</span>Gobierno y decisiones</button>
+    <button class="tab" onclick="showTab('t-finanzas',this)"><span class="tnum">04</span>Finanzas y traslado</button>
+    <button class="tab" onclick="showTab('t-presupuestos',this)"><span class="tnum">05</span>Presupuestos</button>
+    <button class="tab" onclick="showTab('t-roadmap',this)"><span class="tnum">06</span>Hoja de ruta</button>
+    <button class="tab" onclick="showTab('t-migracion',this)"><span class="tnum">07</span>Migración</button>
+    <button class="tab" onclick="showTab('t-legal',this)"><span class="tnum">08</span>Facturación y legal</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ===== 01 RESUMEN ===== -->
+<section class="panel active" id="t-resumen">
+  <div class="sec-num">01 — Contexto</div>
+  <h2 class="sec-title">Resumen ejecutivo</h2>
+  <p class="sec-lead">Tres integrantes de <strong>Kubuz SpA</strong> (Gonzalo Cortés, Fernando Galaz y José Miguel Villatoro) se incorporan junto a <strong>Camilo Morales</strong> para conformar una nueva sociedad, <strong>Brouk SpA</strong>. La nueva sociedad absorbe la operación, los activos, el personal y los flujos de la sociedad actual, <strong>Brouk Servicios Inmobiliarios SpA</strong>, e incorpora la capacidad de tecnología necesaria para lanzar la plataforma de Brokers.</p>
+
+  <div class="num-stat">
+    <div class="ns"><div class="v"><em>4</em></div><div class="k">socios en 4 áreas, con presupuesto autónomo</div></div>
+    <div class="ns"><div class="v">~30 días</div><div class="k">para constituir, valorizar y migrar (junio)</div></div>
+    <div class="ns"><div class="v">01·07</div><div class="k">lanzamiento de plataforma + corte de facturación</div></div>
+    <div class="ns"><div class="v">+300</div><div class="k">usuarios activos a migrar sin interrupción</div></div>
+  </div>
+
+  <div class="grid g2 blk">
+    <div class="card">
+      <h4>Qué resuelve este plan</h4>
+      <ul class="clean">
+        <li>Define la <strong>estructura societaria</strong> y los roles de los 4 socios.</li>
+        <li>Separa las <strong>decisiones del directorio</strong> de las que toma cada socio.</li>
+        <li>Establece el <strong>diagnóstico financiero</strong> y el mecanismo de traslado.</li>
+        <li>Asigna <strong>presupuestos autónomos por área</strong> y una <strong>hoja de ruta semanal</strong>.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Los dos hitos no negociables</h4>
+      <ul class="clean">
+        <li><strong>1 de julio — Plataforma Brokers en vivo</strong>, con los +300 usuarios migrados.</li>
+        <li><strong>1 de julio — Corte de facturación</strong>: todo lo facturado desde esa fecha es de Brouk SpA. Para cumplirlo, la sociedad debe estar <strong>constituida y habilitada en el SII antes del 30 de junio</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h4>Lectura clave del calendario</h4>
+    <p>El corte de facturación al 1 de julio condiciona todo: Brouk SpA tiene que existir, tener RUT, inicio de actividades y facturación electrónica operativa <em>antes</em> de esa fecha. Por eso la constitución legal y el alta tributaria se priorizan en las dos primeras semanas de junio.</p>
+  </div>
+</section>
+
+<!-- ===== 02 SOCIEDAD ===== -->
+<section class="panel" id="t-sociedad">
+  <div class="sec-num">02 — Sociedad</div>
+  <h2 class="sec-title">Estructura societaria y socios</h2>
+  <p class="sec-lead">Cuatro socios fundadores, cada uno con un área propia. Camilo aporta la operación, marca y cartera actual; el equipo de Kubuz aporta la tecnología. Fernando toma Plataforma y Estrategia Tecnológica completa; Éxito del Cliente queda en Gonzalo (necesita presencia y dedicación), y José Miguel —radicado en Valdivia— toma Administración, Finanzas y Legal, un back-office que encaja con el trabajo remoto y que hoy nadie tiene formalmente.</p>
+
+  <div class="entities">
+    <div class="ent">
+      <div class="lbl">Sociedad actual · origen</div>
+      <div class="nm">Brouk Servicios Inmobiliarios SpA</div>
+      <p>Tiene hoy la operación, los activos, el personal y los +300 usuarios. Factura hasta el 30 de junio.</p>
+    </div>
+    <div class="ent-arrow">→</div>
+    <div class="ent new">
+      <div class="lbl">Sociedad nueva · destino</div>
+      <div class="nm">Brouk SpA</div>
+      <p>Se constituye en junio. Recibe todo el traslado y factura desde el 1 de julio.</p>
+    </div>
+  </div>
+
+  <div class="grid g4">
+    <div class="card socio c1">
+      <h4>Camilo Morales</h4>
+      <div class="role">Gerente General <span class="badge-origin b-brouk">Brouk</span></div>
+      <div class="area">Comercial y Desarrollo Corporativo</div>
+      <ul>
+        <li>Ventas, captación y relación con brokers</li>
+        <li>Estrategia comercial y precios</li>
+        <li>Alianzas, expansión y nuevas líneas</li>
+        <li>Relaciones institucionales</li>
+        <li>Continuidad de la operación actual</li>
+      </ul>
+    </div>
+    <div class="card socio c2">
+      <h4>Gonzalo Cortés</h4>
+      <div class="role">Socio · Yo <span class="badge-origin b-kubuz">Kubuz</span></div>
+      <div class="area">Marketing, Operaciones y Éxito del Cliente</div>
+      <ul>
+        <li>Marketing, marca y generación de demanda</li>
+        <li>Operaciones internas y procesos</li>
+        <li>Éxito del cliente: onboarding, soporte y retención (+300)</li>
+        <li>Logística, proveedores y coordinación de producto</li>
+      </ul>
+    </div>
+    <div class="card socio c3">
+      <h4>Fernando Galaz</h4>
+      <div class="role">Socio <span class="badge-origin b-kubuz">Kubuz</span></div>
+      <div class="area">Plataforma y Estrategia Tecnológica</div>
+      <ul>
+        <li>Arquitectura, infraestructura y backend</li>
+        <li>Disponibilidad, estabilidad y escalamiento</li>
+        <li>Integraciones, seguridad y datos</li>
+        <li>Roadmap y estrategia técnica</li>
+        <li>Releases y QA de la plataforma</li>
+      </ul>
+    </div>
+    <div class="card socio c4">
+      <h4>José Miguel Villatoro</h4>
+      <div class="role">Socio <span class="badge-origin b-kubuz">Kubuz</span></div>
+      <div class="area">Administración, Finanzas y Legal</div>
+      <ul>
+        <li>Coordinación con el contador: cierres, impuestos, nómina</li>
+        <li>Gestión legal con el abogado: contratos y cumplimiento</li>
+        <li>Tesorería, control de flujo de caja y presupuestos</li>
+        <li>Administración y documentación societaria</li>
+        <li>Reporting financiero al directorio</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout terra blk">
+    <h4>Por qué esta repartición</h4>
+    <p>Fernando concentra toda la <strong>Plataforma y Estrategia Tecnológica</strong> —el frente más crítico al lanzamiento—. <strong>Éxito del Cliente queda en Gonzalo</strong>: atender, onboardear y retener a +300 brokers exige presencia y dedicación, algo que no calza con José Miguel estando en Valdivia. A él se le asigna <strong>Administración, Finanzas y Legal</strong>, un back-office que es independiente de la ubicación y que hoy nadie tiene formalmente a cargo.</p>
+    <p style="margin-top:8px"><strong>A considerar:</strong> el perfil de José Miguel es técnico, así que esta área se apoya en el <strong>contador y el abogado</strong> para la ejecución, con él como socio que la coordina y reporta. Y como Fernando queda como único socio técnico, conviene evaluar un <strong>desarrollador externo bajo Fernando</strong> y un <strong>apoyo de soporte para Éxito del Cliente bajo Gonzalo</strong> dado el volumen del día uno. Decisiones abiertas.</p>
+  </div>
+
+  <div class="callout teal">
+    <h4>Forma jurídica recomendada</h4>
+    <p>Una <strong>SpA</strong> es la figura más adecuada: responsabilidad limitada al aporte, flexibilidad de series de acciones y facilidad para ajustar socios a futuro. Como los aportes son distintos en naturaleza (operación vs. tecnología), conviene <strong>estatutos a medida</strong> + un <strong>pacto de accionistas</strong> con abogado, en vez de los estatutos estándar.</p>
+  </div>
+</section>
+
+<!-- ===== 03 GOBIERNO ===== -->
+<section class="panel" id="t-gobierno">
+  <div class="sec-num">03 — Gobierno</div>
+  <h2 class="sec-title">Gobierno y decisiones</h2>
+  <p class="sec-lead">El principio es simple: <strong>cada socio decide y ejecuta con autonomía dentro de su área y su presupuesto mensual</strong>, y lo que afecta a toda la sociedad se resuelve en el <strong>directorio</strong> (los cuatro socios). Velocidad sin perder el control de lo estructural.</p>
+
+  <div class="gov">
+    <div class="col board">
+      <h4>Decisiones del Directorio</h4>
+      <div class="csub">Requieren acuerdo de los socios en sesión de directorio / junta</div>
+      <ul>
+        <li><strong>Reparto de utilidades</strong> y política de retiros.</li>
+        <li><strong>Aumentos o disminuciones de capital.</strong></li>
+        <li><strong>Endeudamiento y financiamiento</strong> (créditos, líneas, garantías).</li>
+        <li><strong>Apoderados bancarios</strong> y montos de firma.</li>
+        <li><strong>Incorporación, salida o dilución de socios.</strong></li>
+        <li><strong>Modificación de estatutos o del pacto.</strong></li>
+        <li><strong>Presupuesto anual</strong> y presupuestos por área.</li>
+        <li><strong>Inversiones o compromisos sobre el monto umbral</strong> (ej. &gt; X UF).</li>
+        <li><strong>Contrataciones clave</strong> y dotación de nuevas funciones.</li>
+        <li><strong>Política global de precios</strong> y descuento máximo.</li>
+        <li><strong>Alianzas estratégicas, M&amp;A</strong> y nuevas líneas de negocio.</li>
+        <li><strong>Transacciones con partes relacionadas</strong> (IP de Kubuz) y venta de la sociedad.</li>
+      </ul>
+    </div>
+    <div class="col indiv">
+      <h4>Decisiones de cada socio</h4>
+      <div class="csub">Autonomía dentro del área y del presupuesto mensual aprobado</div>
+      <ul>
+        <li><span class="who">Camilo · Comercial y Desarrollo Corp.</span><br>Ejecución comercial, descuentos dentro del rango aprobado, eventos, exploración de alianzas (no vinculantes), gasto dentro de su presupuesto.</li>
+        <li><span class="who">Gonzalo · Marketing, Operaciones y Éxito del Cliente</span><br>Campañas y marca, herramientas, proveedores operativos, procesos, onboarding, soporte y retención, gasto dentro de su presupuesto.</li>
+        <li><span class="who">Fernando · Plataforma y Estrategia Tecnológica</span><br>Arquitectura, proveedores cloud/infra, decisiones técnicas, releases, QA, seguridad, gasto dentro de su presupuesto.</li>
+        <li><span class="who">José Miguel · Administración, Finanzas y Legal</span><br>Coordinación con contador y abogado, tesorería, control de presupuestos, administración, gasto dentro de su presupuesto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="subh">Matriz de responsabilidad por decisión</h3>
+  <table class="tbl">
+    <thead><tr><th>Ámbito de decisión</th><th>Lidera</th><th>Aprueba / consulta</th></tr></thead>
+    <tbody>
+      <tr><td><b>Precio y descuentos dentro del rango aprobado</b></td><td><span class="tag t-cam">Camilo</span></td><td>Gonzalo (margen)</td></tr>
+      <tr><td><b>Política global de precios y descuento máximo</b></td><td><span class="tag t-board">Directorio</span></td><td>Propone Camilo</td></tr>
+      <tr><td><b>Marketing, marca y campañas</b></td><td><span class="tag t-gon">Gonzalo</span></td><td>Camilo (alineación comercial)</td></tr>
+      <tr><td><b>Roadmap y prioridades de producto</b></td><td><span class="tag t-gon">Gonzalo</span></td><td><span class="tag t-tec">Fernando</span> (factibilidad)</td></tr>
+      <tr><td><b>Arquitectura, infra, releases y estrategia técnica</b></td><td><span class="tag t-tec">Fernando</span></td><td>Gonzalo (costo/operación)</td></tr>
+      <tr><td><b>Soporte y Éxito del Cliente (+300 usuarios)</b></td><td><span class="tag t-gon">Gonzalo</span></td><td><span class="tag t-tec">Fernando</span> (escalamiento técnico)</td></tr>
+      <tr><td><b>Administración, finanzas y legal</b></td><td><span class="tag t-adm">José Miguel</span></td><td>Contador y abogado ejecutan</td></tr>
+      <tr><td><b>Alianzas y desarrollo corporativo</b></td><td><span class="tag t-cam">Camilo</span> explora</td><td><span class="tag t-board">Directorio</span> aprueba</td></tr>
+      <tr><td><b>Operación de la cuenta bancaria y pagos</b></td><td>Apoderados (incl. <span class="tag t-adm">José Miguel</span>, finanzas)</td><td>Firma conjunta sobre el umbral</td></tr>
+      <tr><td><b>Gasto sobre el presupuesto mensual del área</b></td><td>Socio del área</td><td><span class="tag t-board">Directorio</span></td></tr>
+      <tr><td><b>Utilidades, capital, deuda, socios, IP</b></td><td>—</td><td><span class="tag t-board">Directorio</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout strong blk">
+    <h4>Reglas de gobierno a formalizar en el pacto</h4>
+    <ul>
+      <li><strong>Frecuencia:</strong> directorio mensual + extraordinarias cuando se requiera.</li>
+      <li><strong>Quórum:</strong> presencia mínima para sesionar (ej. 3 de 4).</li>
+      <li><strong>Mayorías:</strong> materias ordinarias por mayoría simple; materias relevantes (capital, IP, nuevos socios, venta) por <strong>unanimidad o supermayoría</strong>.</li>
+      <li><strong>Umbral de monto</strong> que dispara aprobación del directorio (en UF o CLP) — debe coincidir con el umbral de firma conjunta bancaria.</li>
+      <li><strong>Mecanismo de desempate</strong> si los votos quedan 2–2.</li>
+    </ul>
+  </div>
+
+  <h3 class="subh">Decisiones abiertas antes de firmar</h3>
+  <div class="decision"><span class="qn">1</span><h4>Participación accionaria</h4><p>¿Cómo se reparte la propiedad entre los 4? Depende de valorizar el aporte de Camilo (operación, marca, +300 usuarios, activos) frente al aporte de tecnología y trabajo de Kubuz. Requiere acuerdo explícito, con valorización de respaldo del contador.</p></div>
+  <div class="decision"><span class="qn">2</span><h4>Vesting / permanencia de los socios</h4><p>¿Se condiciona la entrega total de acciones a la permanencia (ej. vesting a 3–4 años)?</p></div>
+  <div class="decision"><span class="qn">3</span><h4>Propiedad intelectual de la plataforma</h4><p>¿La tecnología es de Brouk SpA, se licencia desde Kubuz, o se aporta?</p></div>
+  <div class="decision"><span class="qn">4</span><h4>Mecanismo y costo tributario del traslado</h4><p>Aporte en especie vs. compra de activos vs. continuidad: efectos en IVA, impuestos y contratos. Con el contador en Semana 1–2.</p></div>
+  <div class="decision"><span class="qn">5</span><h4>Reparto de utilidades y retiros</h4><p>¿Cómo y cuándo se reparten? ¿Los socios reciben sueldo/honorario por su rol además de su participación?</p></div>
+  <div class="decision"><span class="qn">6</span><h4>Apoderados bancarios y montos de firma</h4><p>Quiénes operan la cuenta de Brouk SpA y bajo qué esquema (firma individual hasta un monto, conjunta sobre el umbral). Ver detalle en Facturación y legal.</p></div>
+  <div class="decision"><span class="qn">7</span><h4>Apoyo para Éxito del Cliente (bajo Gonzalo)</h4><p>Atender a +300 brokers desde el día uno es un golpe de carga. ¿Se contrata una <strong>persona dedicada de soporte/CS</strong> bajo Gonzalo, además de sus funciones de marketing y operaciones?</p></div>
+  <div class="decision"><span class="qn">8</span><h4>Capacidad de desarrollo (bajo Fernando)</h4><p>Fernando queda como único socio técnico. ¿Se suma un <strong>desarrollador externo</strong> para sostener plataforma, migración y roadmap?</p></div>
+</section>
+
+<!-- ===== 04 FINANZAS ===== -->
+<section class="panel" id="t-finanzas">
+  <div class="sec-num">04 — Salud financiera y traslado</div>
+  <h2 class="sec-title">Diagnóstico financiero y de flujos</h2>
+  <p class="sec-lead">Antes de trasladar la operación hay que radiografiar Brouk Servicios Inmobiliarios SpA: qué entra, qué sale, qué activos hay y qué contratos están vigentes. Las plantillas para completar con los datos reales de Camilo están en el <strong>Excel de seguimiento</strong> (pestañas "Diagnóstico Financiero" y "Flujo de Caja"); aquí va el marco.</p>
+
+  <div class="grid g3">
+    <div class="card"><h4 style="font-size:16px">Ingresos</h4><p style="font-size:14px;margin:0">Suscripción/uso de plataforma (+300 usuarios), corretaje, eventos y otros. Separar recurrente de variable.</p></div>
+    <div class="card"><h4 style="font-size:16px">Costos</h4><p style="font-size:14px;margin:0">Arriendo, sueldos internos, honorarios externos, servicios y SaaS, bencina, eventos, hosting y honorarios del contador.</p></div>
+    <div class="card"><h4 style="font-size:16px">Activos y personal</h4><p style="font-size:14px;margin:0">Estufas, sonido, mesas, equipos e intangibles (marca, dominio, base de usuarios); contratos internos y externos.</p></div>
+  </div>
+
+  <div class="callout blk">
+    <h4>Indicadores que el Excel calcula solo</h4>
+    <p><strong>Margen mensual</strong> · <strong>Margen %</strong> · <strong>% ingreso recurrente</strong> · <strong>Runway</strong> (caja ÷ quema) · <strong>Ingreso de equilibrio</strong> y brecha. Además, una <strong>proyección de flujo de caja</strong> a 6 meses (jun–nov) con supuestos editables.</p>
+  </div>
+
+  <h3 class="subh">Mecanismo de traslado a Brouk SpA</h3>
+  <div class="grid g3" style="margin-top:8px">
+    <div class="card"><h4 style="font-size:16px">1 · Aporte en especie</h4><p style="font-size:14px;margin:0">Camilo aporta la operación/activos como capital a Brouk SpA. Define su participación, pero requiere valorización formal.</p></div>
+    <div class="card"><h4 style="font-size:16px">2 · Compra de activos y cesión de contratos</h4><p style="font-size:14px;margin:0">Brouk SpA adquiere los activos y se subroga/renueva contratos. Más limpio; revisar IVA y novación laboral.</p></div>
+    <div class="card"><h4 style="font-size:16px">3 · Continuidad por etapas</h4><p style="font-size:14px;margin:0">Brouk SpA opera desde el 1 de julio y se traspasa lo demás progresivamente, cerrando lo previo en la entidad actual.</p></div>
+  </div>
+
+  <div class="callout strong blk">
+    <h4>El contador es la pieza central de toda la transición</h4>
+    <p>No es un trámite puntual: sostiene la operación de principio a fin. Conviene incorporarlo en la Semana 1 y mantenerlo activo. Interviene en:</p>
+    <ul>
+      <li><strong>Valorización</strong> del aporte de Camilo y de los activos.</li>
+      <li><strong>Mecanismo de traslado</strong> y su tratamiento de IVA e impuestos.</li>
+      <li><strong>Inicio de actividades y facturación electrónica</strong> en el SII.</li>
+      <li><strong>Cierre contable</strong> de la entidad actual y contratos laborales.</li>
+      <li><strong>Primer cierre</strong> de Brouk SpA y marco de retiros y utilidades.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 05 PRESUPUESTOS ===== -->
+<section class="panel" id="t-presupuestos">
+  <div class="sec-num">05 — Autonomía con control</div>
+  <h2 class="sec-title">Presupuestos por área</h2>
+  <p class="sec-lead">El presupuesto mensual de cada área es de <strong>ejecución 100% autónoma</strong>: el socio responsable lo gestiona sin pedir aprobación. Solo el gasto que <strong>exceda</strong> el presupuesto mensual del área requiere acuerdo del directorio.</p>
+
+  <table class="tbl">
+    <thead><tr><th>Área</th><th>Responsable</th><th>Cubre</th><th>Presupuesto mensual (autónomo)</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag t-cam">Comercial y Des. Corp.</span></td><td>Camilo</td><td>Ventas, captación de brokers, eventos, viáticos y bencina, comisiones, alianzas</td><td class="fill">$ ________</td></tr>
+      <tr><td><span class="tag t-gon">Mkt, Ops y Éxito del Cliente</span></td><td>Gonzalo</td><td>Marketing y campañas, herramientas, procesos, soporte/CS y eventual apoyo de soporte</td><td class="fill">$ ________</td></tr>
+      <tr><td><span class="tag t-tec">Plataforma y Estrategia Tec.</span></td><td>Fernando</td><td>Cloud, infraestructura, APIs, licencias técnicas, seguridad, herramientas dev, eventual dev externo</td><td class="fill">$ ________</td></tr>
+      <tr><td><span class="tag t-adm">Administración, Finanzas y Legal</span></td><td>José Miguel</td><td>Honorarios de contador y abogado, herramientas administrativas, banca</td><td class="fill">$ ________</td></tr>
+      <tr><td><b>Total operacional</b></td><td></td><td>Fondo común: imprevistos y gastos transversales</td><td class="fill"><b>$ ________</b></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--ink-faint);margin-top:10px">El monto mensual completo de cada fila es el límite autónomo. Sobre ese monto, se requiere acuerdo del directorio (ver pestaña Gobierno).</p>
+
+  <div class="grid g2 blk">
+    <div class="callout teal">
+      <h4>Regla de oro de la autonomía</h4>
+      <p>Autonomía dentro del presupuesto, transparencia hacia el resto. Cada gasto queda registrado en un panel común (planilla compartida o el mismo CRM) para que todos vean el consumo del mes sin pedir permiso por cada compra.</p>
+    </div>
+    <div class="callout">
+      <h4>Cómo dimensionar los montos</h4>
+      <p>Una vez completado el diagnóstico financiero, asignar los presupuestos como <strong>% del ingreso recurrente proyectado</strong>, no como cifras al azar. Empezar conservador el primer trimestre y revisar al cierre de julio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 HOJA DE RUTA (incl. próximos pasos) ===== -->
+<section class="panel" id="t-roadmap">
+  <div class="sec-num">06 — Cronograma</div>
+  <h2 class="sec-title">Hoja de ruta · Junio → Julio</h2>
+  <p class="sec-lead">Cuatro semanas de junio para constituir, valorizar, presupuestar y preparar la migración. El 1 de julio es el día de corte: plataforma en vivo y facturación en Brouk SpA. El detalle actividad por actividad, con estado y % de avance, está en el Excel.</p>
+
+  <div class="road">
+    <div class="week">
+      <div class="week-label"><div class="wk">Semana 1</div><div class="dates">1 – 7 Jun</div><div class="focus">Fundaciones legales y financieras</div></div>
+      <div class="tasks">
+        <div class="task"><span class="tag t-all">Todos</span> Acuerdo sobre participación accionaria y reglas del pacto.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Contratar <b>contador</b> y abogado (estatutos a medida + pacto).</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Entregar datos reales para el diagnóstico financiero.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Consolidar diagnóstico (con el contador): margen, runway, equilibrio.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Auditoría técnica de la plataforma y requisitos del módulo Brokers.</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="week-label"><div class="wk">Semana 2</div><div class="dates">8 – 14 Jun</div><div class="focus">Constitución y dotación</div></div>
+      <div class="tasks">
+        <div class="task"><span class="tag t-all">Todos</span> Firmar constitución de <b>Brouk SpA</b> (ClaveÚnica de cada socio).</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Iniciar RUT e inicio de actividades en el SII (con el contador).</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Definir mecanismo de traslado con el contador.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Borrador de presupuestos por área.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Inventario de +300 usuarios y mapeo de datos a migrar.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Preparar <b>Éxito del Cliente</b> para el día uno: guías, mesa de ayuda y onboarding de los +300.</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="week-label"><div class="wk">Semana 3</div><div class="dates">15 – 21 Jun</div><div class="focus">Tributario, banco, plataforma y personal</div></div>
+      <div class="tasks">
+        <div class="task"><span class="tag t-adm">José Miguel</span> Habilitar <b>facturación electrónica</b>, abrir cuenta corriente y <b>registrar apoderados bancarios</b>.</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Cerrar continuidad/recontratación de personal en Brouk SpA.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Módulo Brokers en <b>staging</b> + pruebas de carga.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Script y ensayo de migración con rollback.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Comunicación a usuarios: lanzamiento y cambio de facturación.</div>
+      </div>
+    </div>
+    <div class="week">
+      <div class="week-label"><div class="wk">Semana 4</div><div class="dates">22 – 30 Jun</div><div class="focus">Ensayo final y corte</div></div>
+      <div class="tasks">
+        <div class="task"><span class="tag t-tec">Fernando</span> Migración de prueba completa (dry-run) y validación de los +300.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Checklist de salida a producción: monitoreo, alertas, contingencia.</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Recordatorio a clientes del nuevo emisor desde el 1 de julio.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Cierre contable previo (con el contador); congelar facturación al 30-jun.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Go / No-Go del lanzamiento (28–29 jun).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="eyebrow">Día de corte</div>
+    <h3>1 de julio de 2026</h3>
+    <p>Lanzamiento de la plataforma Brouk para Brokers con los +300 usuarios migrados, y entrada en vigencia de la facturación bajo Brouk SpA.</p>
+    <div class="ms-grid">
+      <div class="ms-item"><div class="n">01</div><div class="l">Plataforma Brokers en producción</div></div>
+      <div class="ms-item"><div class="n">+300</div><div class="l">usuarios activos migrados y operativos</div></div>
+      <div class="ms-item"><div class="n">$</div><div class="l">Toda factura desde hoy: Brouk SpA</div></div>
+    </div>
+  </div>
+
+  <div class="week" style="border-top:1px solid var(--line)">
+    <div class="week-label"><div class="wk">Post-lanzamiento</div><div class="dates">2 – 31 Jul</div><div class="focus">Estabilización</div></div>
+    <div class="tasks">
+      <div class="task"><span class="tag t-gon">Gonzalo</span> Soporte reforzado y atención a los +300 brokers (Éxito del Cliente).</div>
+      <div class="task"><span class="tag t-tec">Fernando</span> Monitoreo de estabilidad y ajuste de capacidad.</div>
+      <div class="task"><span class="tag t-adm">José Miguel</span> Primer cierre financiero (con el contador) y revisión de presupuestos.</div>
+      <div class="task"><span class="tag t-cam">Camilo</span> Confirmar 100% de facturación por Brouk SpA; cerrar entidad anterior.</div>
+    </div>
+  </div>
+
+  <h3 class="subh" style="margin-top:44px">Próximos pasos inmediatos</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h4>Para arrancar el 1 de junio</h4>
+      <ul class="clean">
+        <li>Reunión de los 4 para cerrar participación accionaria y reglas del pacto.</li>
+        <li>Contratar <strong>contador</strong> y abogado esta misma semana (ruta crítica).</li>
+        <li>Camilo entrega los datos para el diagnóstico financiero (Excel).</li>
+        <li>Preparar el <strong>Éxito del Cliente</strong> (Gonzalo) para los +300 usuarios y evaluar apoyo de soporte.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Para no fallar el 1 de julio</h4>
+      <ul class="clean">
+        <li>Constituir Brouk SpA y habilitar facturación electrónica en SII en las dos primeras semanas de junio.</li>
+        <li>Registrar los apoderados bancarios al abrir la cuenta.</li>
+        <li>Tener el módulo Brokers en staging para mediados de junio.</li>
+        <li>Ensayar la migración completa antes del corte real.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout blk">
+    <h4>Nota importante</h4>
+    <p>Este documento es un plan operativo y estratégico, no asesoría legal ni tributaria. La estructura societaria, el mecanismo de traslado de activos y personal, el reparto accionario y el esquema de apoderados deben validarse con un <strong>abogado y un contador</strong> antes de firmar. No soy abogado ni contador.</p>
+  </div>
+</section>
+
+<!-- ===== 07 MIGRACIÓN ===== -->
+<section class="panel" id="t-migracion">
+  <div class="sec-num">07 — Operación crítica</div>
+  <h2 class="sec-title">Migración de +300 usuarios</h2>
+  <p class="sec-lead">Migrar la base activa sin interrumpir el servicio es el riesgo operativo más alto del plan. Se trabaja en tres fases con un plan de rollback siempre disponible. Fernando lidera la migración técnica; Gonzalo (Éxito del Cliente) sostiene la atención a los +300.</p>
+  <div class="grid g3">
+    <div class="card socio c3">
+      <h4 style="font-size:17px">Pre-migración · Junio</h4>
+      <ul class="clean" style="font-size:14px">
+        <li>Inventario y limpieza de la base de usuarios</li>
+        <li>Mapeo de datos origen → destino</li>
+        <li>Ambiente de staging y pruebas de carga</li>
+        <li>Comunicación anticipada a usuarios</li>
+        <li>Definir ventana y plan de rollback</li>
+      </ul>
+    </div>
+    <div class="card socio c1">
+      <h4 style="font-size:17px">Corte · 30 Jun – 1 Jul</h4>
+      <ul class="clean" style="font-size:14px">
+        <li>Ventana de migración (idealmente de noche)</li>
+        <li>Carga de datos y verificación de integridad</li>
+        <li>Validación de accesos de los +300</li>
+        <li>Soporte en vivo desde el minuto cero</li>
+        <li>Go/No-Go con criterio de reversa claro</li>
+      </ul>
+    </div>
+    <div class="card socio c2">
+      <h4 style="font-size:17px">Post-migración · Julio</h4>
+      <ul class="clean" style="font-size:14px">
+        <li>Monitoreo intensivo primeras 72 h</li>
+        <li>Mesa de ayuda reforzada (Gonzalo · Éxito del Cliente)</li>
+        <li>Métricas de adopción y activación</li>
+        <li>Iteración rápida sobre incidencias</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout teal blk">
+    <h4>Relación con la tecnología de Kubuz — decisión a cerrar</h4>
+    <p>Si la plataforma de Brokers se construye sobre tecnología o IP de Kubuz SpA, debe quedar formalizado <strong>cómo se licencia o transfiere esa propiedad intelectual</strong> entre Kubuz y Brouk SpA. Se resuelve en el directorio y se deja en el pacto, porque tres de los cuatro socios provienen de Kubuz.</p>
+  </div>
+</section>
+
+<!-- ===== 08 FACTURACIÓN Y LEGAL ===== -->
+<section class="panel" id="t-legal">
+  <div class="sec-num">08 — Corte tributario y legal</div>
+  <h2 class="sec-title">Facturación, banco y pasos legales</h2>
+  <p class="sec-lead">Regla simple: hasta el 30 de junio factura Brouk Servicios Inmobiliarios SpA; desde el 1 de julio, Brouk SpA. Para que funcione, Brouk SpA debe estar 100% habilitada en el SII —y con su cuenta y apoderados operativos— antes del corte.</p>
+  <table class="tbl">
+    <thead><tr><th>Hito</th><th>Antes del 30 Jun</th><th>Desde el 1 Jul</th></tr></thead>
+    <tbody>
+      <tr><td><b>Emisor de facturas</b></td><td>Brouk Servicios Inmobiliarios SpA</td><td>Brouk SpA</td></tr>
+      <tr><td><b>Suscripciones / cobros recurrentes</b></td><td>Cuenta actual</td><td>Migrados a Brouk SpA</td></tr>
+      <tr><td><b>Datos tributarios a clientes</b></td><td>Vigentes</td><td>Comunicar nuevo RUT y razón social</td></tr>
+      <tr><td><b>Facturación electrónica SII</b></td><td>—</td><td>Habilitada y probada antes del corte</td></tr>
+      <tr><td><b>Cuenta bancaria de recaudación</b></td><td>Actual</td><td>Cuenta corriente Brouk SpA con apoderados</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <h4>Riesgo a vigilar</h4>
+    <p>Cobros recurrentes (suscripciones, tarjetas, mandatos PAC/PAT) que sigan apuntando a la entidad antigua después del corte. Hay que reapuntar los medios de pago a Brouk SpA <strong>antes</strong> del 1 de julio o programar el cambio para esa fecha exacta.</p>
+  </div>
+
+  <h3 class="subh">Apoderados y operación bancaria</h3>
+  <p>Al abrir la cuenta corriente de Brouk SpA hay que designar a los <strong>apoderados</strong>: quiénes pueden operarla y bajo qué esquema de firmas. Esquema recomendado (a confirmar por el directorio y formalizar con el poder ante el banco):</p>
+  <table class="tbl">
+    <thead><tr><th>Esquema</th><th>Quién firma</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td><b>Firma individual</b></td><td>Camilo o Gonzalo</td><td>Operaciones corrientes hasta un monto X (pagos a proveedores, sueldos, gastos del giro)</td></tr>
+      <tr><td><b>Firma conjunta</b> (2 apoderados)</td><td>Camilo + Gonzalo</td><td>Transferencias o compromisos <b>sobre el monto X</b>, alineado con el umbral del directorio</td></tr>
+      <tr><td><b>Apoderados designados</b></td><td>Camilo · Gonzalo · José Miguel</td><td>José Miguel es candidato natural por liderar Finanzas; la banca digital permite operar desde Valdivia</td></tr>
+    </tbody>
+  </table>
+  <div class="callout teal">
+    <h4>Criterios</h4>
+    <p>Más control → todas las firmas conjuntas. Más agilidad → individual con un umbral más alto. Recomiendo individual para el día a día y conjunta sobre el umbral, <strong>coincidiendo con el monto que dispara aprobación del directorio</strong> para que ambos límites sean el mismo. Los nombres exactos y el monto son decisión del directorio (decisión abierta #6).</p>
+  </div>
+
+  <h3 class="subh">Pasos legales y administrativos</h3>
+  <ul class="clean">
+    <li><strong>Verificar disponibilidad del nombre "Brouk SpA"</strong> en el Registro de Empresas y Sociedades (el actual es Brouk Servicios Inmobiliarios SpA).</li>
+    <li><strong>Definir estatutos y pacto de accionistas</strong> con abogado: objeto social, series de acciones, administración, reglas de gobierno, entrada/salida de socios e IP.</li>
+    <li><strong>Constituir Brouk SpA</strong> — escritura a medida ante notario, o vía <a href="https://www.registrodeempresasysociedades.cl">registrodeempresasysociedades.cl</a> con ClaveÚnica si se usaran estatutos estándar.</li>
+    <li><strong>Obtener RUT e inicio de actividades</strong> en el SII (con el contador).</li>
+    <li><strong>Habilitar facturación electrónica</strong> en el SII — paso crítico para el corte del 1 de julio.</li>
+    <li><strong>Abrir cuenta corriente y registrar apoderados</strong> a nombre de Brouk SpA, con el esquema de firmas acordado.</li>
+    <li><strong>Formalizar el traslado</strong> de activos, contratos y personal según el mecanismo elegido.</li>
+  </ul>
+  <div class="callout teal">
+    <h4>Nota sobre representación legal</h4>
+    <p>Para representar legalmente a la sociedad ante el SII y ser apoderado bancario se requiere ser chileno o extranjero con visa definitiva o temporaria habilitante. Confirmar la situación de cada socio antes de asignar estos roles.</p>
+  </div>
+</section>
+
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fbrand"><span class="gd">B</span>ROU<span class="gd">K</span></div>
+    <p><strong>Brouk SpA</strong> — Plan de conformación de sociedad</p>
+    <p>Documento de trabajo confidencial · Versión 4 · Mayo 2026 · Sujeto a validación legal y tributaria</p>
+  </div>
+</footer>
+
+<script>
+function showTab(id, btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  document.querySelector('.tabs').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
