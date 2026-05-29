@@ -80,6 +80,11 @@
   .presu-amt{font-family:'JetBrains Mono',monospace;font-size:21px;color:var(--gold-deep);margin-bottom:12px;letter-spacing:.02em}
   .presu-cubre{font-size:13px;color:var(--ink-soft);line-height:1.5}
   .presu-cubre b{color:var(--champagne);font-weight:600;display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+  .presu-list{list-style:none;margin:12px 0 0;font-size:13px}
+  .presu-list li{padding-left:16px;position:relative;margin-bottom:6px;color:var(--ink-soft);line-height:1.42}
+  .presu-list li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700}
+  .presu-auto{margin-top:13px;padding-top:11px;border-top:1px solid var(--line-gold);font-size:12.5px;color:var(--ink-faint);line-height:1.46}
+  .presu-auto b{color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
   @media(max-width:680px){.socio-body{grid-template-columns:1fr;gap:14px}}
   .regla-oro{display:flex;gap:20px;align-items:center;background:linear-gradient(135deg,#1A150D 0%,#100D0A 70%);border:1px solid var(--line-gold);border-left:4px solid var(--gold);border-radius:14px;padding:24px 28px;margin:24px 0;box-shadow:var(--shadow-lg)}
   .regla-oro .ro-mark{flex-shrink:0;font-family:'Jost',sans-serif;font-size:42px;color:var(--gold);line-height:1}
@@ -313,7 +318,16 @@
         </ul>
         <div class="presu">
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
-          <div class="presu-cubre"><b>Cubre</b>Ventas, captación de brokers, eventos, viáticos y bencina, comisiones, alianzas.</div>
+          <ul class="presu-list">
+            <li>Captación y prospección de brokers: visitas, reuniones y demos comerciales</li>
+            <li>Descuentos y condiciones especiales <strong>dentro del rango aprobado</strong></li>
+            <li>Eventos comerciales, ferias y actividades de networking</li>
+            <li>Viáticos, traslados y bencina del frente comercial</li>
+            <li>Comisiones e incentivos de venta según el esquema acordado</li>
+            <li>Material de venta, propuestas y herramientas comerciales (CRM)</li>
+            <li>Exploración de alianzas no vinculantes y relaciones institucionales</li>
+          </ul>
+          <div class="presu-auto"><b>Rango de autonomía</b>Decide y ejecuta toda la operación comercial dentro del presupuesto. Pasan al directorio: la política global de precios y el descuento máximo, las alianzas vinculantes y cualquier compromiso sobre el monto umbral.</div>
         </div>
       </div>
     </div>
@@ -330,7 +344,16 @@
         </ul>
         <div class="presu">
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
-          <div class="presu-cubre"><b>Cubre</b>Marketing y campañas, herramientas, procesos, soporte/CS y eventual apoyo de soporte.</div>
+          <ul class="presu-list">
+            <li>Campañas y pauta de marketing (digital, redes, contenidos, SEO/SEM)</li>
+            <li>Marca: diseño, material gráfico y producción audiovisual</li>
+            <li>Herramientas de marketing y analítica (automatización, email, CRM)</li>
+            <li>Procesos internos, documentación y proveedores operativos</li>
+            <li>Onboarding y mesa de ayuda de los +300 brokers</li>
+            <li>Programas de retención, fidelización y comunicación a usuarios</li>
+            <li>Eventual contratación de apoyo de soporte/CS dentro del presupuesto</li>
+          </ul>
+          <div class="presu-auto"><b>Rango de autonomía</b>Define y ejecuta marketing, operaciones y éxito del cliente dentro del presupuesto. Pasan al directorio: contrataciones clave de planta y compromisos sobre el monto umbral; coordina con Camilo la alineación comercial de las campañas.</div>
         </div>
       </div>
     </div>
@@ -348,7 +371,16 @@
         </ul>
         <div class="presu">
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
-          <div class="presu-cubre"><b>Cubre</b>Cloud, infraestructura, APIs, licencias técnicas, seguridad, herramientas dev, eventual dev externo.</div>
+          <ul class="presu-list">
+            <li>Proveedores cloud e infraestructura (hosting, servidores, CDN, base de datos)</li>
+            <li>Licencias y herramientas de desarrollo (repos, CI/CD, monitoreo, logging)</li>
+            <li>APIs e integraciones de terceros (pagos, datos, comunicaciones)</li>
+            <li>Seguridad: certificados, respaldos y herramientas de protección</li>
+            <li>Ambientes de staging, QA y pruebas de carga</li>
+            <li>Gestión de releases y ciclo de despliegue</li>
+            <li>Eventual contratación de desarrollador externo dentro del presupuesto</li>
+          </ul>
+          <div class="presu-auto"><b>Rango de autonomía</b>Decide arquitectura, infra, proveedores técnicos y releases dentro del presupuesto. Pasan al directorio: contrataciones clave y compromisos sobre el monto umbral; coordina con Gonzalo el costo/operación de las decisiones de mayor impacto.</div>
         </div>
       </div>
     </div>
@@ -366,7 +398,16 @@
         </ul>
         <div class="presu">
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
-          <div class="presu-cubre"><b>Cubre</b>Honorarios de contador y abogado, herramientas administrativas, banca.</div>
+          <ul class="presu-list">
+            <li>Honorarios del contador: cierres, impuestos y nómina</li>
+            <li>Honorarios del abogado: contratos y cumplimiento</li>
+            <li>Software de tesorería, facturación y control de gastos</li>
+            <li>Herramientas administrativas y gestión documental</li>
+            <li>Gastos bancarios y de operación financiera</li>
+            <li>Reporting y consolidación financiera al directorio</li>
+            <li>Trámites y mantención societaria al día</li>
+          </ul>
+          <div class="presu-auto"><b>Rango de autonomía</b>Coordina contador y abogado y gestiona la tesorería dentro del presupuesto. Pasan al directorio: endeudamiento, apoderados y montos de firma, presupuesto anual y cualquier compromiso sobre el monto umbral.</div>
         </div>
       </div>
     </div>
