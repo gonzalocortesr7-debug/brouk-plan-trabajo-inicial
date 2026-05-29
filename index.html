@@ -87,6 +87,13 @@
   .regla-oro .ro-body h4{font-size:21px;font-weight:400;color:var(--gold-soft);margin-bottom:6px}
   .regla-oro .ro-body p{font-size:15.5px;color:var(--ink-soft);margin:0;line-height:1.5}
   @media(max-width:680px){.regla-oro{flex-direction:column;align-items:flex-start;gap:12px}}
+  .anexo{display:flex;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line-gold);border-radius:14px;padding:24px 28px;margin:24px 0 0;box-shadow:var(--shadow);text-decoration:none;border-bottom:1px solid var(--line-gold);transition:.18s}
+  .anexo:hover{border-color:var(--gold);background:rgba(200,155,92,.05);transform:translateY(-1px)}
+  .anexo .anexo-ic{flex-shrink:0;width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:26px;color:var(--gold);background:rgba(200,155,92,.1);border:1px solid var(--line-gold);border-radius:12px}
+  .anexo .anexo-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+  .anexo .anexo-title{font-family:'Jost',sans-serif;font-size:20px;font-weight:400;color:var(--ink);margin-bottom:6px}
+  .anexo p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.5}
+  @media(max-width:680px){.anexo{flex-direction:column;align-items:flex-start;gap:14px}}
   .badge-origin{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:6px;text-transform:uppercase;font-weight:500}
   .b-kubuz{background:rgba(133,154,192,.16);color:var(--dusty)}
   .b-brouk{background:rgba(200,155,92,.16);color:var(--gold)}
@@ -260,6 +267,15 @@
     <h4>Lectura clave del calendario</h4>
     <p>El corte de facturación al 1 de julio condiciona todo: Brouk SpA tiene que existir, tener RUT, inicio de actividades y facturación electrónica operativa <em>antes</em> de esa fecha. Por eso la constitución legal y el alta tributaria se priorizan en las dos primeras semanas de junio.</p>
   </div>
+
+  <a class="anexo" href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">
+    <div class="anexo-ic">↗</div>
+    <div class="anexo-body">
+      <div class="anexo-eyebrow">Anexo · Documento de seguimiento</div>
+      <div class="anexo-title">Excel de seguimiento — Brouk SpA</div>
+      <p>Planilla de trabajo con el diagnóstico financiero, la proyección de flujo de caja, los presupuestos por área y la hoja de ruta detallada (estado y % de avance). Se completa con los datos reales de la operación.</p>
+    </div>
+  </a>
 </section>
 
 <!-- ===== 02 SOCIEDAD ===== -->
@@ -467,7 +483,7 @@
 <section class="panel" id="t-finanzas">
   <div class="sec-num">04 — Salud financiera y traslado</div>
   <h2 class="sec-title">Diagnóstico financiero y de flujos</h2>
-  <p class="sec-lead">Antes de trasladar la operación hay que radiografiar Brouk Servicios Inmobiliarios SpA: qué entra, qué sale, qué activos hay y qué contratos están vigentes. Las plantillas para completar con los datos reales de Camilo están en el <strong>Excel de seguimiento</strong> (pestañas "Diagnóstico Financiero" y "Flujo de Caja"); aquí va el marco.</p>
+  <p class="sec-lead">Antes de trasladar la operación hay que radiografiar Brouk Servicios Inmobiliarios SpA: qué entra, qué sale, qué activos hay y qué contratos están vigentes. Las plantillas para completar con los datos reales de Camilo están en el <strong><a href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">Excel de seguimiento</a></strong> (pestañas "Diagnóstico Financiero" y "Flujo de Caja"); aquí va el marco.</p>
 
   <div class="grid g3">
     <div class="card"><h4 style="font-size:16px">Ingresos</h4><p style="font-size:14px;margin:0">Suscripción/uso de plataforma (+300 usuarios), corretaje, eventos y otros. Separar recurrente de variable.</p></div>
@@ -504,7 +520,7 @@
 <section class="panel" id="t-roadmap">
   <div class="sec-num">05 — Cronograma</div>
   <h2 class="sec-title">Hoja de ruta · Junio → Julio</h2>
-  <p class="sec-lead">Cuatro semanas de junio para constituir, valorizar, presupuestar y preparar la migración. El 1 de julio es el día de corte: plataforma en vivo y facturación en Brouk SpA. El detalle actividad por actividad, con estado y % de avance, está en el Excel.</p>
+  <p class="sec-lead">Cuatro semanas de junio para constituir, valorizar, presupuestar y preparar la migración. El 1 de julio es el día de corte: plataforma en vivo y facturación en Brouk SpA. El detalle actividad por actividad, con estado y % de avance, está en el <a href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">Excel de seguimiento</a>.</p>
 
   <div class="road">
     <div class="week">
@@ -697,6 +713,7 @@
   <div class="wrap">
     <div class="fbrand"><span class="gd">B</span>ROU<span class="gd">K</span></div>
     <p><strong>Brouk SpA</strong> — Plan de conformación de sociedad</p>
+    <p>Anexo: <a href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">Excel de seguimiento</a> (diagnóstico financiero, flujo de caja, presupuestos y hoja de ruta detallada)</p>
     <p>Documento de trabajo confidencial · Versión 4 · Mayo 2026 · Sujeto a validación legal y tributaria</p>
   </div>
 </footer>
