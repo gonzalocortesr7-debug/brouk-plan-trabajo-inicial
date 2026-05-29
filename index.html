@@ -74,6 +74,19 @@
   .socio ul li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700;font-size:16px;line-height:1.3}
   .socio .split{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
   .socio .split .who{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dusty);margin-bottom:4px;display:block}
+  .socio-body{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:start;margin-top:4px}
+  .presu{background:rgba(200,155,92,.05);border:1px solid var(--line-gold);border-radius:10px;padding:16px 18px}
+  .presu-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .presu-amt{font-family:'JetBrains Mono',monospace;font-size:21px;color:var(--gold-deep);margin-bottom:12px;letter-spacing:.02em}
+  .presu-cubre{font-size:13px;color:var(--ink-soft);line-height:1.5}
+  .presu-cubre b{color:var(--champagne);font-weight:600;display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+  @media(max-width:680px){.socio-body{grid-template-columns:1fr;gap:14px}}
+  .regla-oro{display:flex;gap:20px;align-items:center;background:linear-gradient(135deg,#1A150D 0%,#100D0A 70%);border:1px solid var(--line-gold);border-left:4px solid var(--gold);border-radius:14px;padding:24px 28px;margin:24px 0;box-shadow:var(--shadow-lg)}
+  .regla-oro .ro-mark{flex-shrink:0;font-family:'Jost',sans-serif;font-size:42px;color:var(--gold);line-height:1}
+  .regla-oro .ro-body .ro-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .regla-oro .ro-body h4{font-size:21px;font-weight:400;color:var(--gold-soft);margin-bottom:6px}
+  .regla-oro .ro-body p{font-size:15.5px;color:var(--ink-soft);margin:0;line-height:1.5}
+  @media(max-width:680px){.regla-oro{flex-direction:column;align-items:flex-start;gap:12px}}
   .badge-origin{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:6px;text-transform:uppercase;font-weight:500}
   .b-kubuz{background:rgba(133,154,192,.16);color:var(--dusty)}
   .b-brouk{background:rgba(200,155,92,.16);color:var(--gold)}
@@ -203,10 +216,9 @@
     <button class="tab" onclick="showTab('t-sociedad',this)"><span class="tnum">02</span>Sociedad y socios</button>
     <button class="tab" onclick="showTab('t-gobierno',this)"><span class="tnum">03</span>Gobierno y decisiones</button>
     <button class="tab" onclick="showTab('t-finanzas',this)"><span class="tnum">04</span>Finanzas y traslado</button>
-    <button class="tab" onclick="showTab('t-presupuestos',this)"><span class="tnum">05</span>Presupuestos</button>
-    <button class="tab" onclick="showTab('t-roadmap',this)"><span class="tnum">06</span>Hoja de ruta</button>
-    <button class="tab" onclick="showTab('t-migracion',this)"><span class="tnum">07</span>Migración</button>
-    <button class="tab" onclick="showTab('t-legal',this)"><span class="tnum">08</span>Facturación y legal</button>
+    <button class="tab" onclick="showTab('t-roadmap',this)"><span class="tnum">05</span>Hoja de ruta</button>
+    <button class="tab" onclick="showTab('t-migracion',this)"><span class="tnum">06</span>Migración</button>
+    <button class="tab" onclick="showTab('t-legal',this)"><span class="tnum">07</span>Facturación y legal</button>
   </div>
 </nav>
 
@@ -275,49 +287,91 @@
       <h4>Camilo Morales</h4>
       <div class="role">Gerente General <span class="badge-origin b-brouk">Brouk</span></div>
       <div class="area">Comercial y Desarrollo Corporativo</div>
-      <ul>
-        <li>Ventas, captación y relación con brokers</li>
-        <li>Estrategia comercial y precios</li>
-        <li>Alianzas, expansión y nuevas líneas</li>
-        <li>Relaciones institucionales</li>
-        <li>Continuidad de la operación actual</li>
-      </ul>
+      <div class="socio-body">
+        <ul>
+          <li>Ventas, captación y relación con brokers</li>
+          <li>Estrategia comercial y precios</li>
+          <li>Alianzas, expansión y nuevas líneas</li>
+          <li>Relaciones institucionales</li>
+          <li>Continuidad de la operación actual</li>
+        </ul>
+        <div class="presu">
+          <div class="presu-lbl">Presupuesto mensual · autónomo</div>
+          <div class="presu-amt">$ ________</div>
+          <div class="presu-cubre"><b>Cubre</b>Ventas, captación de brokers, eventos, viáticos y bencina, comisiones, alianzas.</div>
+        </div>
+      </div>
     </div>
     <div class="card socio c2">
       <h4>Gonzalo Cortés</h4>
       <div class="role">Socio · Yo <span class="badge-origin b-kubuz">Kubuz</span></div>
       <div class="area">Marketing, Operaciones y Éxito del Cliente</div>
-      <ul>
-        <li>Marketing, marca y generación de demanda</li>
-        <li>Operaciones internas y procesos</li>
-        <li>Éxito del cliente: onboarding, soporte y retención (+300)</li>
-        <li>Logística, proveedores y coordinación de producto</li>
-      </ul>
+      <div class="socio-body">
+        <ul>
+          <li>Marketing, marca y generación de demanda</li>
+          <li>Operaciones internas y procesos</li>
+          <li>Éxito del cliente: onboarding, soporte y retención (+300)</li>
+          <li>Logística, proveedores y coordinación de producto</li>
+        </ul>
+        <div class="presu">
+          <div class="presu-lbl">Presupuesto mensual · autónomo</div>
+          <div class="presu-amt">$ ________</div>
+          <div class="presu-cubre"><b>Cubre</b>Marketing y campañas, herramientas, procesos, soporte/CS y eventual apoyo de soporte.</div>
+        </div>
+      </div>
     </div>
     <div class="card socio c3">
       <h4>Fernando Galaz</h4>
       <div class="role">Socio <span class="badge-origin b-kubuz">Kubuz</span></div>
       <div class="area">Plataforma y Estrategia Tecnológica</div>
-      <ul>
-        <li>Arquitectura, infraestructura y backend</li>
-        <li>Disponibilidad, estabilidad y escalamiento</li>
-        <li>Integraciones, seguridad y datos</li>
-        <li>Roadmap y estrategia técnica</li>
-        <li>Releases y QA de la plataforma</li>
-      </ul>
+      <div class="socio-body">
+        <ul>
+          <li>Arquitectura, infraestructura y backend</li>
+          <li>Disponibilidad, estabilidad y escalamiento</li>
+          <li>Integraciones, seguridad y datos</li>
+          <li>Roadmap y estrategia técnica</li>
+          <li>Releases y QA de la plataforma</li>
+        </ul>
+        <div class="presu">
+          <div class="presu-lbl">Presupuesto mensual · autónomo</div>
+          <div class="presu-amt">$ ________</div>
+          <div class="presu-cubre"><b>Cubre</b>Cloud, infraestructura, APIs, licencias técnicas, seguridad, herramientas dev, eventual dev externo.</div>
+        </div>
+      </div>
     </div>
     <div class="card socio c4">
       <h4>José Miguel Villatoro</h4>
       <div class="role">Socio <span class="badge-origin b-kubuz">Kubuz</span></div>
       <div class="area">Administración, Finanzas y Legal</div>
-      <ul>
-        <li>Coordinación con el contador: cierres, impuestos, nómina</li>
-        <li>Gestión legal con el abogado: contratos y cumplimiento</li>
-        <li>Tesorería, control de flujo de caja y presupuestos</li>
-        <li>Administración y documentación societaria</li>
-        <li>Reporting financiero al directorio</li>
-      </ul>
+      <div class="socio-body">
+        <ul>
+          <li>Coordinación con el contador: cierres, impuestos, nómina</li>
+          <li>Gestión legal con el abogado: contratos y cumplimiento</li>
+          <li>Tesorería, control de flujo de caja y presupuestos</li>
+          <li>Administración y documentación societaria</li>
+          <li>Reporting financiero al directorio</li>
+        </ul>
+        <div class="presu">
+          <div class="presu-lbl">Presupuesto mensual · autónomo</div>
+          <div class="presu-amt">$ ________</div>
+          <div class="presu-cubre"><b>Cubre</b>Honorarios de contador y abogado, herramientas administrativas, banca.</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="regla-oro blk">
+    <div class="ro-mark">◆</div>
+    <div class="ro-body">
+      <div class="ro-eyebrow">Regla de oro</div>
+      <h4>Autonomía dentro del presupuesto, transparencia hacia el resto.</h4>
+      <p>Cada socio ejecuta su presupuesto mensual <strong>sin pedir aprobación</strong>; solo lo que <strong>excede</strong> ese monto pasa por el directorio. A cambio, cada gasto queda registrado en un panel común para que todos vean el consumo del mes sin pedir permiso por cada compra.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h4>Cómo dimensionar los montos</h4>
+    <p>Una vez completado el diagnóstico financiero, asignar los presupuestos como <strong>% del ingreso recurrente proyectado</strong>, no como cifras al azar. Empezar conservador el primer trimestre y revisar al cierre de julio. Existe además un <strong>fondo común</strong> para imprevistos y gastos transversales.</p>
   </div>
 
   <div class="callout terra blk">
@@ -446,39 +500,9 @@
   </div>
 </section>
 
-<!-- ===== 05 PRESUPUESTOS ===== -->
-<section class="panel" id="t-presupuestos">
-  <div class="sec-num">05 — Autonomía con control</div>
-  <h2 class="sec-title">Presupuestos por área</h2>
-  <p class="sec-lead">El presupuesto mensual de cada área es de <strong>ejecución 100% autónoma</strong>: el socio responsable lo gestiona sin pedir aprobación. Solo el gasto que <strong>exceda</strong> el presupuesto mensual del área requiere acuerdo del directorio.</p>
-
-  <table class="tbl">
-    <thead><tr><th>Área</th><th>Responsable</th><th>Cubre</th><th>Presupuesto mensual (autónomo)</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tag t-cam">Comercial y Des. Corp.</span></td><td>Camilo</td><td>Ventas, captación de brokers, eventos, viáticos y bencina, comisiones, alianzas</td><td class="fill">$ ________</td></tr>
-      <tr><td><span class="tag t-gon">Mkt, Ops y Éxito del Cliente</span></td><td>Gonzalo</td><td>Marketing y campañas, herramientas, procesos, soporte/CS y eventual apoyo de soporte</td><td class="fill">$ ________</td></tr>
-      <tr><td><span class="tag t-tec">Plataforma y Estrategia Tec.</span></td><td>Fernando</td><td>Cloud, infraestructura, APIs, licencias técnicas, seguridad, herramientas dev, eventual dev externo</td><td class="fill">$ ________</td></tr>
-      <tr><td><span class="tag t-adm">Administración, Finanzas y Legal</span></td><td>José Miguel</td><td>Honorarios de contador y abogado, herramientas administrativas, banca</td><td class="fill">$ ________</td></tr>
-      <tr><td><b>Total operacional</b></td><td></td><td>Fondo común: imprevistos y gastos transversales</td><td class="fill"><b>$ ________</b></td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:13px;color:var(--ink-faint);margin-top:10px">El monto mensual completo de cada fila es el límite autónomo. Sobre ese monto, se requiere acuerdo del directorio (ver pestaña Gobierno).</p>
-
-  <div class="grid g2 blk">
-    <div class="callout teal">
-      <h4>Regla de oro de la autonomía</h4>
-      <p>Autonomía dentro del presupuesto, transparencia hacia el resto. Cada gasto queda registrado en un panel común (planilla compartida o el mismo CRM) para que todos vean el consumo del mes sin pedir permiso por cada compra.</p>
-    </div>
-    <div class="callout">
-      <h4>Cómo dimensionar los montos</h4>
-      <p>Una vez completado el diagnóstico financiero, asignar los presupuestos como <strong>% del ingreso recurrente proyectado</strong>, no como cifras al azar. Empezar conservador el primer trimestre y revisar al cierre de julio.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 06 HOJA DE RUTA (incl. próximos pasos) ===== -->
+<!-- ===== 05 HOJA DE RUTA (incl. próximos pasos) ===== -->
 <section class="panel" id="t-roadmap">
-  <div class="sec-num">06 — Cronograma</div>
+  <div class="sec-num">05 — Cronograma</div>
   <h2 class="sec-title">Hoja de ruta · Junio → Julio</h2>
   <p class="sec-lead">Cuatro semanas de junio para constituir, valorizar, presupuestar y preparar la migración. El 1 de julio es el día de corte: plataforma en vivo y facturación en Brouk SpA. El detalle actividad por actividad, con estado y % de avance, está en el Excel.</p>
 
@@ -576,7 +600,7 @@
 
 <!-- ===== 07 MIGRACIÓN ===== -->
 <section class="panel" id="t-migracion">
-  <div class="sec-num">07 — Operación crítica</div>
+  <div class="sec-num">06 — Operación crítica</div>
   <h2 class="sec-title">Migración de +300 usuarios</h2>
   <p class="sec-lead">Migrar la base activa sin interrumpir el servicio es el riesgo operativo más alto del plan. Se trabaja en tres fases con un plan de rollback siempre disponible. Fernando lidera la migración técnica; Gonzalo (Éxito del Cliente) sostiene la atención a los +300.</p>
   <div class="grid g3">
@@ -618,7 +642,7 @@
 
 <!-- ===== 08 FACTURACIÓN Y LEGAL ===== -->
 <section class="panel" id="t-legal">
-  <div class="sec-num">08 — Corte tributario y legal</div>
+  <div class="sec-num">07 — Corte tributario y legal</div>
   <h2 class="sec-title">Facturación, banco y pasos legales</h2>
   <p class="sec-lead">Regla simple: hasta el 30 de junio factura Brouk Servicios Inmobiliarios SpA; desde el 1 de julio, Brouk SpA. Para que funcione, Brouk SpA debe estar 100% habilitada en el SII —y con su cuenta y apoderados operativos— antes del corte.</p>
   <table class="tbl">
