@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan de Conformación — Brouk SpA</title>
+<title>Plan por Etapas — Brouk SpA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Mulish:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .sec-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold);letter-spacing:.14em;font-weight:500;text-transform:uppercase}
   .sec-title{font-size:clamp(28px,4vw,42px);margin:8px 0 8px;font-weight:300}
-  .sec-lead{font-size:18px;color:var(--ink-soft);max-width:780px;margin-bottom:34px;line-height:1.55}
+  .sec-lead{font-size:18px;color:var(--ink-soft);max-width:820px;margin-bottom:34px;line-height:1.55}
   p{margin-bottom:14px;color:var(--ink-soft)}
   strong{color:var(--ink);font-weight:700}
   a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid var(--line-gold)}
@@ -104,13 +104,17 @@
   .badge-origin{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:6px;text-transform:uppercase;font-weight:500}
   .b-kubuz{background:rgba(133,154,192,.16);color:var(--dusty)}
   .b-brouk{background:rgba(200,155,92,.16);color:var(--gold)}
-  .rec-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(197,137,107,.18);color:var(--terra);padding:3px 9px;border-radius:6px;font-weight:600;margin-bottom:8px}
+  .etapa-n{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .etapa-h{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-faint);margin:3px 0 8px}
+  .etapa-v{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--champagne);margin-bottom:12px}
 
   .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
   .tbl thead th{background:#1C1813;color:var(--gold);text-align:left;padding:13px 16px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--line-gold)}
   .tbl td{padding:12px 16px;border-top:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
   .tbl tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
   .tbl td b{color:var(--ink)}
+  .tbl td.num,.tbl th.num{text-align:right;font-family:'JetBrains Mono',monospace;font-size:13px}
+  .tbl tr.total td{border-top:1px solid var(--line-gold);color:var(--ink);font-weight:700}
   .fill{color:var(--gold-deep);font-family:'JetBrains Mono',monospace;font-size:13px}
   .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:2px 8px;border-radius:5px;font-weight:500;letter-spacing:.04em}
   .t-cam{background:rgba(200,155,92,.15);color:var(--gold)}
@@ -120,9 +124,10 @@
   .t-adm{background:rgba(197,137,107,.16);color:var(--terra)}
   .t-all{background:rgba(216,201,174,.12);color:var(--champagne)}
   .t-board{background:rgba(200,155,92,.2);color:var(--gold-soft)}
+  .t-kubuz{background:rgba(133,154,192,.16);color:var(--dusty)}
 
   .road{margin-top:10px}
-  .week{display:grid;grid-template-columns:140px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+  .week{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
   .week:first-child{border-top:none}
   .week-label .wk{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:.08em;font-weight:500;text-transform:uppercase}
   .week-label .dates{font-family:'Jost',sans-serif;font-size:24px;font-weight:300;margin-top:4px;line-height:1.05;color:var(--ink)}
@@ -131,10 +136,10 @@
   .task{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;line-height:1.4;color:var(--ink-soft)}
   .task .tag{flex-shrink:0;margin-top:2px}
   .milestone{background:linear-gradient(135deg,#1A150D 0%,#100D0A 60%);color:var(--ink);border:1px solid var(--line-gold);border-radius:16px;padding:30px 32px;margin:30px 0;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
-  .milestone::after{content:"01·07";position:absolute;right:-8px;bottom:-30px;font-family:'Jost',sans-serif;font-size:130px;font-weight:300;color:rgba(200,155,92,.07)}
+  .milestone::after{content:"E2";position:absolute;right:6px;bottom:-44px;font-family:'Jost',sans-serif;font-size:150px;font-weight:300;color:rgba(200,155,92,.07)}
   .milestone .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
   .milestone h3{color:var(--gold-soft);font-size:30px;margin:8px 0 6px;position:relative;font-weight:300}
-  .milestone p{color:var(--ink-soft);position:relative;max-width:620px}
+  .milestone p{color:var(--ink-soft);position:relative;max-width:640px}
   .milestone .ms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;position:relative}
   .ms-item{background:rgba(200,155,92,.06);border:1px solid var(--line-gold);border-radius:10px;padding:15px}
   .ms-item .n{font-family:'Jost',sans-serif;font-size:32px;color:var(--gold);font-weight:300}
@@ -152,13 +157,13 @@
   .callout ul{margin:6px 0 0;padding-left:18px}
   .callout ul li{font-size:14.5px;color:var(--ink-soft);margin-bottom:5px}
 
-  .entities{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;margin-bottom:30px}
+  .entities{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch;margin-bottom:30px}
   .ent{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
   .ent .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
-  .ent .nm{font-family:'Jost',sans-serif;font-size:20px;font-weight:400;margin:4px 0 6px;color:var(--ink)}
+  .ent .nm{font-family:'Jost',sans-serif;font-size:19px;font-weight:400;margin:4px 0 6px;color:var(--ink)}
   .ent.new .nm{color:var(--gold)}
-  .ent p{font-size:13.5px;margin:0;color:var(--ink-soft)}
-  .ent-arrow{display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:34px;font-weight:300;color:var(--gold)}
+  .ent p{font-size:13px;margin:0;color:var(--ink-soft)}
+  .ent-arrow{display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:30px;font-weight:300;color:var(--gold)}
 
   .gov{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
   .gov .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
@@ -183,12 +188,12 @@
 
   .num-stat{display:flex;gap:26px;flex-wrap:wrap;margin:8px 0 4px}
   .num-stat .ns{flex:1;min-width:150px}
-  .num-stat .ns .v{font-family:'Jost',sans-serif;font-size:40px;font-weight:300;color:var(--ink);line-height:1}
+  .num-stat .ns .v{font-family:'Jost',sans-serif;font-size:38px;font-weight:300;color:var(--ink);line-height:1}
   .num-stat .ns .v em{color:var(--gold);font-style:normal}
   .num-stat .ns .k{font-size:13px;color:var(--ink-faint);margin-top:8px}
 
   .footer{padding:30px 0 70px;text-align:center;border-top:1px solid var(--line);margin-top:10px}
-  .footer p{font-size:13px;color:var(--ink-faint);max-width:680px;margin:0 auto 8px}
+  .footer p{font-size:13px;color:var(--ink-faint);max-width:720px;margin:0 auto 8px}
   .footer .fbrand{font-family:'Jost',sans-serif;letter-spacing:.34em;color:var(--champagne);font-size:15px;margin-bottom:14px}
   .footer .fbrand .gd{color:var(--gold)}
 
@@ -217,22 +222,23 @@
   </div>
   <div class="doc-title">
     <div>
-      <div class="eyebrow">Plan de conformación de sociedad · Confidencial</div>
+      <div class="eyebrow">Plan estratégico por etapas · Confidencial</div>
       <h1>Brouk <em>SpA</em></h1>
     </div>
-    <div class="meta">Versión 4 · Mayo 2026<br>Arranque 01·06·2026<br>Corte 01·07·2026</div>
+    <div class="meta">Versión 5 · Junio 2026<br>Etapa 1 (JV): Jul–Ago<br>Etapa 2 (Sociedad): desde Sep</div>
   </div>
 </div>
 
 <nav class="tabs">
   <div class="tabs-inner">
     <button class="tab active" onclick="showTab('t-resumen',this)"><span class="tnum">01</span>Resumen</button>
-    <button class="tab" onclick="showTab('t-sociedad',this)"><span class="tnum">02</span>Sociedad y socios</button>
-    <button class="tab" onclick="showTab('t-gobierno',this)"><span class="tnum">03</span>Gobierno y decisiones</button>
-    <button class="tab" onclick="showTab('t-finanzas',this)"><span class="tnum">04</span>Finanzas y traslado</button>
-    <button class="tab" onclick="showTab('t-roadmap',this)"><span class="tnum">05</span>Hoja de ruta</button>
-    <button class="tab" onclick="showTab('t-migracion',this)"><span class="tnum">06</span>Migración</button>
-    <button class="tab" onclick="showTab('t-legal',this)"><span class="tnum">07</span>Facturación y legal</button>
+    <button class="tab" onclick="showTab('t-etapas',this)"><span class="tnum">02</span>Modelo por etapas</button>
+    <button class="tab" onclick="showTab('t-sociedad',this)"><span class="tnum">03</span>Sociedad y socios</button>
+    <button class="tab" onclick="showTab('t-gobierno',this)"><span class="tnum">04</span>Gobierno y decisiones</button>
+    <button class="tab" onclick="showTab('t-finanzas',this)"><span class="tnum">05</span>Economía por etapa</button>
+    <button class="tab" onclick="showTab('t-roadmap',this)"><span class="tnum">06</span>Hoja de ruta</button>
+    <button class="tab" onclick="showTab('t-migracion',this)"><span class="tnum">07</span>Plataforma y traslado</button>
+    <button class="tab" onclick="showTab('t-legal',this)"><span class="tnum">08</span>Facturación y legal</button>
   </div>
 </nav>
 
@@ -242,90 +248,149 @@
 <section class="panel active" id="t-resumen">
   <div class="sec-num">01 — Contexto</div>
   <h2 class="sec-title">Resumen ejecutivo</h2>
-  <p class="sec-lead">Tres integrantes de <strong>Kubuz SpA</strong> (Gonzalo Cortés, Fernando Galaz y José Miguel Villatoro) se incorporan junto a <strong>Camilo Morales</strong> para conformar una nueva sociedad, <strong>Brouk SpA</strong>. <strong>Kubuz deja de operar como plataforma</strong>: su tecnología se traslada a Brouk SpA y los tres socios pasan a <strong>dedicación exclusiva a Brouk</strong>. La nueva sociedad absorbe la operación, los activos, el personal y los flujos de la sociedad actual, <strong>Brouk Servicios Inmobiliarios SpA</strong>, y consolida en un solo proyecto la operación comercial y la plataforma de Brokers.</p>
-
-  <div class="callout teal">
-    <h4>Punto de partida: un solo proyecto, sin operación paralela</h4>
-    <p>No hay conflicto de interés ni reparto de tiempo: <strong>Kubuz cesa como plataforma</strong> y todo el foco —personas, tecnología y dedicación— se concentra en Brouk SpA. Esto define también los <strong>aportes</strong>: Camilo aporta la operación, marca y cartera (+300 usuarios); los tres socios de Kubuz aportan la <strong>tecnología/plataforma</strong> que se traslada a Brouk más su dedicación exclusiva. Ambos aportes deben valorizarse para fijar la participación accionaria.</p>
-  </div>
+  <p class="sec-lead">El proyecto se ejecuta en <strong>tres etapas</strong> que llevan de un <strong>Joint Venture</strong> apoyado en la plataforma de <strong>Kubuz</strong> a una sociedad consolidada, <strong>Brouk SpA</strong>, dueña de toda la operación. No es un corte único: es una transición gradual que arranca generando ingresos desde el primer mes, reduce el riesgo y deja una <strong>garantía</strong> (opción de compra de la tecnología) para alinear a los cuatro socios.</p>
 
   <div class="num-stat">
-    <div class="ns"><div class="v"><em>4</em></div><div class="k">socios en 4 áreas, con presupuesto autónomo</div></div>
-    <div class="ns"><div class="v">~30 días</div><div class="k">para constituir, valorizar y migrar (junio)</div></div>
-    <div class="ns"><div class="v">01·07</div><div class="k">lanzamiento de plataforma + corte de facturación</div></div>
-    <div class="ns"><div class="v">+300</div><div class="k">usuarios activos a migrar sin interrupción</div></div>
+    <div class="ns"><div class="v"><em>3</em></div><div class="k">etapas: JV → Sociedad → Consolidación</div></div>
+    <div class="ns"><div class="v">320</div><div class="k">brokers objetivo en la red</div></div>
+    <div class="ns"><div class="v">Jul</div><div class="k">arranque de la Etapa 1 (Kubuz licencia)</div></div>
+    <div class="ns"><div class="v">Sep</div><div class="k">arranque de la Etapa 2 (Brouk SpA)</div></div>
   </div>
 
-  <div class="grid g2 blk">
-    <div class="card">
-      <h4>Qué resuelve este plan</h4>
-      <ul class="clean">
-        <li>Define la <strong>estructura societaria</strong> y los roles de los 4 socios.</li>
-        <li>Separa las <strong>decisiones del directorio</strong> de las que toma cada socio.</li>
-        <li>Establece el <strong>diagnóstico financiero</strong> y el mecanismo de traslado.</li>
-        <li>Asigna <strong>presupuestos autónomos por área</strong> y una <strong>hoja de ruta semanal</strong>.</li>
-      </ul>
+  <h3 class="subh">El recorrido económico</h3>
+  <div class="grid g3">
+    <div class="card socio c3">
+      <div class="etapa-n">Etapa 1 · Joint Venture</div>
+      <div class="etapa-h">Mes 1–3 · Jul–Ago · Kubuz</div>
+      <p style="font-size:14px;margin:0">Kubuz licencia la plataforma a la red y cobra un fee por escritura. Etapa de <strong>inversión</strong>: el flujo de caja a 6 meses es <strong>−$6,8M</strong>, que se recupera con el fee a 60 días.</p>
     </div>
-    <div class="card">
-      <h4>Los dos hitos no negociables</h4>
-      <ul class="clean">
-        <li><strong>1 de julio — Plataforma Brokers en vivo</strong>, con los +300 usuarios migrados.</li>
-        <li><strong>1 de julio — Corte de facturación</strong>: todo lo facturado desde esa fecha es de Brouk SpA. Para cumplirlo, la sociedad debe estar <strong>constituida y habilitada en el SII antes del 30 de junio</strong>.</li>
-      </ul>
+    <div class="card socio c1">
+      <div class="etapa-n">Etapa 2 · Sociedad</div>
+      <div class="etapa-h">Mes 3–9 · desde Sep · Brouk SpA</div>
+      <p style="font-size:14px;margin:0">Se constituye Brouk SpA, que captura el 50% de la comisión y el licenciamiento. Resultado neto a 6 meses: <strong>$65,5M</strong>, con dividendo para Camilo de <strong>$16,4M</strong>.</p>
+    </div>
+    <div class="card socio c2">
+      <div class="etapa-n">Etapa 3 · Consolidación</div>
+      <div class="etapa-h">&gt; Mes 9 · Brouk SpA holding</div>
+      <p style="font-size:14px;margin:0">Todas las líneas por Brouk SpA. Run-rate estimado de <strong>$117M/mes</strong> de ingreso bruto (~$1.408M anual) entre corretaje, créditos, arriendos, SaaS y más.</p>
     </div>
   </div>
 
-  <div class="callout">
-    <h4>Lectura clave del calendario</h4>
-    <p>El corte de facturación al 1 de julio condiciona todo: Brouk SpA tiene que existir, tener RUT, inicio de actividades y facturación electrónica operativa <em>antes</em> de esa fecha. Por eso la constitución legal y el alta tributaria se priorizan en las dos primeras semanas de junio.</p>
+  <div class="callout strong blk">
+    <h4>La idea en una frase</h4>
+    <p>Empezar facturando ya con la plataforma de Kubuz (Etapa 1), constituir Brouk SpA cuando el modelo está probado (Etapa 2) y consolidar todas las líneas de negocio en esa sociedad (Etapa 3) — con los cuatro socios al <strong>25%</strong> de la operación total y una <strong>opción de compra de la tecnología</strong> que protege a todos durante la transición.</p>
   </div>
 
+  <a class="anexo" href="https://docs.google.com/spreadsheets/d/1_ybgXe6Pi6t9GLeql9WTPrPeXXGsjKUUTaTYqysm_a8/edit" target="_blank" rel="noopener">
+    <div class="anexo-ic">↗</div>
+    <div class="anexo-body">
+      <div class="anexo-eyebrow">Anexo · Modelo financiero</div>
+      <div class="anexo-title">Modelo por etapas — Brouk SpA</div>
+      <p>Flujo de Kubuz (Etapa 1), resultado de Brouk SpA (Etapa 2) y estimación de run-rate (Etapa 3), con supuestos y parámetros editables.</p>
+    </div>
+  </a>
   <a class="anexo" href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">
     <div class="anexo-ic">↗</div>
     <div class="anexo-body">
       <div class="anexo-eyebrow">Anexo · Hoja de ruta</div>
-      <div class="anexo-title">Hoja de ruta — Brouk SpA</div>
-      <p>Las 37 actividades por semana, con responsable, estado y % de avance, desde el cierre de documentos hasta el post-lanzamiento.</p>
-    </div>
-  </a>
-
-  <a class="anexo" href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">
-    <div class="anexo-ic">↗</div>
-    <div class="anexo-body">
-      <div class="anexo-eyebrow">Anexo · Documento de seguimiento</div>
-      <div class="anexo-title">Excel de seguimiento — Brouk SpA</div>
-      <p>Planilla de trabajo con el diagnóstico financiero, la proyección de flujo de caja y los presupuestos por área. Se completa con los datos reales de la operación.</p>
+      <div class="anexo-title">Actividades por etapa — Brouk SpA</div>
+      <p>Las actividades de cada etapa con responsable, estado y % de avance, desde el Joint Venture hasta la consolidación.</p>
     </div>
   </a>
 </section>
 
-<!-- ===== 02 SOCIEDAD ===== -->
-<section class="panel" id="t-sociedad">
-  <div class="sec-num">02 — Sociedad</div>
-  <h2 class="sec-title">Estructura societaria y socios</h2>
-  <p class="sec-lead">Cuatro socios fundadores, cada uno con un área propia y <strong>dedicación exclusiva a Brouk</strong>. Camilo aporta la operación, marca y cartera actual; los tres socios de Kubuz aportan la tecnología/plataforma que se traslada a Brouk. Fernando toma Plataforma y Estrategia Tecnológica completa; Éxito del Cliente queda en Gonzalo (necesita presencia y dedicación), y José Miguel —radicado en Valdivia— toma Administración, Finanzas y Legal, un back-office que encaja con el trabajo remoto y que hoy nadie tiene formalmente.</p>
+<!-- ===== 02 MODELO POR ETAPAS ===== -->
+<section class="panel" id="t-etapas">
+  <div class="sec-num">02 — Estrategia</div>
+  <h2 class="sec-title">Modelo por 3 etapas</h2>
+  <p class="sec-lead">De Joint Venture a holding. Cada etapa tiene su horizonte, su vehículo legal y su lógica económica. El valor migra progresivamente desde Kubuz hacia Brouk SpA, que termina concentrando toda la operación.</p>
 
-  <div class="entities">
-    <div class="ent">
-      <div class="lbl">Sociedad actual · origen</div>
-      <div class="nm">Brouk Servicios Inmobiliarios SpA</div>
-      <p>Tiene hoy la operación, los activos, el personal y los +300 usuarios. Factura hasta el 30 de junio.</p>
+  <div class="grid g3">
+    <div class="card socio c3">
+      <div class="etapa-n">Etapa 1 — Joint Venture</div>
+      <div class="etapa-h">Mes 1–3 · Jul–Ago 2026</div>
+      <div class="etapa-v">Vehículo: licencia + operación (Kubuz)</div>
+      <ul>
+        <li>Kubuz licencia la plataforma a la red (freemium, $89.990 + IVA)</li>
+        <li>Cobra un fee de <strong>5 UF por escritura</strong>, pagado a 60 días</li>
+        <li>La <strong>IP queda en Kubuz</strong></li>
+        <li>Garantía: <strong>opción de compra</strong> de la tecnología hasta el Mes 4, a valor de perito</li>
+      </ul>
     </div>
-    <div class="ent-arrow">→</div>
-    <div class="ent new">
-      <div class="lbl">Sociedad nueva · destino</div>
-      <div class="nm">Brouk SpA</div>
-      <p>Se constituye en junio. Recibe todo el traslado y factura desde el 1 de julio.</p>
+    <div class="card socio c1">
+      <div class="etapa-n">Etapa 2 — Sociedad</div>
+      <div class="etapa-h">Mes 3–9 · desde Sep 2026</div>
+      <div class="etapa-v">Vehículo: Brouk SpA (nueva)</div>
+      <ul>
+        <li>Se constituye <strong>Brouk SpA</strong></li>
+        <li><strong>Camilo entra</strong> como socio (25% de dividendos)</li>
+        <li>El equipo de Kubuz entra como socio</li>
+        <li>Brouk SpA captura el <strong>50% de la comisión</strong> y recibe el licenciamiento de la red</li>
+      </ul>
+    </div>
+    <div class="card socio c2">
+      <div class="etapa-n">Etapa 3 — Consolidación</div>
+      <div class="etapa-h">&gt; Mes 9</div>
+      <div class="etapa-v">Vehículo: Brouk SpA (holding)</div>
+      <ul>
+        <li>Todas las líneas por <strong>Brouk SpA</strong></li>
+        <li>Corretaje, créditos, licenciamiento, cursos</li>
+        <li>Servicios a inmobiliarias, arriendos y SaaS a corredores</li>
+        <li>Socios con <strong>25% de la operación total</strong></li>
+      </ul>
     </div>
   </div>
 
-  <h3 class="subh">Propiedad y aportes</h3>
-  <p>La sociedad se reparte en <strong>partes iguales entre los cuatro socios</strong>, sobre una lógica de aportes equivalentes:</p>
-  <ul class="clean">
-    <li><strong>Plataforma ↔ negocio:</strong> la plataforma completa con todas las integraciones (los tres socios de Kubuz) se equipara al negocio en marcha que aporta Camilo (operación, marca y cartera de +300).</li>
-    <li><strong>Activos físicos ↔ capital:</strong> Gonzalo, Fernando y José Miguel hacen un aporte de capital en efectivo equivalente a la valorización de los activos físicos (estufas, sonido, mesas, equipos) que aporta Camilo. Ese efectivo queda además como <strong>capital de trabajo</strong> desde el día uno.</li>
-  </ul>
-  <p style="font-size:14px;color:var(--ink-faint)">A confirmar (Administración y Finanzas): si el aporte de capital es de cada uno o entre los tres, y la valorización de respaldo (plataforma ≈ negocio). Las protecciones del pacto (mayorías reforzadas, vesting, tag-along) se detallan en Gobierno.</p>
+  <div class="callout teal blk">
+    <h4>Cómo migra el valor (lectura rápida)</h4>
+    <ul>
+      <li>En <strong>Jul–Ago</strong>, Kubuz factura el licenciamiento a la red (6 y 16 brokers) y empieza a recibir caja por el fee en <strong>septiembre</strong>.</li>
+      <li>Desde <strong>Sep</strong>, el licenciamiento y la captura de comisión <strong>pasan a Brouk SpA</strong>, que concentra el valor.</li>
+      <li>El fee de 5 UF por escritura se cobra a <strong>60 días</strong>; lo escriturado en Nov–Dic se cobra en 2027.</li>
+    </ul>
+  </div>
+
+  <h3 class="subh">Parámetros clave del modelo</h3>
+  <table class="tbl">
+    <thead><tr><th>Parámetro</th><th class="num">Valor</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td><b>Valor UF</b></td><td class="num">$40.661</td><td>Referencia jun-2026</td></tr>
+      <tr><td><b>Ticket promedio por propiedad</b></td><td class="num">3.000 UF</td><td>≈ $121.983.000</td></tr>
+      <tr><td><b>Comisión inmobiliaria sobre venta</b></td><td class="num">2,0%</td><td>Estándar de mercado</td></tr>
+      <tr><td><b>Fee Kubuz por transacción</b></td><td class="num">5,0 UF</td><td>≈ $203.305 · pago a 60 días</td></tr>
+      <tr><td><b>Precio licencia (neto)</b></td><td class="num">$89.990</td><td>+ IVA 19% ≈ $107.088</td></tr>
+      <tr><td><b>Red objetivo</b></td><td class="num">320 brokers</td><td>Total de la red Brouk</td></tr>
+      <tr><td><b>Captura Brouk sobre comisión · Etapa 2</b></td><td class="num">50,0%</td><td>Desde Sep</td></tr>
+      <tr><td><b>Participación dividendos Camilo · Etapa 2</b></td><td class="num">25,0%</td><td>Sobre el resultado de Brouk SpA</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== 03 SOCIEDAD ===== -->
+<section class="panel" id="t-sociedad">
+  <div class="sec-num">03 — Sociedad</div>
+  <h2 class="sec-title">Brouk SpA y sus socios</h2>
+  <p class="sec-lead">Brouk SpA se <strong>constituye en la Etapa 2</strong>, una vez probado el modelo en el Joint Venture. Cuatro socios fundadores, cada uno con un área propia y al <strong>25%</strong>. Camilo aporta la red, la cartera y la operación; los tres socios de Kubuz aportan la plataforma, que se incorpora a Brouk vía cesión (con la opción de compra de la Etapa 1 como respaldo).</p>
+
+  <div class="entities">
+    <div class="ent">
+      <div class="lbl">Etapa 1 · vehículo</div>
+      <div class="nm">Kubuz SpA</div>
+      <p>Licencia la plataforma a la red y cobra el fee. IP en Kubuz.</p>
+    </div>
+    <div class="ent-arrow">→</div>
+    <div class="ent new">
+      <div class="lbl">Etapa 2 · se constituye</div>
+      <div class="nm">Brouk SpA</div>
+      <p>Camilo + equipo Kubuz al 25%. Captura comisión y licenciamiento.</p>
+    </div>
+    <div class="ent-arrow">→</div>
+    <div class="ent new">
+      <div class="lbl">Etapa 3 · holding</div>
+      <div class="nm">Brouk SpA</div>
+      <p>Concentra todas las líneas de negocio. Socios al 25% del total.</p>
+    </div>
+  </div>
 
   <div class="grid g4">
     <div class="card socio c1">
@@ -338,7 +403,7 @@
           <li>Estrategia comercial y precios</li>
           <li>Alianzas, expansión y nuevas líneas</li>
           <li>Relaciones institucionales</li>
-          <li>Continuidad de la operación actual</li>
+          <li>Continuidad de la operación y de la red</li>
         </ul>
         <div class="presu">
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
@@ -363,7 +428,7 @@
         <ul>
           <li>Marketing, marca y generación de demanda</li>
           <li>Operaciones internas y procesos</li>
-          <li>Éxito del cliente: onboarding, soporte y retención (+300)</li>
+          <li>Éxito del cliente: onboarding, soporte y retención</li>
           <li>Logística, proveedores y coordinación de producto</li>
         </ul>
         <div class="presu">
@@ -373,7 +438,7 @@
             <li>Marca: diseño, material gráfico y producción audiovisual</li>
             <li>Herramientas de marketing y analítica (automatización, email, CRM)</li>
             <li>Procesos internos, documentación y proveedores operativos</li>
-            <li>Onboarding y mesa de ayuda de los +300 brokers</li>
+            <li>Onboarding y mesa de ayuda de los brokers de la red</li>
             <li>Programas de retención, fidelización y comunicación a usuarios</li>
             <li>Eventual contratación de apoyo de soporte/CS dentro del presupuesto</li>
           </ul>
@@ -415,7 +480,7 @@
       <div class="socio-body">
         <ul>
           <li>Cierres contables, impuestos y nómina</li>
-          <li>Gestión legal con el abogado: contratos y cumplimiento</li>
+          <li>Gestión legal: contratos y cumplimiento</li>
           <li>Tesorería, control de flujo de caja y presupuestos</li>
           <li>Administración y documentación societaria</li>
           <li>Reporting financiero al directorio</li>
@@ -424,7 +489,7 @@
           <div class="presu-lbl">Presupuesto mensual · autónomo</div>
           <ul class="presu-list">
             <li>Software contable, tributario y de nómina (cierres, impuestos)</li>
-            <li>Honorarios del abogado: contratos y cumplimiento</li>
+            <li>Asesorías legales puntuales: contratos y cumplimiento</li>
             <li>Software de tesorería, facturación y control de gastos</li>
             <li>Herramientas administrativas y gestión documental</li>
             <li>Gastos bancarios y de operación financiera</li>
@@ -446,355 +511,271 @@
     </div>
   </div>
 
-  <div class="callout">
-    <h4>Cómo dimensionar los montos</h4>
-    <p>Una vez completado el diagnóstico financiero, asignar los presupuestos como <strong>% del ingreso recurrente proyectado</strong>, no como cifras al azar. Empezar conservador el primer trimestre y revisar al cierre de julio. Existe además un <strong>fondo común</strong> para imprevistos y gastos transversales.</p>
-  </div>
-
-  <div class="callout terra blk">
-    <h4>Por qué esta repartición</h4>
-    <p>Fernando concentra toda la <strong>Plataforma y Estrategia Tecnológica</strong> —el frente más crítico al lanzamiento—. <strong>Éxito del Cliente queda en Gonzalo</strong>: atender, onboardear y retener a +300 brokers exige presencia y dedicación, algo que no calza con José Miguel estando en Valdivia. A él se le asigna <strong>Administración, Finanzas y Legal</strong>, un back-office que es independiente de la ubicación y que hoy nadie tiene formalmente a cargo.</p>
-    <p style="margin-top:8px"><strong>A considerar:</strong> José Miguel asume la administración, finanzas y legal del día a día —sin contador de planta—, apoyándose en asesorías puntuales solo cuando se requiera. Y como Fernando queda como único socio técnico, conviene evaluar un <strong>desarrollador externo bajo Fernando</strong> y un <strong>apoyo de soporte para Éxito del Cliente bajo Gonzalo</strong> dado el volumen del día uno. Decisiones abiertas.</p>
-  </div>
-
-  <div class="callout teal">
-    <h4>Forma jurídica recomendada</h4>
-    <p>Una <strong>SpA</strong> es la figura más adecuada: responsabilidad limitada al aporte, flexibilidad de series de acciones y facilidad para ajustar socios a futuro. Como los aportes son distintos en naturaleza (operación vs. tecnología), conviene <strong>estatutos a medida</strong> + un <strong>pacto de accionistas</strong> con abogado, en vez de los estatutos estándar.</p>
-  </div>
+  <h3 class="subh">Propiedad y aportes</h3>
+  <p>La sociedad se reparte en <strong>partes iguales entre los cuatro socios</strong> (1.000 acciones cada uno de 4.000), sobre una lógica de aportes equivalentes:</p>
+  <ul class="clean">
+    <li><strong>Plataforma ↔ negocio:</strong> la plataforma completa con todas las integraciones (los tres socios de Kubuz, vía cesión) se equipara a la red, cartera y operación que aporta Camilo.</li>
+    <li><strong>Opción de compra como respaldo:</strong> durante la Etapa 1 la IP queda en Kubuz con una opción de compra a valor de perito (hasta el Mes 4), que alinea a las partes antes de fusionar todo en Brouk SpA.</li>
+  </ul>
+  <p style="font-size:14px;color:var(--ink-faint)">A confirmar (Administración y Finanzas): monto del capital y forma de pago, y la valorización de respaldo de los aportes. Las protecciones del pacto (vesting, lock-up, leaver, tag/drag-along) se detallan en Gobierno.</p>
 </section>
 
-<!-- ===== 03 GOBIERNO ===== -->
+<!-- ===== 04 GOBIERNO ===== -->
 <section class="panel" id="t-gobierno">
-  <div class="sec-num">03 — Gobierno</div>
+  <div class="sec-num">04 — Gobierno</div>
   <h2 class="sec-title">Gobierno y decisiones</h2>
-  <p class="sec-lead">El principio es simple: <strong>cada socio decide y ejecuta con autonomía dentro de su área y su presupuesto mensual</strong>, y lo que afecta a toda la sociedad se resuelve en el <strong>directorio</strong> (los cuatro socios). Velocidad sin perder el control de lo estructural.</p>
+  <p class="sec-lead">Brouk SpA se administra por un <strong>Directorio de 4 miembros</strong> (uno por socio), con <strong>Camilo como Gerente General</strong>. La operación diaria es libre; las materias clave pasan por el directorio con quórum reforzado, y las estructurales por la Junta con unanimidad. Reglas tomadas de los borradores de Estatutos y Pacto de Accionistas.</p>
 
   <div class="gov">
     <div class="col board">
-      <h4>Decisiones del Directorio</h4>
-      <div class="csub">Requieren acuerdo de los socios en sesión de directorio / junta</div>
+      <h4>Materias reservadas al Directorio</h4>
+      <div class="csub">Quórum reforzado de 3 de 4 directores</div>
       <ul>
-        <li><strong>Reparto de utilidades</strong> y política de retiros.</li>
-        <li><strong>Aumentos o disminuciones de capital.</strong></li>
-        <li><strong>Endeudamiento y financiamiento</strong> (créditos, líneas, garantías).</li>
-        <li><strong>Apoderados bancarios</strong> y montos de firma.</li>
-        <li><strong>Incorporación, salida o dilución de socios.</strong></li>
-        <li><strong>Modificación de estatutos o del pacto.</strong></li>
-        <li><strong>Presupuesto anual</strong> y presupuestos por área.</li>
-        <li><strong>Inversiones o compromisos sobre el monto umbral</strong> (ej. &gt; X UF).</li>
-        <li><strong>Contrataciones clave</strong> y dotación de nuevas funciones.</li>
-        <li><strong>Política global de precios</strong> y descuento máximo.</li>
-        <li><strong>Alianzas estratégicas, M&amp;A</strong> y nuevas líneas de negocio.</li>
-        <li><strong>Traslado de la tecnología de Kubuz a Brouk</strong> (operación con parte relacionada) y venta de la sociedad.</li>
+        <li><strong>Endeudamiento, crédito o financiamiento</strong> sobre el umbral (UF a definir).</li>
+        <li><strong>Adquisición, enajenación o gravamen de activos</strong> sobre el umbral.</li>
+        <li><strong>Avales, fianzas y garantías</strong> a favor de terceros.</li>
+        <li><strong>Contratos</strong> sobre el umbral o a más de 12 meses.</li>
+        <li><strong>Presupuesto anual</strong> y plan de negocios.</li>
+        <li><strong>Política de dividendos</strong> y distribución de utilidades.</li>
+        <li><strong>Contratación, remoción y sueldo</strong> del Gerente General y ejecutivos.</li>
+        <li><strong>Inversiones, filiales</strong> y operaciones con partes relacionadas.</li>
       </ul>
     </div>
     <div class="col indiv">
-      <h4>Decisiones de cada socio</h4>
-      <div class="csub">Autonomía dentro del área y del presupuesto mensual aprobado</div>
+      <h4>Materias reservadas a la Junta</h4>
+      <div class="csub">Unanimidad de los accionistas</div>
       <ul>
-        <li><span class="who">Camilo · Comercial y Desarrollo Corp.</span><br>Ejecución comercial, descuentos dentro del rango aprobado, eventos, exploración de alianzas (no vinculantes), gasto dentro de su presupuesto.</li>
-        <li><span class="who">Gonzalo · Marketing, Operaciones y Éxito del Cliente</span><br>Campañas y marca, herramientas, proveedores operativos, procesos, onboarding, soporte y retención, gasto dentro de su presupuesto.</li>
-        <li><span class="who">Fernando · Plataforma y Estrategia Tecnológica</span><br>Arquitectura, proveedores cloud/infra, decisiones técnicas, releases, QA, seguridad, gasto dentro de su presupuesto.</li>
-        <li><span class="who">José Miguel · Administración, Finanzas y Legal</span><br>Administración, contabilidad y legal, tesorería, control de presupuestos, gasto dentro de su presupuesto.</li>
+        <li><span class="who">Estructura</span>Reforma de estatutos; aumento o disminución de capital.</li>
+        <li><span class="who">Acciones</span>Emisión de nuevas acciones o series.</li>
+        <li><span class="who">Sociedad</span>Fusión, división, transformación o disolución.</li>
+        <li><span class="who">Tecnología</span>Transferencia o licenciamiento de la <strong>IP esencial</strong>.</li>
+        <li><span class="who">Dividendos</span>Distribución que exceda la política aprobada.</li>
       </ul>
     </div>
   </div>
 
   <div class="callout strong blk">
-    <h4>Reglas de gobierno a formalizar en el pacto</h4>
+    <h4>Permanencia, vesting y salida (del Pacto)</h4>
     <ul>
-      <li><strong>Frecuencia:</strong> directorio mensual + extraordinarias cuando se requiera.</li>
-      <li><strong>Quórum:</strong> presencia mínima para sesionar (ej. 3 de 4).</li>
-      <li><strong>Mayorías:</strong> materias ordinarias por mayoría simple; materias relevantes (capital, IP, nuevos socios, venta) por <strong>unanimidad o supermayoría</strong>.</li>
-      <li><strong>Umbral de monto</strong> que dispara aprobación del directorio (en UF o CLP) — debe coincidir con el umbral de firma conjunta bancaria.</li>
-      <li><strong>Mecanismo de desempate</strong> si los votos quedan 2–2.</li>
-      <li><strong>Dedicación exclusiva</strong> de los cuatro socios a Brouk y <strong>cláusula de no-competencia</strong> mientras sean socios.</li>
-      <li><strong>Restricciones a la venta de acciones:</strong> derecho de primera oferta (ROFR) entre socios antes de vender a terceros.</li>
-      <li><strong>Tag-along y drag-along:</strong> protección del minoritario y arrastre del mayoritario ante la venta de la sociedad.</li>
-      <li><strong>Buen/mal salida (good/bad leaver)</strong> ligado al vesting, y qué pasa con las acciones ante <strong>muerte o incapacidad</strong> de un socio.</li>
-      <li><strong>Resolución de conflictos:</strong> cláusula de mediación y <strong>arbitraje</strong>, además del desempate.</li>
+      <li><strong>Permanencia mínima:</strong> 24 meses; salida antes de ese plazo se trata como <em>bad leaver</em>.</li>
+      <li><strong>Lock-up:</strong> 24 meses sin poder vender acciones.</li>
+      <li><strong>Vesting inverso:</strong> 48 meses con cliff a los 24 (50% se consolida al mes 24, el resto lineal hasta el 48).</li>
+      <li><strong>Salida:</strong> <em>bad leaver</em> vende todo a valor nominal; entre el mes 24 y 48, lo consolidado a valor justo; <em>good leaver</em> (fallecimiento, invalidez, acuerdo unánime) todo a valor justo.</li>
+      <li><strong>No competencia y no captación:</strong> durante la permanencia y 24 meses tras la salida. Confidencialidad indefinida.</li>
+      <li><strong>Canalización de negocios:</strong> toda operación del giro debe pasar por Brouk; desviarla "por fuera" gatilla bad leaver + restitución + multa de 2–3× la comisión eludida.</li>
+      <li><strong>Transferencia de acciones:</strong> derecho preferente (ROFR), tag-along y drag-along (con el 75%).</li>
+      <li><strong>Garantía:</strong> prenda del 100% de las acciones de cada socio + mandato irrevocable.</li>
+      <li><strong>Conflictos:</strong> arbitraje CAM Santiago (árbitro mixto) y cláusula shotgun ante empates persistentes.</li>
     </ul>
   </div>
 
   <h3 class="subh">Decisiones abiertas antes de firmar</h3>
-  <div class="decision"><span class="qn">1</span><h4>Participación accionaria — partes iguales</h4><p>Reparto acordado en <strong>partes iguales entre los cuatro</strong>. Camilo aporta operación, marca, cartera y activos físicos; los tres socios de Kubuz aportan la plataforma completa más un aporte de capital equivalente a la valorización de los activos físicos (que además queda como capital de trabajo). Pendiente: la <strong>valorización de respaldo</strong> (a cargo de Administración y Finanzas) y definir si el aporte de capital es de cada uno o entre los tres. Ver pestaña Sociedad.</p></div>
-  <div class="decision"><span class="qn">2</span><h4>Traslado de la tecnología de Kubuz a Brouk</h4><p>La plataforma deja de ser de Kubuz y pasa a Brouk SpA. Definir el <strong>mecanismo</strong> (aporte en especie a cambio de acciones vs. venta) y su efecto tributario. Es una <strong>operación con parte relacionada</strong>: debe quedar valorizada y documentada.</p></div>
-  <div class="decision"><span class="qn">3</span><h4>Cierre o destino de Kubuz SpA</h4><p>Si Kubuz deja de operar, ¿la sociedad se <strong>disuelve, queda inactiva o se mantiene</strong> solo como titular de algo? Hay que ordenar sus <strong>activos, pasivos, contratos y personal</strong> antes de trasladar la tecnología, y cerrar su ciclo tributario.</p></div>
-  <div class="decision"><span class="qn">4</span><h4>Vesting / permanencia de los socios</h4><p>¿Se condiciona la entrega total de acciones a la permanencia (ej. vesting a 3–4 años), con cláusulas de <strong>buen/mal salida</strong> (good/bad leaver)?</p></div>
-  <div class="decision"><span class="qn">5</span><h4>Capital inicial y capital de trabajo</h4><p>Cubierto en parte por el <strong>aporte de capital de Gonzalo, Fernando y José Miguel</strong> (símil de los activos físicos), que entra como caja a Brouk SpA. Falta <strong>dimensionar</strong> ese monto y confirmar que da <strong>runway para los primeros meses</strong> antes de que el flujo se estabilice — el runway de la entidad nueva, no solo de la antigua.</p></div>
-  <div class="decision"><span class="qn">6</span><h4>Due diligence y pasivos de la sociedad antigua</h4><p>Antes de absorber Brouk Servicios Inmobiliarios SpA, revisar <strong>contingencias laborales, tributarias y juicios</strong>. ¿Brouk SpA hereda pasivos o solo activos limpios? Debe ser explícito en el mecanismo de traslado.</p></div>
-  <div class="decision"><span class="qn">7</span><h4>Mecanismo y costo tributario del traslado</h4><p>Aporte en especie vs. compra de activos vs. continuidad: efectos en IVA, impuestos y contratos. A resolver en Semana 1–2 (Administración y Finanzas).</p></div>
-  <div class="decision"><span class="qn">8</span><h4>Reparto de utilidades y retiros</h4><p>¿Cómo y cuándo se reparten? ¿Los socios reciben sueldo/honorario por su rol además de su participación?</p></div>
-  <div class="decision"><span class="qn">9</span><h4>Apoderados bancarios y montos de firma</h4><p>Quiénes operan la cuenta de Brouk SpA y bajo qué esquema (firma individual hasta un monto, conjunta sobre el umbral). Ver detalle en Facturación y legal.</p></div>
-  <div class="decision"><span class="qn">10</span><h4>Apoyo para Éxito del Cliente (bajo Gonzalo)</h4><p>Atender a +300 brokers desde el día uno es un golpe de carga. ¿Se contrata una <strong>persona dedicada de soporte/CS</strong> bajo Gonzalo, además de sus funciones de marketing y operaciones?</p></div>
-  <div class="decision"><span class="qn">11</span><h4>Capacidad de desarrollo (bajo Fernando)</h4><p>Fernando queda como único socio técnico. ¿Se suma un <strong>desarrollador externo</strong> para sostener plataforma, migración y roadmap?</p></div>
+  <div class="decision"><span class="qn">1</span><h4>Monto del capital y forma de pago</h4><p>Definir el capital de Brouk SpA y cómo se entera (al contado o en plazo, aporte en dinero u otro). Queda como campo pendiente en los estatutos.</p></div>
+  <div class="decision"><span class="qn">2</span><h4>Umbrales en UF de las materias reservadas</h4><p>Fijar el monto (en UF) que dispara el quórum reforzado del directorio para endeudamiento, activos y contratos. Debe coincidir con el umbral de firma conjunta bancaria.</p></div>
+  <div class="decision"><span class="qn">3</span><h4>5.º director o voto dirimente</h4><p>Con cuatro socios al 25%, el directorio puede empatar 2–2. ¿Se suma un 5.º director independiente, un voto dirimente del Presidente, o se confía en la cláusula shotgun?</p></div>
+  <div class="decision"><span class="qn">4</span><h4>Firmar los anexos de cesión</h4><p>Formalizar el anexo de cesión de la <strong>tecnología</strong> de la plataforma y el de la <strong>cartera de clientes</strong> de Camilo a favor de Brouk SpA. Es lo que materializa los aportes.</p></div>
+  <div class="decision"><span class="qn">5</span><h4>Opción de compra de la IP (Etapa 1)</h4><p>Cerrar el mecanismo y el plazo (hasta el Mes 4) de la opción de compra de la tecnología a valor de perito, que respalda la transición Kubuz → Brouk.</p></div>
+  <div class="decision"><span class="qn">6</span><h4>Reparto de utilidades, retiros y sueldos</h4><p>Política de dividendos (reinversión preferente en crecimiento) y si los socios reciben sueldo/honorario por su rol además de su participación.</p></div>
+  <div class="decision"><span class="qn">7</span><h4>Apoderados bancarios y montos de firma</h4><p>Quiénes operan la cuenta de Brouk SpA y bajo qué esquema (individual hasta un monto, conjunta sobre el umbral). Ver Facturación y legal.</p></div>
 </section>
 
-<!-- ===== 04 FINANZAS ===== -->
+<!-- ===== 05 ECONOMÍA POR ETAPA ===== -->
 <section class="panel" id="t-finanzas">
-  <div class="sec-num">04 — Salud financiera y traslado</div>
-  <h2 class="sec-title">Diagnóstico financiero y de flujos</h2>
-  <p class="sec-lead">Antes de trasladar la operación hay que radiografiar Brouk Servicios Inmobiliarios SpA: qué entra, qué sale, qué activos hay y qué contratos están vigentes. Las plantillas para completar con los datos reales de Camilo están en el <strong><a href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">Excel de seguimiento</a></strong> (pestañas "Diagnóstico Financiero" y "Flujo de Caja"); aquí va el marco.</p>
+  <div class="sec-num">05 — Economía</div>
+  <h2 class="sec-title">Economía por etapa</h2>
+  <p class="sec-lead">Las cifras salen del modelo financiero (anexo). Etapa 1 es de inversión en Kubuz; la Etapa 2 ya genera resultado en Brouk SpA; la Etapa 3 muestra el run-rate de una operación diversificada. Todas las cifras son <strong>netas de IVA</strong>.</p>
 
-  <div class="grid g3">
-    <div class="card"><h4 style="font-size:16px">Ingresos</h4><p style="font-size:14px;margin:0">Suscripción/uso de plataforma (+300 usuarios), corretaje, eventos y otros. Separar recurrente de variable.</p></div>
-    <div class="card"><h4 style="font-size:16px">Costos</h4><p style="font-size:14px;margin:0">Arriendo, sueldos internos, honorarios externos, servicios y SaaS, bencina, eventos, hosting y software contable.</p></div>
-    <div class="card"><h4 style="font-size:16px">Activos y personal</h4><p style="font-size:14px;margin:0">Estufas, sonido, mesas, equipos e intangibles (marca, dominio, base de usuarios); contratos internos y externos.</p></div>
+  <h3 class="subh">Etapa 1 — Flujo de Kubuz (Jul–Dic, 6 meses)</h3>
+  <p>Kubuz licencia la plataforma (6 brokers en Jul, 16 en Ago, 32 desde Sep) y cobra el fee de 5 UF por escritura a 60 días. Es una etapa de inversión que se recupera con el fee.</p>
+  <div class="num-stat">
+    <div class="ns"><div class="v"><em>$8,5M</em></div><div class="k">ingresos caja (6 meses)</div></div>
+    <div class="ns"><div class="v">$15,3M</div><div class="k">egresos (opex equipo + infra)</div></div>
+    <div class="ns"><div class="v">−$6,8M</div><div class="k">flujo neto caja (6 meses)</div></div>
+    <div class="ns"><div class="v">$6,1M</div><div class="k">fee por cobrar (se paga en 2027)</div></div>
   </div>
 
-  <div class="callout blk">
-    <h4>Indicadores que el Excel calcula solo</h4>
-    <p><strong>Margen mensual</strong> · <strong>Margen %</strong> · <strong>% ingreso recurrente</strong> · <strong>Runway</strong> (caja ÷ quema) · <strong>Ingreso de equilibrio</strong> y brecha. Además, una <strong>proyección de flujo de caja</strong> a 6 meses (jun–nov) con supuestos editables.</p>
+  <h3 class="subh">Etapa 2 — Resultado de Brouk SpA (desde Sep, 6 meses)</h3>
+  <p>Desde septiembre, Brouk SpA captura el 50% de la comisión inmobiliaria y recibe el licenciamiento de la red. Camilo recibe el 25% del resultado como dividendo.</p>
+  <div class="num-stat">
+    <div class="ns"><div class="v"><em>$78,6M</em></div><div class="k">ingresos (6 meses)</div></div>
+    <div class="ns"><div class="v">$13,1M</div><div class="k">egresos (fee a Kubuz + opex)</div></div>
+    <div class="ns"><div class="v">$65,5M</div><div class="k">resultado neto (6 meses)</div></div>
+    <div class="ns"><div class="v">$16,4M</div><div class="k">dividendo Camilo (25%)</div></div>
   </div>
 
-  <h3 class="subh">Mecanismo de traslado a Brouk SpA</h3>
-  <div class="grid g3" style="margin-top:8px">
-    <div class="card"><h4 style="font-size:16px">1 · Aporte en especie</h4><p style="font-size:14px;margin:0">Camilo aporta la operación/activos como capital a Brouk SpA. Define su participación, pero requiere valorización formal.</p></div>
-    <div class="card"><h4 style="font-size:16px">2 · Compra de activos y cesión de contratos</h4><p style="font-size:14px;margin:0">Brouk SpA adquiere los activos y se subroga/renueva contratos. Más limpio; revisar IVA y novación laboral.</p></div>
-    <div class="card"><h4 style="font-size:16px">3 · Continuidad por etapas</h4><p style="font-size:14px;margin:0">Brouk SpA opera desde el 1 de julio y se traspasa lo demás progresivamente, cerrando lo previo en la entidad actual.</p></div>
-  </div>
+  <h3 class="subh">Etapa 3 — Run-rate diversificado (&gt; Mes 9)</h3>
+  <p>Estimación de un mes representativo con todas las líneas operando por Brouk SpA. Ingreso bruto (no descuenta reparto a brokers ni costos): ajustar las cantidades al pipeline real.</p>
+  <table class="tbl">
+    <thead><tr><th>Línea de ingreso</th><th class="num">Mensual</th><th class="num">Anual</th></tr></thead>
+    <tbody>
+      <tr><td><b>Corretaje — venta de propiedades</b></td><td class="num">$60.991.500</td><td class="num">$731.898.000</td></tr>
+      <tr><td><b>Gestión de créditos hipotecarios</b></td><td class="num">$12.195.000</td><td class="num">$146.340.000</td></tr>
+      <tr><td><b>Servicios a inmobiliarias</b></td><td class="num">$16.250.000</td><td class="num">$195.000.000</td></tr>
+      <tr><td><b>Administración de arriendos</b></td><td class="num">$5.974.500</td><td class="num">$71.694.000</td></tr>
+      <tr><td><b>Intermediación de arriendos</b></td><td class="num">$2.845.000</td><td class="num">$34.140.000</td></tr>
+      <tr><td><b>SaaS / licencias a corredores</b></td><td class="num">$13.498.500</td><td class="num">$161.982.000</td></tr>
+      <tr><td><b>Licenciamiento white-label a inmobiliarias</b></td><td class="num">$3.599.600</td><td class="num">$43.195.200</td></tr>
+      <tr><td><b>Cursos / formación</b></td><td class="num">$2.000.000</td><td class="num">$24.000.000</td></tr>
+      <tr class="total"><td><b>Total ingreso bruto</b></td><td class="num">$117.354.100</td><td class="num">$1.408.249.200</td></tr>
+    </tbody>
+  </table>
 
-  <div class="callout strong blk">
-    <h4>José Miguel lidera la transición financiera y tributaria</h4>
-    <p>El área de Administración, Finanzas y Legal (José Miguel) sostiene la transición de principio a fin, apoyándose en asesorías puntuales solo cuando se requiera. Cubre:</p>
-    <ul>
-      <li><strong>Valorización</strong> del aporte de Camilo y de los activos.</li>
-      <li><strong>Mecanismo de traslado</strong> y su tratamiento de IVA e impuestos.</li>
-      <li><strong>Inicio de actividades y facturación electrónica</strong> en el SII.</li>
-      <li><strong>Cierre contable</strong> de la entidad actual y contratos laborales.</li>
-      <li><strong>Primer cierre</strong> de Brouk SpA y marco de retiros y utilidades.</li>
-    </ul>
-  </div>
-
-  <div class="callout terra blk">
-    <h4>Continuidad laboral del personal — costo y riesgo a definir</h4>
-    <p>Al trasladar a las personas de la entidad antigua a Brouk SpA hay dos caminos, y conviene decidirlo con el abogado laboral antes del corte:</p>
-    <ul>
-      <li><strong>Continuidad de la relación laboral:</strong> se respeta la <strong>antigüedad</strong> de cada trabajador. No hay desembolso ahora, pero Brouk SpA asume el pasivo por años de servicio acumulados.</li>
-      <li><strong>Finiquito y recontratación:</strong> la entidad antigua finiquita y Brouk SpA contrata de nuevo. Más limpio, pero implica <strong>pagar indemnizaciones</strong> al corte — un costo de caja que debe estar en el flujo.</li>
-    </ul>
-    <p style="margin-top:8px">Definir además la situación de los <strong>socios</strong>: ¿reciben sueldo/honorario por su rol (con previsión, AFP y salud) además de su participación, o solo retiros? Tiene efecto tributario y previsional.</p>
+  <div class="callout teal blk">
+    <h4>Cómo leer el modelo</h4>
+    <p>El flujo de Etapa 1 y el resultado de Etapa 2 incorporan los rezagos reales (el fee se cobra a 60 días). La Etapa 3 es un <strong>run-rate</strong> (mes representativo), no un flujo con rezagos. En el anexo, edita <strong>solo</strong> la pestaña de <em>Supuestos</em> y los drivers azules de <em>Etapa 3</em>; el resto se recalcula solo.</p>
   </div>
 </section>
 
-<!-- ===== 05 HOJA DE RUTA (incl. próximos pasos) ===== -->
+<!-- ===== 06 HOJA DE RUTA ===== -->
 <section class="panel" id="t-roadmap">
-  <div class="sec-num">05 — Cronograma</div>
-  <h2 class="sec-title">Hoja de ruta · Junio → Julio</h2>
-  <p class="sec-lead">Cuatro semanas de junio para constituir, valorizar, presupuestar y preparar la migración. El 1 de julio es el día de corte: plataforma en vivo y facturación en Brouk SpA. El detalle actividad por actividad, con responsable, estado y % de avance, está en la <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">hoja de ruta en Google Sheets</a>.</p>
+  <div class="sec-num">06 — Cronograma</div>
+  <h2 class="sec-title">Hoja de ruta por etapas</h2>
+  <p class="sec-lead">El plan se ejecuta en las tres etapas. La Etapa 1 arranca la operación con la plataforma de Kubuz; la Etapa 2 constituye Brouk SpA y traslada el valor; la Etapa 3 consolida todas las líneas. El detalle actividad por actividad, con responsable y avance, está en la <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">hoja de ruta en Google Sheets</a>.</p>
 
   <div class="road">
     <div class="week">
-      <div class="week-label"><div class="wk">Semana 1</div><div class="dates">1 – 7 Jun</div><div class="focus">Cerrar los documentos fundacionales</div></div>
+      <div class="week-label"><div class="wk">Etapa 1 · JV</div><div class="dates">Jul–Ago</div><div class="focus">Lanzar y facturar</div></div>
       <div class="tasks">
-        <div class="task"><span class="tag t-all">Todos</span> Revisar y cerrar los borradores de <b>Estatutos</b> y <b>Pacto de Accionistas</b> (completar los campos pendientes).</div>
-        <div class="task"><span class="tag t-all">Todos</span> Revisar el <b>Contrato de Prenda</b> sobre las acciones.</div>
-        <div class="task"><span class="tag t-all">Todos</span> Definir el <b>monto del capital y la forma de pago</b> (aporte en efectivo).</div>
-        <div class="task"><span class="tag t-all">Todos</span> Fijar los <b>umbrales en UF</b> de las materias reservadas y el <b>mecanismo de desempate</b> (5º director o voto dirimente).</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> <span class="tag t-tec">Fernando</span> Preparar los <b>anexos de cesión</b>: cartera de clientes y tecnología de la plataforma.</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> Entregar datos reales para el diagnóstico financiero.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Consolidar diagnóstico financiero: margen, runway, equilibrio.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Auditoría técnica de la plataforma y requisitos del módulo Brokers.</div>
-        <div class="task"><span class="tag t-gon">Gonzalo</span> Concretar el arriendo de la <b>oficina inicial</b> (Badajoz 130, piso 4, Las Condes — domicilio social; mudanza prevista al 3.er mes).</div>
+        <div class="task"><span class="tag t-all">Todos</span> Cerrar el <b>acuerdo de Joint Venture / licencia</b> entre Kubuz y la red.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Firmar la <b>opción de compra de la IP</b> (valor de perito, vigencia hasta el Mes 4).</div>
+        <div class="task"><span class="tag t-kubuz">Kubuz</span> Lanzar la plataforma en <b>freemium</b> ($89.990+IVA) a los primeros brokers (6 → 16).</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Montar el cobro del <b>fee de 5 UF por escritura</b> (a 60 días) y la facturación de Kubuz.</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Captación de brokers a la red y activación de las primeras escrituras.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Onboarding y mesa de ayuda de los primeros brokers.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Auditoría técnica de la plataforma y soporte de la operación.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Concretar el arriendo de la <b>oficina inicial</b> (Badajoz 130, Las Condes; mudanza al 3.er mes).</div>
       </div>
     </div>
     <div class="week">
-      <div class="week-label"><div class="wk">Semana 2</div><div class="dates">8 – 14 Jun</div><div class="focus">Firmar, constituir e inscribir</div></div>
+      <div class="week-label"><div class="wk">Etapa 2 · Sociedad</div><div class="dates">Sep+</div><div class="focus">Constituir y trasladar</div></div>
       <div class="tasks">
-        <div class="task"><span class="tag t-all">Todos</span> Firmar la <b>constitución de Brouk SpA</b> (Estatutos) ante notario / con ClaveÚnica.</div>
-        <div class="task"><span class="tag t-all">Todos</span> Firmar el <b>Pacto de Accionistas</b>, el <b>Contrato de Prenda</b> y los <b>anexos de cesión</b> (tecnología + cartera).</div>
-        <div class="task"><span class="tag t-all">Todos</span> Designar al <b>mandatario para la legalización</b> (poder de constitución).</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> <b>Inscripción</b> en el Registro de Comercio y <b>publicación</b> en el Diario Oficial.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Iniciar <b>RUT e inicio de actividades</b> en el SII.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Inscribir la <b>prenda</b> en el Registro de Prendas y anotar en el Registro de Accionistas.</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> Definir el mecanismo de traslado de la operación y activos de la entidad antigua.</div>
-        <div class="task"><span class="tag t-gon">Gonzalo</span> Borrador de presupuestos por área.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Inventario de +300 usuarios y mapeo de datos a migrar.</div>
-        <div class="task"><span class="tag t-gon">Gonzalo</span> Preparar <b>Éxito del Cliente</b> para el día uno: guías, mesa de ayuda y onboarding de los +300.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Cerrar los borradores de <b>Estatutos, Pacto y Prenda</b> (capital, umbrales UF, desempate).</div>
+        <div class="task"><span class="tag t-all">Todos</span> Firmar y <b>constituir Brouk SpA</b>; inscripción, publicación, RUT e inicio de actividades.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Ejercer/formalizar la <b>cesión de la tecnología</b> y de la cartera a Brouk SpA.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Apoderados bancarios, cuenta corriente y <b>facturación electrónica</b> de Brouk SpA.</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Trasladar a Brouk la <b>captura del 50% de la comisión</b> y el licenciamiento de la red.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Migrar la operación y los usuarios de la red a Brouk SpA (ver Plataforma y traslado).</div>
       </div>
     </div>
     <div class="week">
-      <div class="week-label"><div class="wk">Semana 3</div><div class="dates">15 – 21 Jun</div><div class="focus">Tributario, banco, plataforma y personal</div></div>
+      <div class="week-label"><div class="wk">Etapa 3 · Consolidación</div><div class="dates">&gt; Mes 9</div><div class="focus">Escalar y diversificar</div></div>
       <div class="tasks">
-        <div class="task"><span class="tag t-adm">José Miguel</span> Habilitar <b>facturación electrónica</b>, abrir cuenta corriente y <b>registrar apoderados bancarios</b>.</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> Cerrar continuidad/recontratación de personal en Brouk SpA.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Módulo Brokers en <b>staging</b> + pruebas de carga.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Script y ensayo de migración con rollback.</div>
-        <div class="task"><span class="tag t-gon">Gonzalo</span> Comunicación a usuarios: lanzamiento y cambio de facturación.</div>
-      </div>
-    </div>
-    <div class="week">
-      <div class="week-label"><div class="wk">Semana 4</div><div class="dates">22 – 30 Jun</div><div class="focus">Ensayo final y corte</div></div>
-      <div class="tasks">
-        <div class="task"><span class="tag t-tec">Fernando</span> Migración de prueba completa (dry-run) y validación de los +300.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Checklist de salida a producción: monitoreo, alertas, contingencia.</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> Recordatorio a clientes del nuevo emisor desde el 1 de julio.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Cierre contable previo; congelar facturación al 30-jun.</div>
-        <div class="task"><span class="tag t-all">Todos</span> Go / No-Go del lanzamiento (28–29 jun).</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Abrir las nuevas líneas: créditos, servicios a inmobiliarias, arriendos, white-label.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Escalar la red más allá de los 320 brokers y lanzar cursos/formación.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Producto: SaaS a corredores y capacidad para el volumen del run-rate.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Estructura de holding, primer cierre y política de dividendos.</div>
+        <div class="task"><span class="tag t-gon">Gonzalo</span> Planificar el <b>cambio de oficina</b> (3.er mes).</div>
       </div>
     </div>
   </div>
 
   <div class="milestone">
-    <div class="eyebrow">Día de corte</div>
-    <h3>1 de julio de 2026</h3>
-    <p>Lanzamiento de la plataforma Brouk para Brokers con los +300 usuarios migrados, y entrada en vigencia de la facturación bajo Brouk SpA.</p>
+    <div class="eyebrow">Hito de la transición</div>
+    <h3>Etapa 2 — Constitución de Brouk SpA</h3>
+    <p>El paso de Joint Venture a sociedad: se constituye Brouk SpA, los cuatro socios entran al 25% y el licenciamiento y la comisión pasan a la nueva sociedad. Desde aquí el valor se concentra en Brouk.</p>
     <div class="ms-grid">
-      <div class="ms-item"><div class="n">01</div><div class="l">Plataforma Brokers en producción</div></div>
-      <div class="ms-item"><div class="n">+300</div><div class="l">usuarios activos migrados y operativos</div></div>
-      <div class="ms-item"><div class="n">$</div><div class="l">Toda factura desde hoy: Brouk SpA</div></div>
+      <div class="ms-item"><div class="n">4×25%</div><div class="l">socios fundadores en partes iguales</div></div>
+      <div class="ms-item"><div class="n">50%</div><div class="l">de la comisión capturada por Brouk SpA</div></div>
+      <div class="ms-item"><div class="n">IP</div><div class="l">tecnología cedida a Brouk (respaldada por la opción de compra)</div></div>
     </div>
   </div>
 
-  <div class="week" style="border-top:1px solid var(--line)">
-    <div class="week-label"><div class="wk">Post-lanzamiento</div><div class="dates">2 – 31 Jul</div><div class="focus">Estabilización</div></div>
-    <div class="tasks">
-      <div class="task"><span class="tag t-gon">Gonzalo</span> Soporte reforzado y atención a los +300 brokers (Éxito del Cliente).</div>
-      <div class="task"><span class="tag t-tec">Fernando</span> Monitoreo de estabilidad y ajuste de capacidad.</div>
-      <div class="task"><span class="tag t-adm">José Miguel</span> Primer cierre financiero y revisión de presupuestos.</div>
-      <div class="task"><span class="tag t-cam">Camilo</span> Confirmar 100% de facturación por Brouk SpA; cerrar entidad anterior.</div>
-      <div class="task"><span class="tag t-gon">Gonzalo</span> Planificar el <b>cambio de oficina</b>: buscar y definir la nueva ubicación para el 3.er mes.</div>
-    </div>
-  </div>
-
-  <h3 class="subh" style="margin-top:44px">Próximos pasos inmediatos</h3>
-  <div class="grid g2">
-    <div class="card">
-      <h4>Para arrancar (Semana 1)</h4>
-      <ul class="clean">
-        <li>Cerrar los <strong>borradores de Estatutos y Pacto</strong>: completar capital, umbrales en UF y mecanismo de desempate.</li>
-        <li>Preparar y dejar listos para firma los <strong>anexos de cesión</strong> (tecnología + cartera de Camilo).</li>
-        <li>Camilo entrega los datos para el diagnóstico financiero (Excel).</li>
-        <li>Concretar el <strong>arriendo de la oficina</strong> y preparar el Éxito del Cliente para los +300.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h4>Para no fallar el 1 de julio</h4>
-      <ul class="clean">
-        <li>Constituir Brouk SpA y habilitar facturación electrónica en SII en las dos primeras semanas de junio.</li>
-        <li>Registrar los apoderados bancarios al abrir la cuenta.</li>
-        <li>Tener el módulo Brokers en staging para mediados de junio.</li>
-        <li>Ensayar la migración completa antes del corte real.</li>
-      </ul>
-    </div>
-  </div>
   <div class="callout blk">
     <h4>Nota importante</h4>
-    <p>Este documento es un plan operativo y estratégico, no asesoría legal ni tributaria. Los borradores de Estatutos, Pacto de Accionistas y Contrato de Prenda son preliminares y <strong>deben validarse legal y tributariamente antes de firmar</strong>, igual que el mecanismo de traslado de activos y personal y el esquema de apoderados.</p>
+    <p>Este documento es un plan operativo y estratégico, no asesoría legal ni tributaria. Los borradores de Estatutos, Pacto de Accionistas y Contrato de Prenda son preliminares y <strong>deben validarse legal y tributariamente antes de firmar</strong>, igual que el acuerdo de Joint Venture, la opción de compra de la IP y los anexos de cesión.</p>
   </div>
 </section>
 
-<!-- ===== 07 MIGRACIÓN ===== -->
+<!-- ===== 07 PLATAFORMA Y TRASLADO ===== -->
 <section class="panel" id="t-migracion">
-  <div class="sec-num">06 — Operación crítica</div>
-  <h2 class="sec-title">Migración de +300 usuarios</h2>
-  <p class="sec-lead">Migrar la base activa sin interrumpir el servicio es el riesgo operativo más alto del plan. Se trabaja en tres fases con un plan de rollback siempre disponible. Fernando lidera la migración técnica; Gonzalo (Éxito del Cliente) sostiene la atención a los +300.</p>
+  <div class="sec-num">07 — Operación crítica</div>
+  <h2 class="sec-title">Plataforma y traslado de la operación</h2>
+  <p class="sec-lead">La plataforma ya opera desde la Etapa 1 (licenciada por Kubuz). El movimiento crítico es el <strong>traslado de la operación y la red a Brouk SpA</strong> en la Etapa 2, sin interrumpir el servicio. Fernando lidera lo técnico; Gonzalo sostiene la atención a los usuarios.</p>
   <div class="grid g3">
     <div class="card socio c3">
-      <h4 style="font-size:17px">Pre-migración · Junio</h4>
+      <h4 style="font-size:17px">Etapa 1 · plataforma operativa</h4>
       <ul class="clean" style="font-size:14px">
+        <li>Plataforma en producción bajo licencia de Kubuz</li>
+        <li>Onboarding de los primeros brokers (6 → 16 → 32)</li>
         <li>Inventario y limpieza de la base de usuarios</li>
-        <li>Mapeo de datos origen → destino</li>
-        <li>Ambiente de staging y pruebas de carga</li>
-        <li>Comunicación anticipada a usuarios</li>
-        <li>Definir ventana y plan de rollback</li>
+        <li>Auditoría técnica y pruebas de carga</li>
+        <li>Definir ventana y plan de rollback del traslado</li>
       </ul>
     </div>
     <div class="card socio c1">
-      <h4 style="font-size:17px">Corte · 30 Jun – 1 Jul</h4>
+      <h4 style="font-size:17px">Etapa 2 · traslado a Brouk</h4>
       <ul class="clean" style="font-size:14px">
-        <li>Ventana de migración (idealmente de noche)</li>
-        <li>Carga de datos y verificación de integridad</li>
-        <li>Validación de accesos de los +300</li>
-        <li>Soporte en vivo desde el minuto cero</li>
+        <li>Cesión de la tecnología (IP) a Brouk SpA</li>
+        <li>Migrar código, repositorios, dominios y cuentas</li>
+        <li>Traslado de la operación y la red a Brouk</li>
+        <li>Validación de accesos y soporte en vivo</li>
         <li>Go/No-Go con criterio de reversa claro</li>
       </ul>
     </div>
     <div class="card socio c2">
-      <h4 style="font-size:17px">Post-migración · Julio</h4>
+      <h4 style="font-size:17px">Etapa 3 · escalamiento</h4>
       <ul class="clean" style="font-size:14px">
-        <li>Monitoreo intensivo primeras 72 h</li>
-        <li>Mesa de ayuda reforzada (Gonzalo · Éxito del Cliente)</li>
-        <li>Métricas de adopción y activación</li>
-        <li>Iteración rápida sobre incidencias</li>
+        <li>Capacidad para el volumen del run-rate</li>
+        <li>SaaS a corredores y licenciamiento white-label</li>
+        <li>Monitoreo de estabilidad y métricas de adopción</li>
+        <li>Iteración sobre nuevas líneas de producto</li>
       </ul>
     </div>
   </div>
   <div class="callout teal blk">
-    <h4>Traslado de la tecnología de Kubuz a Brouk</h4>
-    <p>La plataforma de Brokers se construye sobre la tecnología de Kubuz SpA, que <strong>deja de operar</strong>. Esa propiedad intelectual <strong>se traslada a Brouk SpA</strong> y debe quedar formalizada como aporte (a cambio de acciones) o como venta, con <strong>valorización de respaldo</strong>. Es una operación con parte relacionada —tres de los cuatro socios provienen de Kubuz—, así que se aprueba en el directorio y se documenta en el pacto. Conviene migrar también el <strong>código, los repositorios, los dominios y las cuentas de servicios</strong> a nombre de Brouk SpA.</p>
+    <h4>Protección de datos y términos de la plataforma</h4>
+    <p>La red maneja datos de los brokers y de sus clientes. Hay que cerrar con el abogado: cumplimiento de la <strong>Ley 21.719</strong> de datos personales, los <strong>términos y condiciones + política de privacidad</strong> a nombre de Brouk SpA, el consentimiento para el traslado de la base entre Kubuz y Brouk, y dejar explícito que la base de usuarios es un activo de Brouk SpA.</p>
   </div>
 </section>
 
 <!-- ===== 08 FACTURACIÓN Y LEGAL ===== -->
 <section class="panel" id="t-legal">
-  <div class="sec-num">07 — Corte tributario y legal</div>
-  <h2 class="sec-title">Facturación, banco y pasos legales</h2>
-  <p class="sec-lead">Regla simple: hasta el 30 de junio factura Brouk Servicios Inmobiliarios SpA; desde el 1 de julio, Brouk SpA. Para que funcione, Brouk SpA debe estar 100% habilitada en el SII —y con su cuenta y apoderados operativos— antes del corte.</p>
+  <div class="sec-num">08 — Tributario y legal</div>
+  <h2 class="sec-title">Facturación y pasos legales por etapa</h2>
+  <p class="sec-lead">Quién factura cambia con la etapa: en la Etapa 1 factura <strong>Kubuz</strong> (licencias + fee); desde la Etapa 2 factura <strong>Brouk SpA</strong> (licenciamiento + comisión). La IP queda en Kubuz hasta que se cede a Brouk, con la opción de compra como respaldo.</p>
   <table class="tbl">
-    <thead><tr><th>Hito</th><th>Antes del 30 Jun</th><th>Desde el 1 Jul</th></tr></thead>
+    <thead><tr><th>Concepto</th><th>Etapa 1 (Jul–Ago)</th><th>Etapa 2 (desde Sep)</th></tr></thead>
     <tbody>
-      <tr><td><b>Emisor de facturas</b></td><td>Brouk Servicios Inmobiliarios SpA</td><td>Brouk SpA</td></tr>
-      <tr><td><b>Suscripciones / cobros recurrentes</b></td><td>Cuenta actual</td><td>Migrados a Brouk SpA</td></tr>
-      <tr><td><b>Datos tributarios a clientes</b></td><td>Vigentes</td><td>Comunicar nuevo RUT y razón social</td></tr>
-      <tr><td><b>Facturación electrónica SII</b></td><td>—</td><td>Habilitada y probada antes del corte</td></tr>
-      <tr><td><b>Cuenta bancaria de recaudación</b></td><td>Actual</td><td>Cuenta corriente Brouk SpA con apoderados</td></tr>
+      <tr><td><b>Emisor de facturas</b></td><td>Kubuz SpA</td><td>Brouk SpA</td></tr>
+      <tr><td><b>Licenciamiento a la red</b></td><td>Lo cobra Kubuz</td><td>Pasa a Brouk SpA</td></tr>
+      <tr><td><b>Fee por escritura (5 UF)</b></td><td>De Kubuz · cobro a 60 días</td><td>Se evalúa según la cesión</td></tr>
+      <tr><td><b>Captura de comisión (50%)</b></td><td>—</td><td>Brouk SpA</td></tr>
+      <tr><td><b>Propiedad de la tecnología (IP)</b></td><td>En Kubuz · opción de compra (perito) hasta Mes 4</td><td>Cedida a Brouk SpA</td></tr>
+      <tr><td><b>Facturación electrónica SII</b></td><td>Kubuz vigente</td><td>Brouk habilitada antes de operar</td></tr>
     </tbody>
   </table>
-  <div class="callout">
-    <h4>Riesgo a vigilar</h4>
-    <p>Cobros recurrentes (suscripciones, tarjetas, mandatos PAC/PAT) que sigan apuntando a la entidad antigua después del corte. Hay que reapuntar los medios de pago a Brouk SpA <strong>antes</strong> del 1 de julio o programar el cambio para esa fecha exacta.</p>
-  </div>
 
-  <div class="callout terra">
-    <h4>Plan B del corte — el timeline es ajustado</h4>
-    <p>Constituir + RUT + inicio de actividades + <strong>certificación de facturación electrónica (DTE)</strong> + <strong>apertura de cuenta bancaria</strong> en ~30 días es muy exigente: tanto el alta de DTE como la cuenta corriente suelen demorar semanas. Hay que tener un fallback listo por si Brouk SpA no queda 100% habilitada al 1 de julio:</p>
-    <ul>
-      <li><strong>Facturación:</strong> si el DTE no está certificado, la entidad antigua emite unos días más y se traspasa el corte en cuanto Brouk SpA quede habilitada, sin frenar la operación.</li>
-      <li><strong>Recaudación:</strong> si la cuenta de Brouk no está abierta, mantener transitoriamente la cuenta actual con regla clara de traspaso de fondos, y reapuntar los cobros apenas exista la nueva cuenta.</li>
-      <li><strong>Decisión Go/No-Go</strong> del corte el 28–29 de junio, con criterios objetivos (DTE certificado, cuenta operativa, migración validada).</li>
-    </ul>
+  <h3 class="subh">Documentos del marco societario</h3>
+  <div class="grid g3">
+    <div class="card"><h4 style="font-size:16px">Estatutos</h4><p style="font-size:14px;margin:0">Brouk SpA, objeto inmobiliario + tecnología, 4.000 acciones (25% c/u), directorio de 4, materias reservadas, Camilo Gerente General. Borrador v2.0.</p></div>
+    <div class="card"><h4 style="font-size:16px">Pacto de Accionistas</h4><p style="font-size:14px;margin:0">Dedicación, permanencia 24m, vesting 48m, no competencia, canalización de negocios, cesión de IP y cartera, opción de compra. Borrador v2.0.</p></div>
+    <div class="card"><h4 style="font-size:16px">Contrato de Prenda</h4><p style="font-size:14px;margin:0">Prenda del 100% de las acciones de cada socio a favor de los demás y de la sociedad, con mandato irrevocable de traspaso.</p></div>
   </div>
 
   <h3 class="subh">Apoderados y operación bancaria</h3>
-  <p>Al abrir la cuenta corriente de Brouk SpA hay que designar a los <strong>apoderados</strong>: quiénes pueden operarla y bajo qué esquema de firmas. Esquema recomendado (a confirmar por el directorio y formalizar con el poder ante el banco):</p>
+  <p>Al abrir la cuenta corriente de Brouk SpA hay que designar a los <strong>apoderados</strong> y su esquema de firmas (a confirmar por el directorio):</p>
   <table class="tbl">
     <thead><tr><th>Esquema</th><th>Quién firma</th><th>Para qué</th></tr></thead>
     <tbody>
-      <tr><td><b>Firma individual</b></td><td>Camilo o Gonzalo</td><td>Operaciones corrientes hasta un monto X (pagos a proveedores, sueldos, gastos del giro)</td></tr>
+      <tr><td><b>Firma individual</b></td><td>Camilo o Gonzalo</td><td>Operaciones corrientes hasta un monto X (proveedores, sueldos, gastos del giro)</td></tr>
       <tr><td><b>Firma conjunta</b> (2 apoderados)</td><td>Camilo + Gonzalo</td><td>Transferencias o compromisos <b>sobre el monto X</b>, alineado con el umbral del directorio</td></tr>
-      <tr><td><b>Apoderados designados</b></td><td>Camilo · Gonzalo · José Miguel</td><td>José Miguel es candidato natural por liderar Finanzas; la banca digital permite operar desde Valdivia</td></tr>
+      <tr><td><b>Apoderados designados</b></td><td>Camilo · Gonzalo · José Miguel</td><td>José Miguel candidato natural por liderar Finanzas; la banca digital permite operar desde Valdivia</td></tr>
     </tbody>
   </table>
-  <div class="callout teal">
-    <h4>Criterios</h4>
-    <p>Más control → todas las firmas conjuntas. Más agilidad → individual con un umbral más alto. Recomiendo individual para el día a día y conjunta sobre el umbral, <strong>coincidiendo con el monto que dispara aprobación del directorio</strong> para que ambos límites sean el mismo. Los nombres exactos y el monto son decisión del directorio (decisión abierta #6).</p>
-  </div>
 
   <h3 class="subh">Pasos legales y administrativos</h3>
   <ul class="clean">
-    <li><strong>Verificar disponibilidad del nombre "Brouk SpA"</strong> en el Registro de Empresas y Sociedades (el actual es Brouk Servicios Inmobiliarios SpA).</li>
-    <li><strong>Definir estatutos y pacto de accionistas</strong> con abogado: objeto social, series de acciones, administración, reglas de gobierno, entrada/salida de socios e IP.</li>
-    <li><strong>Constituir Brouk SpA</strong> — escritura a medida ante notario, o vía <a href="https://www.registrodeempresasysociedades.cl">registrodeempresasysociedades.cl</a> con ClaveÚnica si se usaran estatutos estándar.</li>
-    <li><strong>Obtener RUT e inicio de actividades</strong> en el SII.</li>
-    <li><strong>Habilitar facturación electrónica</strong> en el SII — paso crítico para el corte del 1 de julio.</li>
-    <li><strong>Abrir cuenta corriente y registrar apoderados</strong> a nombre de Brouk SpA, con el esquema de firmas acordado.</li>
-    <li><strong>Registrar / traspasar la marca "Brouk" en INAPI</strong> — verificar si ya está registrada y a nombre de quién, y dejarla a nombre de Brouk SpA.</li>
-    <li><strong>Traspasar los activos digitales:</strong> dominio web, redes sociales, cuentas de servicios (hosting, Google, etc.), repositorios de código y la propiedad intelectual de la plataforma de Kubuz.</li>
-    <li><strong>Formalizar el traslado</strong> de activos, contratos y personal según el mecanismo elegido.</li>
+    <li><strong>Cerrar el acuerdo de Joint Venture</strong> y la <strong>opción de compra de la IP</strong> (Etapa 1).</li>
+    <li><strong>Verificar disponibilidad del nombre "Brouk SpA"</strong> y cerrar los borradores (capital, umbrales UF, desempate).</li>
+    <li><strong>Constituir Brouk SpA</strong> — firma, inscripción en el Registro de Comercio y publicación en el Diario Oficial.</li>
+    <li><strong>Obtener RUT e inicio de actividades</strong> y <strong>habilitar facturación electrónica</strong> en el SII.</li>
+    <li><strong>Abrir cuenta corriente y registrar apoderados</strong> a nombre de Brouk SpA.</li>
+    <li><strong>Firmar los anexos de cesión</strong> (tecnología + cartera) e inscribir la <strong>prenda</strong> en el Registro de Prendas.</li>
+    <li><strong>Registrar / traspasar la marca "Brouk"</strong> en INAPI y los activos digitales (dominio, redes, repositorios).</li>
   </ul>
-  <h3 class="subh">Protección de datos y términos de la plataforma</h3>
-  <p>Brouk SpA maneja datos personales de los +300 brokers y, probablemente, de los clientes de esos brokers. Migrar esa base a una nueva entidad activa obligaciones que conviene cerrar con el abogado:</p>
-  <ul class="clean">
-    <li><strong>Ley 21.719 de protección de datos personales:</strong> nueva ley chilena con sanciones relevantes (vigencia plena en diciembre 2026). Definir base de licitud, finalidad y resguardos del tratamiento de datos.</li>
-    <li><strong>Consentimiento / comunicación del traspaso:</strong> informar a los usuarios que sus datos pasan a operar bajo Brouk SpA antes del corte.</li>
-    <li><strong>Términos y condiciones + política de privacidad</strong> de la plataforma a nombre de Brouk SpA, aceptados en el onboarding y al migrar.</li>
-    <li><strong>Propiedad de los datos:</strong> dejar explícito que la base de usuarios y su información es un activo de Brouk SpA.</li>
-  </ul>
-
   <div class="callout teal">
     <h4>Nota sobre representación legal</h4>
-    <p>Para representar legalmente a la sociedad ante el SII y ser apoderado bancario se requiere ser chileno o extranjero con visa definitiva o temporaria habilitante. Confirmar la situación de cada socio antes de asignar estos roles.</p>
+    <p>Para representar a la sociedad ante el SII y ser apoderado bancario se requiere ser chileno o extranjero con visa definitiva o temporaria habilitante. Confirmar la situación de cada socio antes de asignar estos roles.</p>
   </div>
 </section>
 
@@ -803,9 +784,9 @@
 <footer class="footer">
   <div class="wrap">
     <div class="fbrand"><span class="gd">B</span>ROU<span class="gd">K</span></div>
-    <p><strong>Brouk SpA</strong> — Plan de conformación de sociedad</p>
-    <p>Anexos: <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">Hoja de ruta</a> (actividades por semana) · <a href="https://docs.google.com/spreadsheets/d/1FZuZ1mDbwD8zkDb7kURjzuCCurJRW3uwLoC-GRTqjZY/edit?gid=1594710209#gid=1594710209" target="_blank" rel="noopener">Excel de seguimiento</a> (diagnóstico financiero, flujo de caja y presupuestos)</p>
-    <p>Documento de trabajo confidencial · Versión 4 · Mayo 2026 · Sujeto a validación legal y tributaria</p>
+    <p><strong>Brouk SpA</strong> — Plan estratégico por etapas</p>
+    <p>Anexos: <a href="https://docs.google.com/spreadsheets/d/1_ybgXe6Pi6t9GLeql9WTPrPeXXGsjKUUTaTYqysm_a8/edit" target="_blank" rel="noopener">Modelo por etapas</a> · <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">Hoja de ruta</a></p>
+    <p>Documento de trabajo confidencial · Versión 5 · Junio 2026 · Sujeto a validación legal y tributaria</p>
   </div>
 </footer>
 
