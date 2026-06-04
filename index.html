@@ -116,6 +116,12 @@
   .tbl td.num,.tbl th.num{text-align:right;font-family:'JetBrains Mono',monospace;font-size:13px}
   .tbl tr.total td{border-top:1px solid var(--line-gold);color:var(--ink);font-weight:700}
   .fill{color:var(--gold-deep);font-family:'JetBrains Mono',monospace;font-size:13px}
+  .scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;box-shadow:var(--shadow)}
+  .scrollx .tbl{box-shadow:none}
+  .tbl td.neg{color:var(--terra)}
+  .tbl tr.subt td{color:var(--ink);font-weight:700;border-top:1px solid var(--line-gold)}
+  .tbl tr.acc td{color:var(--ink-faint);font-size:12px}
+  .tbl-cap{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:6px 2px 0}
   .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:2px 8px;border-radius:5px;font-weight:500;letter-spacing:.04em}
   .t-cam{background:rgba(200,155,92,.15);color:var(--gold)}
   .t-gon{background:rgba(143,166,142,.16);color:var(--sage)}
@@ -225,7 +231,7 @@
       <div class="eyebrow">Plan estratégico por etapas · Confidencial</div>
       <h1>Brouk <em>SpA</em></h1>
     </div>
-    <div class="meta">Versión 5 · Junio 2026<br>Etapa 1 (JV): Jul–Ago<br>Etapa 2 (Sociedad): desde Sep</div>
+    <div class="meta">Versión 6 · Junio 2026<br>Etapa 1 (Joint Venture): Jul–Ago<br>Etapa 2 (Sociedad): desde Sep</div>
   </div>
 </div>
 
@@ -251,7 +257,7 @@
   <p class="sec-lead">El proyecto se ejecuta en <strong>tres etapas</strong> que llevan de un <strong>Joint Venture</strong> apoyado en la plataforma de <strong>Kubuz</strong> a una sociedad consolidada, <strong>Brouk SpA</strong>, dueña de toda la operación. No es un corte único: es una transición gradual que arranca generando ingresos desde el primer mes, reduce el riesgo y deja una <strong>garantía</strong> (opción de compra de la tecnología) para alinear a los cuatro socios.</p>
 
   <div class="num-stat">
-    <div class="ns"><div class="v"><em>3</em></div><div class="k">etapas: JV → Sociedad → Consolidación</div></div>
+    <div class="ns"><div class="v"><em>3</em></div><div class="k">etapas: Joint Venture → Sociedad → Consolidación</div></div>
     <div class="ns"><div class="v">320</div><div class="k">brokers objetivo en la red</div></div>
     <div class="ns"><div class="v">Jul</div><div class="k">arranque de la Etapa 1 (Kubuz licencia)</div></div>
     <div class="ns"><div class="v">Sep</div><div class="k">arranque de la Etapa 2 (Brouk SpA)</div></div>
@@ -260,25 +266,25 @@
   <h3 class="subh">El recorrido económico</h3>
   <div class="grid g3">
     <div class="card socio c3">
-      <div class="etapa-n">Etapa 1 · Joint Venture</div>
-      <div class="etapa-h">Mes 1–3 · Jul–Ago · Kubuz</div>
-      <p style="font-size:14px;margin:0">Kubuz licencia la plataforma a la red y cobra un fee por escritura. Etapa de <strong>inversión</strong>: el flujo de caja a 6 meses es <strong>−$6,8M</strong>, que se recupera con el fee a 60 días.</p>
+      <div class="etapa-n">Etapa 1 · Joint Venture contractual</div>
+      <div class="etapa-h">Mes 1–3 · Jul–Ago · Kubuz 100%</div>
+      <p style="font-size:14px;margin:0">Kubuz licencia la plataforma, paga a Brouk SI el <strong>10% del licenciamiento</strong> y cobra el <strong>fee del 10%</strong> de la comisión por escritura. La plataforma cierra el semestre con flujo de caja <strong>+$5,8M</strong>.</p>
     </div>
     <div class="card socio c1">
-      <div class="etapa-n">Etapa 2 · Sociedad</div>
-      <div class="etapa-h">Mes 3–9 · desde Sep · Brouk SpA</div>
-      <p style="font-size:14px;margin:0">Se constituye Brouk SpA, que captura el 50% de la comisión y el licenciamiento. Resultado neto a 6 meses: <strong>$65,5M</strong>, con dividendo para Camilo de <strong>$16,4M</strong>.</p>
+      <div class="etapa-n">Etapa 2 · Joint Venture accionario</div>
+      <div class="etapa-h">Mes 3–9 · desde Sep · Kubuz 75 / Brouk SI 25</div>
+      <p style="font-size:14px;margin:0">La plataforma pasa a un <strong>Joint Venture accionario</strong>. El resultado del Joint Venture se reparte <strong>75 / 25</strong>; Brouk SI deja de cobrar la comisión de licenciamiento y entra como accionista.</p>
     </div>
     <div class="card socio c2">
       <div class="etapa-n">Etapa 3 · Consolidación</div>
-      <div class="etapa-h">&gt; Mes 9 · Brouk SpA holding</div>
-      <p style="font-size:14px;margin:0">Todas las líneas por Brouk SpA. Run-rate estimado de <strong>$117M/mes</strong> de ingreso bruto (~$1.408M anual) entre corretaje, créditos, arriendos, SaaS y más.</p>
+      <div class="etapa-h">&gt; Mes 9 · Brouk SpA · 4 × 25%</div>
+      <p style="font-size:14px;margin:0">Se constituye <strong>Brouk SpA</strong> y todo se consolida. Run-rate estimado de <strong>$117M/mes</strong> de ingreso bruto (~$1.408M anual), repartido parejo entre los 4 socios.</p>
     </div>
   </div>
 
   <div class="callout strong blk">
     <h4>La idea en una frase</h4>
-    <p>Empezar facturando ya con la plataforma de Kubuz (Etapa 1), constituir Brouk SpA cuando el modelo está probado (Etapa 2) y consolidar todas las líneas de negocio en esa sociedad (Etapa 3) — con los cuatro socios al <strong>25%</strong> de la operación total y una <strong>opción de compra de la tecnología</strong> que protege a todos durante la transición.</p>
+    <p>Empezar facturando ya con la plataforma de Kubuz (Etapa 1, Kubuz 100%), llevar la plataforma a un <strong>Joint Venture accionario 75/25</strong> cuando el modelo está probado (Etapa 2) y consolidar todas las líneas en una sola <strong>Brouk SpA</strong> con los cuatro socios al <strong>25%</strong> (Etapa 3) — con una <strong>opción de compra de la tecnología</strong> que protege a todos durante la transición.</p>
   </div>
 
   <a class="anexo" href="https://docs.google.com/spreadsheets/d/1_ybgXe6Pi6t9GLeql9WTPrPeXXGsjKUUTaTYqysm_a8/edit" target="_blank" rel="noopener">
@@ -307,36 +313,36 @@
 
   <div class="grid g3">
     <div class="card socio c3">
-      <div class="etapa-n">Etapa 1 — Joint Venture</div>
+      <div class="etapa-n">Etapa 1 — Joint Venture contractual</div>
       <div class="etapa-h">Mes 1–3 · Jul–Ago 2026</div>
-      <div class="etapa-v">Vehículo: licencia + operación (Kubuz)</div>
+      <div class="etapa-v">Vehículo: contrato · Plataforma Kubuz 100%</div>
       <ul>
         <li>Kubuz licencia la plataforma a la red (freemium, $89.990 + IVA)</li>
-        <li>Cobra un fee de <strong>5 UF por escritura</strong>, pagado a 60 días</li>
-        <li>La <strong>IP queda en Kubuz</strong></li>
-        <li>Garantía: <strong>opción de compra</strong> de la tecnología hasta el Mes 4, a valor de perito</li>
+        <li>Kubuz paga a <strong>Brouk Servicios Inmobiliarios</strong> el <strong>10% del licenciamiento</strong> vendido</li>
+        <li>Fee de plataforma = <strong>10% de la comisión de Brouk</strong> por venta (reemplaza las 5 UF), a 60 días</li>
+        <li>La <strong>IP queda en Kubuz</strong>; opción de compra como garantía</li>
       </ul>
     </div>
     <div class="card socio c1">
-      <div class="etapa-n">Etapa 2 — Sociedad</div>
+      <div class="etapa-n">Etapa 2 — Joint Venture accionario</div>
       <div class="etapa-h">Mes 3–9 · desde Sep 2026</div>
-      <div class="etapa-v">Vehículo: Brouk SpA (nueva)</div>
+      <div class="etapa-v">Plataforma: Kubuz 75% / Brouk SI 25%</div>
       <ul>
-        <li>Se constituye <strong>Brouk SpA</strong></li>
-        <li><strong>Camilo entra</strong> como socio (25% de dividendos)</li>
-        <li>El equipo de Kubuz entra como socio</li>
-        <li>Brouk SpA captura el <strong>50% de la comisión</strong> y recibe el licenciamiento de la red</li>
+        <li>La plataforma pasa a un <strong>Joint Venture accionario</strong>: Kubuz 75%, Brouk SI 25%</li>
+        <li>Kubuz <strong>deja de pagar</strong> el 10% de licenciamiento; Brouk SI entra como <strong>accionista</strong></li>
+        <li>El Joint Venture sigue cobrando el <strong>10% de la comisión</strong> por transacción</li>
+        <li>El resultado del Joint Venture se reparte <strong>75 / 25</strong></li>
       </ul>
     </div>
     <div class="card socio c2">
       <div class="etapa-n">Etapa 3 — Consolidación</div>
       <div class="etapa-h">&gt; Mes 9</div>
-      <div class="etapa-v">Vehículo: Brouk SpA (holding)</div>
+      <div class="etapa-v">Vehículo: Brouk SpA · 4 socios × 25%</div>
       <ul>
-        <li>Todas las líneas por <strong>Brouk SpA</strong></li>
-        <li>Corretaje, créditos, licenciamiento, cursos</li>
-        <li>Servicios a inmobiliarias, arriendos y SaaS a corredores</li>
-        <li>Socios con <strong>25% de la operación total</strong></li>
+        <li>Se constituye <strong>Brouk SpA</strong>, una sola sociedad</li>
+        <li>Consolida plataforma, operación y todas las líneas</li>
+        <li><strong>Ni Kubuz ni Brouk SI</strong> perciben renta aparte</li>
+        <li>Ganancias parejas entre los <strong>4 socios (25% c/u)</strong></li>
       </ul>
     </div>
   </div>
@@ -344,9 +350,10 @@
   <div class="callout teal blk">
     <h4>Cómo migra el valor (lectura rápida)</h4>
     <ul>
-      <li>En <strong>Jul–Ago</strong>, Kubuz factura el licenciamiento a la red (6 y 16 brokers) y empieza a recibir caja por el fee en <strong>septiembre</strong>.</li>
-      <li>Desde <strong>Sep</strong>, el licenciamiento y la captura de comisión <strong>pasan a Brouk SpA</strong>, que concentra el valor.</li>
-      <li>El fee de 5 UF por escritura se cobra a <strong>60 días</strong>; lo escriturado en Nov–Dic se cobra en 2027.</li>
+      <li>En <strong>Jul–Ago</strong>, Kubuz licencia a la red (6 y 16 brokers), paga a Brouk SI el <strong>10% del licenciamiento</strong> y cobra el <strong>fee del 10%</strong> de la comisión por escritura (a 60 días).</li>
+      <li>Desde <strong>Sep</strong>, la plataforma pasa a un <strong>Joint Venture accionario 75/25</strong>: Kubuz deja de pagar el 10% de licenciamiento y Brouk SI entra como accionista; el Joint Venture sigue cobrando el 10% de la comisión.</li>
+      <li>En <strong>Etapa 3</strong> todo se consolida en <strong>Brouk SpA</strong> (4 socios × 25%): ni Kubuz ni Brouk SI perciben renta aparte.</li>
+      <li>El fee del 10% se cobra a <strong>60 días</strong>; lo escriturado en Nov–Dic se cobra en 2027.</li>
     </ul>
   </div>
 
@@ -356,12 +363,13 @@
     <tbody>
       <tr><td><b>Valor UF</b></td><td class="num">$40.661</td><td>Referencia jun-2026</td></tr>
       <tr><td><b>Ticket promedio por propiedad</b></td><td class="num">3.000 UF</td><td>≈ $121.983.000</td></tr>
-      <tr><td><b>Comisión inmobiliaria sobre venta</b></td><td class="num">2,0%</td><td>Estándar de mercado</td></tr>
-      <tr><td><b>Fee Kubuz por transacción</b></td><td class="num">5,0 UF</td><td>≈ $203.305 · pago a 60 días</td></tr>
+      <tr><td><b>Comisión de Brouk SI (de la inmobiliaria)</b></td><td class="num">2,0%</td><td>≈ $2.439.660 por venta</td></tr>
+      <tr><td><b>Fee de plataforma · Kubuz/Joint Venture</b></td><td class="num">10% de la comisión</td><td>≈ $243.966 por venta · pago a 60 días</td></tr>
+      <tr><td><b>Comisión de licenciamiento a Brouk SI · Etapa 1</b></td><td class="num">10%</td><td>Sobre el licenciamiento vendido · sólo Jul–Ago</td></tr>
       <tr><td><b>Precio licencia (neto)</b></td><td class="num">$89.990</td><td>+ IVA 19% ≈ $107.088</td></tr>
       <tr><td><b>Red objetivo</b></td><td class="num">320 brokers</td><td>Total de la red Brouk</td></tr>
-      <tr><td><b>Captura Brouk sobre comisión · Etapa 2</b></td><td class="num">50,0%</td><td>Desde Sep</td></tr>
-      <tr><td><b>Participación dividendos Camilo · Etapa 2</b></td><td class="num">25,0%</td><td>Sobre el resultado de Brouk SpA</td></tr>
+      <tr><td><b>Reparto del Joint Venture · Etapa 2</b></td><td class="num">75 / 25</td><td>Kubuz 75% · Brouk SI 25% · desde Sep</td></tr>
+      <tr><td><b>Brouk SpA · Etapa 3</b></td><td class="num">4 × 25%</td><td>Ganancias parejas entre los 4 socios</td></tr>
     </tbody>
   </table>
 </section>
@@ -370,25 +378,25 @@
 <section class="panel" id="t-sociedad">
   <div class="sec-num">03 — Sociedad</div>
   <h2 class="sec-title">Brouk SpA y sus socios</h2>
-  <p class="sec-lead">Brouk SpA se <strong>constituye en la Etapa 2</strong>, una vez probado el modelo en el Joint Venture. Cuatro socios fundadores, cada uno con un área propia y al <strong>25%</strong>. Camilo aporta la red, la cartera y la operación; los tres socios de Kubuz aportan la plataforma, que se incorpora a Brouk vía cesión (con la opción de compra de la Etapa 1 como respaldo).</p>
+  <p class="sec-lead">Brouk SpA se <strong>constituye en la Etapa 3</strong>, tras probar el modelo en el Joint Venture (Etapa 1) y operarlo como <strong>Joint Venture accionario 75/25</strong> (Etapa 2). Cuatro socios fundadores, cada uno con un área propia y al <strong>25%</strong>. Camilo (<strong>Brouk Servicios Inmobiliarios</strong>) aporta la red, la cartera y la operación; los tres socios de Kubuz aportan la plataforma, que se incorpora vía cesión (con la opción de compra como respaldo).</p>
 
   <div class="entities">
     <div class="ent">
-      <div class="lbl">Etapa 1 · vehículo</div>
+      <div class="lbl">Etapa 1 · Kubuz 100%</div>
       <div class="nm">Kubuz SpA</div>
-      <p>Licencia la plataforma a la red y cobra el fee. IP en Kubuz.</p>
+      <p>Licencia la plataforma; paga 10% del licenciamiento a Brouk SI y cobra el fee del 10%. IP en Kubuz.</p>
     </div>
     <div class="ent-arrow">→</div>
     <div class="ent new">
-      <div class="lbl">Etapa 2 · se constituye</div>
-      <div class="nm">Brouk SpA</div>
-      <p>Camilo + equipo Kubuz al 25%. Captura comisión y licenciamiento.</p>
+      <div class="lbl">Etapa 2 · Joint Venture accionario</div>
+      <div class="nm">Kubuz 75 / Brouk SI 25</div>
+      <p>La plataforma se opera en sociedad. Brouk SI entra como accionista 25%; el resultado se reparte 75/25.</p>
     </div>
     <div class="ent-arrow">→</div>
     <div class="ent new">
-      <div class="lbl">Etapa 3 · holding</div>
+      <div class="lbl">Etapa 3 · se constituye</div>
       <div class="nm">Brouk SpA</div>
-      <p>Concentra todas las líneas de negocio. Socios al 25% del total.</p>
+      <p>Una sola sociedad, 4 socios × 25%. Concentra todas las líneas; ni Kubuz ni Brouk SI perciben renta aparte.</p>
     </div>
   </div>
 
@@ -583,46 +591,87 @@
 <section class="panel" id="t-finanzas">
   <div class="sec-num">05 — Economía</div>
   <h2 class="sec-title">Economía por etapa</h2>
-  <p class="sec-lead">Las cifras salen del modelo financiero (anexo). Etapa 1 es de inversión en Kubuz; la Etapa 2 ya genera resultado en Brouk SpA; la Etapa 3 muestra el run-rate de una operación diversificada. Todas las cifras son <strong>netas de IVA</strong>.</p>
+  <p class="sec-lead">Las cifras se recalcularon sobre el modelo de <strong>tres entidades</strong> (Kubuz, Brouk Servicios Inmobiliarios y, en Etapa 3, Brouk SpA), en <strong>base caja</strong>: el fee del 10% se cobra a 60 días. Las Etapas 1–2 muestran el flujo de la plataforma y los flujos del acuerdo; la Etapa 3, el run-rate consolidado. Todas las cifras son <strong>netas de IVA</strong>.</p>
 
-  <h3 class="subh">Etapa 1 — Flujo de Kubuz (Jul–Dic, 6 meses)</h3>
-  <p>Kubuz licencia la plataforma (6 brokers en Jul, 16 en Ago, 32 desde Sep) y cobra el fee de 5 UF por escritura a 60 días. Es una etapa de inversión que se recupera con el fee.</p>
-  <div class="num-stat">
-    <div class="ns"><div class="v"><em>$8,5M</em></div><div class="k">ingresos caja (6 meses)</div></div>
-    <div class="ns"><div class="v">$15,3M</div><div class="k">egresos (opex equipo + infra)</div></div>
-    <div class="ns"><div class="v">−$6,8M</div><div class="k">flujo neto caja (6 meses)</div></div>
-    <div class="ns"><div class="v">$6,1M</div><div class="k">fee por cobrar (se paga en 2027)</div></div>
+  <div class="callout terra">
+    <h4>Supuestos del recálculo (validar con contador)</h4>
+    <ul>
+      <li>Comisión de Brouk SI a la inmobiliaria: <strong>2%</strong> ($2.439.660/venta). Fee de plataforma = <strong>10% de esa comisión</strong> ($243.966/venta), cobrado a 60 días.</li>
+      <li>En Etapa 1, Kubuz paga a Brouk SI el <strong>10% del licenciamiento</strong> ($8.999/licencia); desde Sep ese pago cesa y Brouk SI entra como <strong>accionista 25%</strong> del Joint Venture.</li>
+      <li>Opex de plataforma (infra + equipo) imputado a Kubuz/Joint Venture; el opex de operación/red ($2M/mes) es del corretaje de Brouk SI y corre fuera de estas tablas.</li>
+      <li>Etapa 1 = Jul–Ago (Kubuz 100%); Etapa 2 = Sep–Dic (Joint Venture 75/25). El reparto 75/25 se aplica al flujo del Joint Venture de Sep–Dic.</li>
+    </ul>
   </div>
 
-  <h3 class="subh">Etapa 2 — Resultado de Brouk SpA (desde Sep, 6 meses)</h3>
-  <p>Desde septiembre, Brouk SpA captura el 50% de la comisión inmobiliaria y recibe el licenciamiento de la red. Camilo recibe el 25% del resultado como dividendo.</p>
+  <h3 class="subh">Etapas 1–2 — Flujo de caja de la plataforma (Jul–Dic)</h3>
+  <p>Kubuz es 100% dueña en Jul–Ago; desde Sep la plataforma es un <strong>Joint Venture accionario</strong> (Kubuz 75% / Brouk SI 25%). El licenciamiento se cobra el mismo mes; el fee del 10% por escritura, a 60 días. En Etapa 1 el licenciamiento paga un 10% de comisión a Brouk SI.</p>
   <div class="num-stat">
-    <div class="ns"><div class="v"><em>$78,6M</em></div><div class="k">ingresos (6 meses)</div></div>
-    <div class="ns"><div class="v">$13,1M</div><div class="k">egresos (fee a Kubuz + opex)</div></div>
-    <div class="ns"><div class="v">$65,5M</div><div class="k">resultado neto (6 meses)</div></div>
-    <div class="ns"><div class="v">$16,4M</div><div class="k">dividendo Camilo (25%)</div></div>
+    <div class="ns"><div class="v"><em>+$5,8M</em></div><div class="k">flujo neto plataforma (6 meses)</div></div>
+    <div class="ns"><div class="v">$13,5M</div><div class="k">licenciamiento cobrado (6 meses)</div></div>
+    <div class="ns"><div class="v">$7,8M</div><div class="k">fee del 10% cobrado (6 meses)</div></div>
+    <div class="ns"><div class="v">$7,3M</div><div class="k">fee por cobrar (se paga en 2027)</div></div>
   </div>
+  <div class="scrollx blk">
+    <table class="tbl" style="min-width:720px">
+      <thead><tr><th>Flujo de caja plataforma (CLP)</th><th class="num">Jul</th><th class="num">Ago</th><th class="num">Sep</th><th class="num">Oct</th><th class="num">Nov</th><th class="num">Dic</th></tr></thead>
+      <tbody>
+        <tr><td>Licenciamiento a la red</td><td class="num">$539.940</td><td class="num">$1.439.840</td><td class="num">$2.879.680</td><td class="num">$2.879.680</td><td class="num">$2.879.680</td><td class="num">$2.879.680</td></tr>
+        <tr><td>(−) Comisión 10% a Brouk SI · Etapa 1</td><td class="num neg">($53.994)</td><td class="num neg">($143.984)</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Fee transacción 10% · cobro 60 días</td><td class="num">—</td><td class="num">—</td><td class="num">$487.932</td><td class="num">$1.219.830</td><td class="num">$2.439.660</td><td class="num">$3.659.490</td></tr>
+        <tr class="subt"><td>Total ingresos caja</td><td class="num">$485.946</td><td class="num">$1.295.856</td><td class="num">$3.367.612</td><td class="num">$4.099.510</td><td class="num">$5.319.340</td><td class="num">$6.539.170</td></tr>
+        <tr><td>Opex plataforma (infra + equipo)</td><td class="num">$800.000</td><td class="num">$800.000</td><td class="num">$800.000</td><td class="num">$4.300.000</td><td class="num">$4.300.000</td><td class="num">$4.300.000</td></tr>
+        <tr class="total"><td>Flujo neto del mes</td><td class="num neg">($314.054)</td><td class="num">$495.856</td><td class="num">$2.567.612</td><td class="num neg">($200.490)</td><td class="num">$1.019.340</td><td class="num">$2.239.170</td></tr>
+        <tr class="acc"><td>Flujo acumulado</td><td class="num neg">($314.054)</td><td class="num">$181.802</td><td class="num">$2.749.414</td><td class="num">$2.548.924</td><td class="num">$3.568.264</td><td class="num">$5.807.434</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tbl-cap">Licenciamiento = licencias activas (6 → 16 → 32) × $89.990. Fee = 10% de la comisión de Brouk ($243.966/escritura), cobrado 60 días después. Kubuz 100% en Jul–Ago; Joint Venture 75/25 desde Sep. Cifras netas de IVA.</div>
+
+  <h3 class="subh">Etapa 2 — Reparto del Joint Venture y flujos del acuerdo (Sep–Dic)</h3>
+  <p>En la Etapa 2 el resultado de la plataforma corresponde al Joint Venture y se reparte <strong>75% Kubuz / 25% Brouk SI</strong>. Lo de abajo son los flujos del acuerdo de plataforma; el corretaje de Brouk SI (su comisión del 2%) es su negocio propio y corre en paralelo.</p>
+  <div class="grid g2 blk">
+    <table class="tbl">
+      <thead><tr><th>Reparto del Joint Venture · Sep–Dic</th><th class="num">CLP</th></tr></thead>
+      <tbody>
+        <tr><td>Resultado del Joint Venture (flujo Sep–Dic)</td><td class="num">$5.625.632</td></tr>
+        <tr><td>Kubuz · 75%</td><td class="num">$4.219.224</td></tr>
+        <tr class="total"><td>Brouk SI · 25%</td><td class="num">$1.406.408</td></tr>
+      </tbody>
+    </table>
+    <table class="tbl">
+      <thead><tr><th>Flujos del acuerdo · Brouk SI (Jul–Dic)</th><th class="num">CLP</th></tr></thead>
+      <tbody>
+        <tr><td>Comisión de licenciamiento 10% · Etapa 1</td><td class="num">$197.978</td></tr>
+        <tr><td>Participación 25% en el Joint Venture · Etapa 2</td><td class="num">$1.406.408</td></tr>
+        <tr><td>(−) Fee de plataforma pagado (10%, 60 días)</td><td class="num neg">($7.806.912)</td></tr>
+        <tr class="total"><td>Neto del acuerdo de plataforma</td><td class="num neg">($6.202.526)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tbl-cap">El neto negativo es el <strong>costo de usar la plataforma</strong>: a cambio, Brouk SI factura ~$151M de comisión (2%) por su corretaje en el período — volumen propio, fuera de este acuerdo. La igualación 4×25% llega en la Etapa 3.</div>
 
   <h3 class="subh">Etapa 3 — Run-rate diversificado (&gt; Mes 9)</h3>
-  <p>Estimación de un mes representativo con todas las líneas operando por Brouk SpA. Ingreso bruto (no descuenta reparto a brokers ni costos): ajustar las cantidades al pipeline real.</p>
-  <table class="tbl">
-    <thead><tr><th>Línea de ingreso</th><th class="num">Mensual</th><th class="num">Anual</th></tr></thead>
-    <tbody>
-      <tr><td><b>Corretaje — venta de propiedades</b></td><td class="num">$60.991.500</td><td class="num">$731.898.000</td></tr>
-      <tr><td><b>Gestión de créditos hipotecarios</b></td><td class="num">$12.195.000</td><td class="num">$146.340.000</td></tr>
-      <tr><td><b>Servicios a inmobiliarias</b></td><td class="num">$16.250.000</td><td class="num">$195.000.000</td></tr>
-      <tr><td><b>Administración de arriendos</b></td><td class="num">$5.974.500</td><td class="num">$71.694.000</td></tr>
-      <tr><td><b>Intermediación de arriendos</b></td><td class="num">$2.845.000</td><td class="num">$34.140.000</td></tr>
-      <tr><td><b>SaaS / licencias a corredores</b></td><td class="num">$13.498.500</td><td class="num">$161.982.000</td></tr>
-      <tr><td><b>Licenciamiento white-label a inmobiliarias</b></td><td class="num">$3.599.600</td><td class="num">$43.195.200</td></tr>
-      <tr><td><b>Cursos / formación</b></td><td class="num">$2.000.000</td><td class="num">$24.000.000</td></tr>
-      <tr class="total"><td><b>Total ingreso bruto</b></td><td class="num">$117.354.100</td><td class="num">$1.408.249.200</td></tr>
-    </tbody>
-  </table>
+  <p>Estimación de un mes representativo con todas las líneas operando por una sola <strong>Brouk SpA</strong> (4 socios × 25%). <strong>No hay fees inter-entidad</strong>: ni Kubuz ni Brouk SI perciben renta aparte. Ingreso <strong>bruto</strong> (no descuenta reparto a brokers ni costos): ajustar las cantidades al pipeline real.</p>
+  <div class="scrollx">
+    <table class="tbl" style="min-width:720px">
+      <thead><tr><th>Línea de ingreso</th><th class="num">Cant.</th><th class="num">Tarifa / base</th><th class="num">Factor</th><th class="num">Mensual</th><th class="num">Anual</th></tr></thead>
+      <tbody>
+        <tr><td><b>Corretaje — venta de propiedades</b></td><td class="num">25</td><td class="num">$121.983.000</td><td class="num">2,0%</td><td class="num">$60.991.500</td><td class="num">$731.898.000</td></tr>
+        <tr><td><b>Gestión de créditos hipotecarios</b></td><td class="num">15</td><td class="num">$813.000</td><td class="num">100%</td><td class="num">$12.195.000</td><td class="num">$146.340.000</td></tr>
+        <tr><td><b>Servicios a inmobiliarias</b></td><td class="num">5</td><td class="num">$3.250.000</td><td class="num">100%</td><td class="num">$16.250.000</td><td class="num">$195.000.000</td></tr>
+        <tr><td><b>Administración de arriendos</b></td><td class="num">150</td><td class="num">$569.000</td><td class="num">7,0%</td><td class="num">$5.974.500</td><td class="num">$71.694.000</td></tr>
+        <tr><td><b>Intermediación de arriendos</b></td><td class="num">10</td><td class="num">$569.000</td><td class="num">50%</td><td class="num">$2.845.000</td><td class="num">$34.140.000</td></tr>
+        <tr><td><b>SaaS / licencias a corredores</b></td><td class="num">150</td><td class="num">$89.990</td><td class="num">100%</td><td class="num">$13.498.500</td><td class="num">$161.982.000</td></tr>
+        <tr><td><b>Licenciamiento white-label a inmobiliarias</b></td><td class="num">40</td><td class="num">$89.990</td><td class="num">100%</td><td class="num">$3.599.600</td><td class="num">$43.195.200</td></tr>
+        <tr><td><b>Cursos / formación</b></td><td class="num">40</td><td class="num">$50.000</td><td class="num">100%</td><td class="num">$2.000.000</td><td class="num">$24.000.000</td></tr>
+        <tr class="total"><td><b>Total ingreso bruto</b></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">$117.354.100</td><td class="num">$1.408.249.200</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="callout teal blk">
     <h4>Cómo leer el modelo</h4>
-    <p>El flujo de Etapa 1 y el resultado de Etapa 2 incorporan los rezagos reales (el fee se cobra a 60 días). La Etapa 3 es un <strong>run-rate</strong> (mes representativo), no un flujo con rezagos. En el anexo, edita <strong>solo</strong> la pestaña de <em>Supuestos</em> y los drivers azules de <em>Etapa 3</em>; el resto se recalcula solo.</p>
+    <p>Las Etapas 1–2 están en <strong>base caja</strong> (el fee del 10% se cobra a 60 días); la cola de Nov–Dic se cobra en 2027. La Etapa 3 es un <strong>run-rate</strong> (mes representativo), no un flujo con rezagos. El corretaje de Brouk SI (comisión 2%) corre fuera de estas tablas hasta consolidarse en Brouk SpA. En el anexo, edita <strong>solo</strong> la pestaña de <em>Supuestos</em> y los drivers azules de <em>Etapa 3</em>; el resto se recalcula solo.</p>
   </div>
 </section>
 
@@ -630,16 +679,16 @@
 <section class="panel" id="t-roadmap">
   <div class="sec-num">06 — Cronograma</div>
   <h2 class="sec-title">Hoja de ruta por etapas</h2>
-  <p class="sec-lead">El plan se ejecuta en las tres etapas. La Etapa 1 arranca la operación con la plataforma de Kubuz; la Etapa 2 constituye Brouk SpA y traslada el valor; la Etapa 3 consolida todas las líneas. El detalle actividad por actividad, con responsable y avance, está en la <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">hoja de ruta en Google Sheets</a>.</p>
+  <p class="sec-lead">El plan se ejecuta en las tres etapas. La Etapa 1 arranca la operación con la plataforma de Kubuz; la Etapa 2 lleva la plataforma a un <strong>Joint Venture accionario 75/25</strong>; la Etapa 3 constituye <strong>Brouk SpA</strong> y consolida todas las líneas. El detalle actividad por actividad, con responsable y avance, está en la <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">hoja de ruta en Google Sheets</a>.</p>
 
   <div class="road">
     <div class="week">
-      <div class="week-label"><div class="wk">Etapa 1 · JV</div><div class="dates">Jul–Ago</div><div class="focus">Lanzar y facturar</div></div>
+      <div class="week-label"><div class="wk">Etapa 1 · Joint Venture contractual</div><div class="dates">Jul–Ago</div><div class="focus">Lanzar y facturar</div></div>
       <div class="tasks">
         <div class="task"><span class="tag t-all">Todos</span> Cerrar el <b>acuerdo de Joint Venture / licencia</b> entre Kubuz y la red.</div>
         <div class="task"><span class="tag t-all">Todos</span> Firmar la <b>opción de compra de la IP</b> (valor de perito, vigencia hasta el Mes 4).</div>
         <div class="task"><span class="tag t-kubuz">Kubuz</span> Lanzar la plataforma en <b>freemium</b> ($89.990+IVA) a los primeros brokers (6 → 16).</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Montar el cobro del <b>fee de 5 UF por escritura</b> (a 60 días) y la facturación de Kubuz.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Montar el cobro del <b>fee del 10% de la comisión</b> por escritura (a 60 días) y el pago del <b>10% del licenciamiento</b> a Brouk SI.</div>
         <div class="task"><span class="tag t-cam">Camilo</span> Captación de brokers a la red y activación de las primeras escrituras.</div>
         <div class="task"><span class="tag t-gon">Gonzalo</span> Onboarding y mesa de ayuda de los primeros brokers.</div>
         <div class="task"><span class="tag t-tec">Fernando</span> Auditoría técnica de la plataforma y soporte de la operación.</div>
@@ -647,36 +696,36 @@
       </div>
     </div>
     <div class="week">
-      <div class="week-label"><div class="wk">Etapa 2 · Sociedad</div><div class="dates">Sep+</div><div class="focus">Constituir y trasladar</div></div>
+      <div class="week-label"><div class="wk">Etapa 2 · Joint Venture accionario</div><div class="dates">Sep+</div><div class="focus">Operar en sociedad 75/25</div></div>
       <div class="tasks">
-        <div class="task"><span class="tag t-all">Todos</span> Cerrar los borradores de <b>Estatutos, Pacto y Prenda</b> (capital, umbrales UF, desempate).</div>
-        <div class="task"><span class="tag t-all">Todos</span> Firmar y <b>constituir Brouk SpA</b>; inscripción, publicación, RUT e inicio de actividades.</div>
-        <div class="task"><span class="tag t-all">Todos</span> Ejercer/formalizar la <b>cesión de la tecnología</b> y de la cartera a Brouk SpA.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Apoderados bancarios, cuenta corriente y <b>facturación electrónica</b> de Brouk SpA.</div>
-        <div class="task"><span class="tag t-cam">Camilo</span> Trasladar a Brouk la <b>captura del 50% de la comisión</b> y el licenciamiento de la red.</div>
-        <div class="task"><span class="tag t-tec">Fernando</span> Migrar la operación y los usuarios de la red a Brouk SpA (ver Plataforma y traslado).</div>
+        <div class="task"><span class="tag t-all">Todos</span> Cerrar el <b>pacto del Joint Venture accionario</b> (Kubuz 75% / Brouk SI 25%) y el aporte de la plataforma.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Dejar de pagar el 10% de licenciamiento; <b>Brouk SI entra como accionista</b> 25% del Joint Venture.</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Operar en el Joint Venture el cobro del <b>fee del 10%</b> de la comisión y la facturación.</div>
+        <div class="task"><span class="tag t-tec">Fernando</span> Migrar la operación y los usuarios de la red al Joint Venture, sin interrumpir el servicio.</div>
+        <div class="task"><span class="tag t-cam">Camilo</span> Sostener el corretaje (comisión 2%) y la captación de brokers a la red.</div>
       </div>
     </div>
     <div class="week">
-      <div class="week-label"><div class="wk">Etapa 3 · Consolidación</div><div class="dates">&gt; Mes 9</div><div class="focus">Escalar y diversificar</div></div>
+      <div class="week-label"><div class="wk">Etapa 3 · Consolidación</div><div class="dates">&gt; Mes 9</div><div class="focus">Constituir, escalar y diversificar</div></div>
       <div class="tasks">
+        <div class="task"><span class="tag t-all">Todos</span> Cerrar los borradores de <b>Estatutos, Pacto y Prenda</b> y <b>constituir Brouk SpA</b> (4×25%): inscripción, RUT e inicio de actividades.</div>
+        <div class="task"><span class="tag t-all">Todos</span> Ejercer la <b>cesión de la tecnología</b> y de la cartera a Brouk SpA; apoderados y facturación electrónica.</div>
         <div class="task"><span class="tag t-cam">Camilo</span> Abrir las nuevas líneas: créditos, servicios a inmobiliarias, arriendos, white-label.</div>
         <div class="task"><span class="tag t-gon">Gonzalo</span> Escalar la red más allá de los 320 brokers y lanzar cursos/formación.</div>
         <div class="task"><span class="tag t-tec">Fernando</span> Producto: SaaS a corredores y capacidad para el volumen del run-rate.</div>
-        <div class="task"><span class="tag t-adm">José Miguel</span> Estructura de holding, primer cierre y política de dividendos.</div>
-        <div class="task"><span class="tag t-gon">Gonzalo</span> Planificar el <b>cambio de oficina</b> (3.er mes).</div>
+        <div class="task"><span class="tag t-adm">José Miguel</span> Primer cierre, estructura y política de dividendos de Brouk SpA.</div>
       </div>
     </div>
   </div>
 
   <div class="milestone">
     <div class="eyebrow">Hito de la transición</div>
-    <h3>Etapa 2 — Constitución de Brouk SpA</h3>
-    <p>El paso de Joint Venture a sociedad: se constituye Brouk SpA, los cuatro socios entran al 25% y el licenciamiento y la comisión pasan a la nueva sociedad. Desde aquí el valor se concentra en Brouk.</p>
+    <h3>Etapa 2 — Joint Venture accionario 75/25</h3>
+    <p>El paso de Joint Venture <strong>contractual</strong> a Joint Venture <strong>accionario</strong> sobre la plataforma: Brouk SI deja de cobrar la comisión de licenciamiento y entra como accionista del Joint Venture. El resultado se reparte 75/25 y se prepara la consolidación final en Brouk SpA (Etapa 3).</p>
     <div class="ms-grid">
-      <div class="ms-item"><div class="n">4×25%</div><div class="l">socios fundadores en partes iguales</div></div>
-      <div class="ms-item"><div class="n">50%</div><div class="l">de la comisión capturada por Brouk SpA</div></div>
-      <div class="ms-item"><div class="n">IP</div><div class="l">tecnología cedida a Brouk (respaldada por la opción de compra)</div></div>
+      <div class="ms-item"><div class="n">75/25</div><div class="l">Kubuz 75% · Brouk SI 25% de la plataforma</div></div>
+      <div class="ms-item"><div class="n">10%</div><div class="l">fee de la comisión que sigue cobrando el Joint Venture</div></div>
+      <div class="ms-item"><div class="n">25%</div><div class="l">participación de Brouk SI en el resultado del Joint Venture</div></div>
     </div>
   </div>
 
@@ -690,41 +739,42 @@
 <section class="panel" id="t-migracion">
   <div class="sec-num">07 — Operación crítica</div>
   <h2 class="sec-title">Plataforma y traslado de la operación</h2>
-  <p class="sec-lead">La plataforma ya opera desde la Etapa 1 (licenciada por Kubuz). El movimiento crítico es el <strong>traslado de la operación y la red a Brouk SpA</strong> en la Etapa 2, sin interrumpir el servicio. Fernando lidera lo técnico; Gonzalo sostiene la atención a los usuarios.</p>
+  <p class="sec-lead">La plataforma ya opera desde la Etapa 1 (Kubuz 100%). El movimiento crítico es llevar la plataforma a un <strong>Joint Venture accionario</strong> (Etapa 2) y consolidarla en <strong>Brouk SpA</strong> (Etapa 3), sin interrumpir el servicio. Fernando lidera lo técnico; Gonzalo sostiene la atención a los usuarios.</p>
   <div class="grid g3">
     <div class="card socio c3">
       <h4 style="font-size:17px">Etapa 1 · plataforma operativa</h4>
       <ul class="clean" style="font-size:14px">
-        <li>Plataforma en producción bajo licencia de Kubuz</li>
+        <li>Plataforma en producción bajo Kubuz (100%)</li>
         <li>Onboarding de los primeros brokers (6 → 16 → 32)</li>
         <li>Inventario y limpieza de la base de usuarios</li>
         <li>Auditoría técnica y pruebas de carga</li>
-        <li>Definir ventana y plan de rollback del traslado</li>
+        <li>Definir ventana y plan de rollback</li>
       </ul>
     </div>
     <div class="card socio c1">
-      <h4 style="font-size:17px">Etapa 2 · traslado a Brouk</h4>
+      <h4 style="font-size:17px">Etapa 2 · Joint Venture accionario 75/25</h4>
       <ul class="clean" style="font-size:14px">
-        <li>Cesión de la tecnología (IP) a Brouk SpA</li>
-        <li>Migrar código, repositorios, dominios y cuentas</li>
-        <li>Traslado de la operación y la red a Brouk</li>
+        <li>Aporte de la plataforma al Joint Venture (Kubuz 75 / Brouk SI 25)</li>
+        <li>Gobernanza técnica y accesos compartidos</li>
+        <li>Migrar la operación y la red al Joint Venture</li>
         <li>Validación de accesos y soporte en vivo</li>
         <li>Go/No-Go con criterio de reversa claro</li>
       </ul>
     </div>
     <div class="card socio c2">
-      <h4 style="font-size:17px">Etapa 3 · escalamiento</h4>
+      <h4 style="font-size:17px">Etapa 3 · cesión a Brouk SpA + escala</h4>
       <ul class="clean" style="font-size:14px">
+        <li>Cesión de la tecnología (IP) a Brouk SpA</li>
+        <li>Migrar código, repositorios, dominios y cuentas</li>
         <li>Capacidad para el volumen del run-rate</li>
         <li>SaaS a corredores y licenciamiento white-label</li>
         <li>Monitoreo de estabilidad y métricas de adopción</li>
-        <li>Iteración sobre nuevas líneas de producto</li>
       </ul>
     </div>
   </div>
   <div class="callout teal blk">
     <h4>Protección de datos y términos de la plataforma</h4>
-    <p>La red maneja datos de los brokers y de sus clientes. Hay que cerrar con el abogado: cumplimiento de la <strong>Ley 21.719</strong> de datos personales, los <strong>términos y condiciones + política de privacidad</strong> a nombre de Brouk SpA, el consentimiento para el traslado de la base entre Kubuz y Brouk, y dejar explícito que la base de usuarios es un activo de Brouk SpA.</p>
+    <p>La red maneja datos de los brokers y de sus clientes. Hay que cerrar con el abogado: cumplimiento de la <strong>Ley 21.719</strong> de datos personales, los <strong>términos y condiciones + política de privacidad</strong>, el consentimiento para el traslado de la base entre Kubuz, el Joint Venture y Brouk SpA, y dejar explícito que la base de usuarios termina como activo de <strong>Brouk SpA</strong>.</p>
   </div>
 </section>
 
@@ -732,18 +782,20 @@
 <section class="panel" id="t-legal">
   <div class="sec-num">08 — Tributario y legal</div>
   <h2 class="sec-title">Facturación y pasos legales por etapa</h2>
-  <p class="sec-lead">Quién factura cambia con la etapa: en la Etapa 1 factura <strong>Kubuz</strong> (licencias + fee); desde la Etapa 2 factura <strong>Brouk SpA</strong> (licenciamiento + comisión). La IP queda en Kubuz hasta que se cede a Brouk, con la opción de compra como respaldo.</p>
-  <table class="tbl">
-    <thead><tr><th>Concepto</th><th>Etapa 1 (Jul–Ago)</th><th>Etapa 2 (desde Sep)</th></tr></thead>
-    <tbody>
-      <tr><td><b>Emisor de facturas</b></td><td>Kubuz SpA</td><td>Brouk SpA</td></tr>
-      <tr><td><b>Licenciamiento a la red</b></td><td>Lo cobra Kubuz</td><td>Pasa a Brouk SpA</td></tr>
-      <tr><td><b>Fee por escritura (5 UF)</b></td><td>De Kubuz · cobro a 60 días</td><td>Se evalúa según la cesión</td></tr>
-      <tr><td><b>Captura de comisión (50%)</b></td><td>—</td><td>Brouk SpA</td></tr>
-      <tr><td><b>Propiedad de la tecnología (IP)</b></td><td>En Kubuz · opción de compra (perito) hasta Mes 4</td><td>Cedida a Brouk SpA</td></tr>
-      <tr><td><b>Facturación electrónica SII</b></td><td>Kubuz vigente</td><td>Brouk habilitada antes de operar</td></tr>
-    </tbody>
-  </table>
+  <p class="sec-lead">Quién factura cambia con la etapa: en la Etapa 1 conviven <strong>Kubuz</strong> (licencias + fee) y <strong>Brouk SI</strong> (corretaje); en la Etapa 2 la plataforma factura desde el <strong>Joint Venture</strong>; en la Etapa 3 todo lo emite <strong>Brouk SpA</strong>. La IP queda en Kubuz hasta cederse a Brouk SpA, con la opción de compra como respaldo.</p>
+  <div class="scrollx">
+    <table class="tbl" style="min-width:720px">
+      <thead><tr><th>Concepto</th><th>Etapa 1 · Jul–Ago</th><th>Etapa 2 · desde Sep</th><th>Etapa 3 · &gt; Mes 9</th></tr></thead>
+      <tbody>
+        <tr><td><b>Propiedad de la plataforma</b></td><td>Kubuz 100%</td><td>Joint Venture · Kubuz 75 / Brouk SI 25</td><td>Brouk SpA · 4 × 25%</td></tr>
+        <tr><td><b>Licenciamiento a la red</b></td><td>Lo cobra Kubuz · paga 10% a Brouk SI</td><td>Lo cobra el Joint Venture · sin pago a Brouk SI</td><td>Brouk SpA</td></tr>
+        <tr><td><b>Fee de plataforma (10% comisión)</b></td><td>De Kubuz · cobro a 60 días</td><td>Del Joint Venture · cobro a 60 días</td><td>Sin fee · interno a Brouk SpA</td></tr>
+        <tr><td><b>Comisión de corretaje (2%)</b></td><td>La factura Brouk SI</td><td>La factura Brouk SI</td><td>La factura Brouk SpA</td></tr>
+        <tr><td><b>Propiedad de la tecnología (IP)</b></td><td>En Kubuz · opción de compra (perito)</td><td>En Kubuz · aportada al Joint Venture</td><td>Cedida a Brouk SpA</td></tr>
+        <tr><td><b>Facturación electrónica SII</b></td><td>Kubuz + Brouk SI vigentes</td><td>+ Joint Venture habilitado</td><td>Brouk SpA habilitada</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <h3 class="subh">Documentos del marco societario</h3>
   <div class="grid g3">
@@ -786,7 +838,7 @@
     <div class="fbrand"><span class="gd">B</span>ROU<span class="gd">K</span></div>
     <p><strong>Brouk SpA</strong> — Plan estratégico por etapas</p>
     <p>Anexos: <a href="https://docs.google.com/spreadsheets/d/1_ybgXe6Pi6t9GLeql9WTPrPeXXGsjKUUTaTYqysm_a8/edit" target="_blank" rel="noopener">Modelo por etapas</a> · <a href="https://docs.google.com/spreadsheets/d/1WR39SC-Z1oQLWZ_PiZCp5gEQprgUYZENcfHU27uJX-w/edit" target="_blank" rel="noopener">Hoja de ruta</a></p>
-    <p>Documento de trabajo confidencial · Versión 5 · Junio 2026 · Sujeto a validación legal y tributaria</p>
+    <p>Documento de trabajo confidencial · Versión 6 · Junio 2026 · Sujeto a validación legal y tributaria</p>
   </div>
 </footer>
 
